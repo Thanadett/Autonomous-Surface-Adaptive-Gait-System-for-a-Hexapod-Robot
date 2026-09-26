@@ -1,0 +1,407 @@
+=== run_e2 2026-09-25T23:13:26+07:00  plan=e3 camera=true mode=--resume build=build_final1 install=install_final1 quick=0 args= ===
+GZ_PARTITION=hexapod_39815_e2
+--- e2_runner --config /home/t/49x_Hexapod/ros2_ws/install_final1/hexapod_evaluation/share/hexapod_evaluation/config/e3.yaml --resume  ---
+waiting for locomotion_node and ground-truth pose ...
+standing base_link z = 116.3 mm; mass 4.147 kg; 15 conditions x 10 trials, 1.0 m; camera snapshots on
+tripod_mu100_01: OK   [patch mu=1] v   22.4 mm/s  SSMmin   99.6 mm  slip   0.6 mm  CoT   1.50  pitch   0.0 deg  
+tripod_mu060_01: OK   [patch mu=0.6] v   22.4 mm/s  SSMmin   99.6 mm  slip   0.6 mm  CoT   1.02  pitch   0.0 deg  
+tripod_mu030_01: OK   [patch mu=0.3] v   22.5 mm/s  SSMmin   99.6 mm  slip   0.6 mm  CoT   0.73  pitch   0.0 deg  
+tripod_mu015_01: OK   [patch mu=0.15] v   22.5 mm/s  SSMmin   99.6 mm  slip   0.6 mm  CoT   0.59  pitch   0.0 deg  
+tripod_soft_01: OK   [patch mu=0.8 soft] v   22.4 mm/s  SSMmin   99.6 mm  slip   0.6 mm  CoT   1.25  pitch   0.0 deg  
+ripple_mu100_01: OK   [patch mu=1] v   25.5 mm/s  SSMmin  102.5 mm  slip   0.3 mm  CoT   1.22  pitch   0.0 deg  
+ripple_mu060_01: OK   [patch mu=0.6] v   25.5 mm/s  SSMmin  102.5 mm  slip   0.3 mm  CoT   0.79  pitch   0.0 deg  
+ripple_mu030_01: OK   [patch mu=0.3] v   25.6 mm/s  SSMmin  102.4 mm  slip   0.3 mm  CoT   0.50  pitch   0.0 deg  
+ripple_mu015_01: OK   [patch mu=0.15] v   25.6 mm/s  SSMmin  102.4 mm  slip   0.3 mm  CoT   0.34  pitch   0.0 deg  
+ripple_soft_01: OK   [patch mu=0.8 soft] v   25.4 mm/s  SSMmin  102.4 mm  slip   0.4 mm  CoT   1.04  pitch   0.0 deg  
+wave_mu100_01: OK   [patch mu=1] v   25.2 mm/s  SSMmin   99.6 mm  slip   0.4 mm  CoT   0.85  pitch   0.0 deg  
+wave_mu060_01: OK   [patch mu=0.6] v   25.3 mm/s  SSMmin   99.8 mm  slip   0.4 mm  CoT   0.59  pitch   0.0 deg  
+wave_mu030_01: OK   [patch mu=0.3] v   25.3 mm/s  SSMmin   99.8 mm  slip   0.5 mm  CoT   0.35  pitch   0.0 deg  
+wave_mu015_01: OK   [patch mu=0.15] v   25.3 mm/s  SSMmin   99.7 mm  slip   0.6 mm  CoT   0.23  pitch   0.0 deg  
+wave_soft_01: OK   [patch mu=0.8 soft] v   25.2 mm/s  SSMmin   99.6 mm  slip   0.4 mm  CoT   0.75  pitch   0.0 deg  
+tripod_mu100_02: OK   [patch mu=1] v   22.4 mm/s  SSMmin   99.4 mm  slip   0.6 mm  CoT   1.51  pitch   0.0 deg  
+tripod_mu060_02: OK   [patch mu=0.6] v   22.4 mm/s  SSMmin   99.4 mm  slip   0.6 mm  CoT   1.02  pitch   0.0 deg  
+tripod_mu030_02: OK   [patch mu=0.3] v   22.5 mm/s  SSMmin   99.4 mm  slip   0.6 mm  CoT   0.73  pitch   0.0 deg  
+tripod_mu015_02: OK   [patch mu=0.15] v   22.5 mm/s  SSMmin   99.4 mm  slip   0.6 mm  CoT   0.58  pitch   0.0 deg  
+tripod_soft_02: OK   [patch mu=0.8 soft] v   22.4 mm/s  SSMmin   99.4 mm  slip   0.6 mm  CoT   1.26  pitch   0.0 deg  
+ripple_mu100_02: OK   [patch mu=1] v   25.5 mm/s  SSMmin  102.4 mm  slip   0.3 mm  CoT   1.22  pitch   0.0 deg  
+ripple_mu060_02: OK   [patch mu=0.6] v   25.5 mm/s  SSMmin  102.4 mm  slip   0.4 mm  CoT   0.80  pitch   0.0 deg  
+ripple_mu030_02: OK   [patch mu=0.3] v   25.6 mm/s  SSMmin  102.4 mm  slip   0.3 mm  CoT   0.49  pitch   0.0 deg  
+ripple_mu015_02: OK   [patch mu=0.15] v   25.6 mm/s  SSMmin  102.4 mm  slip   0.3 mm  CoT   0.34  pitch   0.0 deg  
+ripple_soft_02: OK   [patch mu=0.8 soft] v   25.5 mm/s  SSMmin  102.4 mm  slip   0.3 mm  CoT   1.02  pitch   0.0 deg  
+wave_mu100_02: OK   [patch mu=1] v   25.2 mm/s  SSMmin   99.7 mm  slip   0.4 mm  CoT   0.86  pitch   0.0 deg  
+wave_mu060_02: OK   [patch mu=0.6] v   25.3 mm/s  SSMmin   99.7 mm  slip   0.4 mm  CoT   0.59  pitch   0.0 deg  
+wave_mu030_02: OK   [patch mu=0.3] v   25.3 mm/s  SSMmin   99.7 mm  slip   0.5 mm  CoT   0.35  pitch   0.0 deg  
+wave_mu015_02: OK   [patch mu=0.15] v   25.3 mm/s  SSMmin   99.6 mm  slip   0.6 mm  CoT   0.24  pitch   0.0 deg  
+wave_soft_02: OK   [patch mu=0.8 soft] v   25.2 mm/s  SSMmin   99.7 mm  slip   0.4 mm  CoT   0.77  pitch   0.0 deg  
+tripod_mu100_03: OK   [patch mu=1] v   22.4 mm/s  SSMmin   99.5 mm  slip   0.6 mm  CoT   1.50  pitch   0.0 deg  
+tripod_mu060_03: OK   [patch mu=0.6] v   22.4 mm/s  SSMmin   99.5 mm  slip   0.6 mm  CoT   1.02  pitch   0.0 deg  
+tripod_mu030_03: OK   [patch mu=0.3] v   22.5 mm/s  SSMmin   99.5 mm  slip   0.6 mm  CoT   0.73  pitch   0.0 deg  
+tripod_mu015_03: OK   [patch mu=0.15] v   22.5 mm/s  SSMmin   99.5 mm  slip   0.6 mm  CoT   0.59  pitch   0.0 deg  
+tripod_soft_03: OK   [patch mu=0.8 soft] v   22.4 mm/s  SSMmin   99.5 mm  slip   0.6 mm  CoT   1.25  pitch   0.0 deg  
+ripple_mu100_03: OK   [patch mu=1] v   25.5 mm/s  SSMmin  102.4 mm  slip   0.3 mm  CoT   1.23  pitch   0.0 deg  
+ripple_mu060_03: OK   [patch mu=0.6] v   25.5 mm/s  SSMmin  102.4 mm  slip   0.3 mm  CoT   0.81  pitch   0.0 deg  
+ripple_mu030_03: OK   [patch mu=0.3] v   25.6 mm/s  SSMmin  102.4 mm  slip   0.3 mm  CoT   0.50  pitch   0.0 deg  
+ripple_mu030_03: WARNING - terrain piece not removed: Service call timed out
+ripple_mu015_03: OK   [patch mu=0.15] v   25.6 mm/s  SSMmin  102.4 mm  slip   0.4 mm  CoT   0.34  pitch   0.0 deg  
+ripple_soft_03: OK   [patch mu=0.8 soft] v   25.5 mm/s  SSMmin  102.4 mm  slip   0.4 mm  CoT   1.04  pitch   0.0 deg  
+wave_mu100_03: OK   [patch mu=1] v   25.2 mm/s  SSMmin   99.7 mm  slip   0.4 mm  CoT   0.86  pitch   0.0 deg  
+wave_mu060_03: OK   [patch mu=0.6] v   25.3 mm/s  SSMmin   99.7 mm  slip   0.4 mm  CoT   0.58  pitch   0.0 deg  
+wave_mu030_03: OK   [patch mu=0.3] v   25.3 mm/s  SSMmin   99.7 mm  slip   0.4 mm  CoT   0.35  pitch   0.0 deg  
+wave_mu015_03: OK   [patch mu=0.15] v   25.3 mm/s  SSMmin   99.7 mm  slip   0.6 mm  CoT   0.24  pitch   0.0 deg  
+wave_soft_03: OK   [patch mu=0.8 soft] v   25.2 mm/s  SSMmin   99.7 mm  slip   0.4 mm  CoT   0.75  pitch   0.0 deg  
+tripod_mu100_04: OK   [patch mu=1] v   22.4 mm/s  SSMmin   99.4 mm  slip   0.6 mm  CoT   1.51  pitch   0.0 deg  
+tripod_mu060_04: OK   [patch mu=0.6] v   22.4 mm/s  SSMmin   99.4 mm  slip   0.6 mm  CoT   1.03  pitch   0.0 deg  
+tripod_mu030_04: OK   [patch mu=0.3] v   22.5 mm/s  SSMmin   99.4 mm  slip   0.6 mm  CoT   0.72  pitch   0.0 deg  
+tripod_mu015_04: OK   [patch mu=0.15] v   22.5 mm/s  SSMmin   99.4 mm  slip   0.6 mm  CoT   0.58  pitch   0.0 deg  
+tripod_soft_04: OK   [patch mu=0.8 soft] v   22.4 mm/s  SSMmin   99.4 mm  slip   0.6 mm  CoT   1.25  pitch   0.0 deg  
+ripple_mu100_04: OK   [patch mu=1] v   25.5 mm/s  SSMmin  102.3 mm  slip   0.3 mm  CoT   1.24  pitch   0.0 deg  
+ripple_mu060_04: teleport attempt 1 failed (Service call timed out), retrying
+ripple_mu060_04: OK   [patch mu=0.6] v   25.5 mm/s  SSMmin  102.4 mm  slip   0.3 mm  CoT   0.81  pitch   0.0 deg  
+ripple_mu030_04: OK   [patch mu=0.3] v   25.6 mm/s  SSMmin  102.3 mm  slip   0.3 mm  CoT   0.49  pitch   0.0 deg  
+ripple_mu030_04: WARNING - terrain piece not removed: Service call timed out
+ripple_mu015_04: OK   [patch mu=0.15] v   25.6 mm/s  SSMmin  102.4 mm  slip   0.3 mm  CoT   0.34  pitch   0.0 deg  
+ripple_soft_04: OK   [patch mu=0.8 soft] v   25.4 mm/s  SSMmin  102.3 mm  slip   0.3 mm  CoT   1.04  pitch   0.0 deg  
+wave_mu100_04: OK   [patch mu=1] v   25.2 mm/s  SSMmin   99.6 mm  slip   0.3 mm  CoT   0.85  pitch   0.0 deg  
+wave_mu060_04: OK   [patch mu=0.6] v   25.3 mm/s  SSMmin   99.7 mm  slip   0.4 mm  CoT   0.58  pitch   0.0 deg  
+wave_mu030_04: OK   [patch mu=0.3] v   25.3 mm/s  SSMmin   99.7 mm  slip   0.4 mm  CoT   0.35  pitch   0.0 deg  
+wave_mu015_04: OK   [patch mu=0.15] v   25.3 mm/s  SSMmin   99.7 mm  slip   0.6 mm  CoT   0.23  pitch   0.0 deg  
+wave_soft_04: OK   [patch mu=0.8 soft] v   25.2 mm/s  SSMmin   99.7 mm  slip   0.4 mm  CoT   0.75  pitch   0.0 deg  
+wave_soft_04: WARNING - terrain piece not removed: Service call timed out
+tripod_mu100_05: OK   [patch mu=1] v   22.4 mm/s  SSMmin   99.5 mm  slip   0.6 mm  CoT   1.52  pitch   0.0 deg  
+tripod_mu060_05: OK   [patch mu=0.6] v   22.4 mm/s  SSMmin   99.5 mm  slip   0.6 mm  CoT   1.04  pitch  -0.0 deg  
+tripod_mu030_05: OK   [patch mu=0.3] v   22.5 mm/s  SSMmin   99.5 mm  slip   0.6 mm  CoT   0.73  pitch  -0.0 deg  
+tripod_mu015_05: OK   [patch mu=0.15] v   22.5 mm/s  SSMmin   99.5 mm  slip   0.6 mm  CoT   0.60  pitch  -0.0 deg  
+tripod_soft_05: OK   [patch mu=0.8 soft] v   22.4 mm/s  SSMmin   99.5 mm  slip   0.6 mm  CoT   1.27  pitch   0.0 deg  
+ripple_mu100_05: SKIP - could not create the terrain piece: Service call timed out
+ripple_mu060_05: SKIP - could not create the terrain piece: Service call timed out
+ripple_mu030_05: OK   [patch mu=0.3] v   25.5 mm/s  SSMmin  102.3 mm  slip   0.3 mm  CoT   0.83  pitch   0.0 deg  
+ripple_mu015_05: OK   [patch mu=0.15] v   25.5 mm/s  SSMmin  102.3 mm  slip   0.3 mm  CoT   0.78  pitch   0.0 deg  
+ripple_soft_05: OK   [patch mu=0.8 soft] v   25.4 mm/s  SSMmin  102.3 mm  slip   0.3 mm  CoT   1.02  pitch   0.0 deg  
+wave_mu100_05: OK   [patch mu=1] v   25.2 mm/s  SSMmin   99.6 mm  slip   0.3 mm  CoT   0.79  pitch   0.0 deg  
+wave_mu060_05: OK   [patch mu=0.6] v   25.3 mm/s  SSMmin   99.6 mm  slip   0.4 mm  CoT   0.70  pitch   0.0 deg  
+wave_mu030_05: OK   [patch mu=0.3] v   25.3 mm/s  SSMmin   99.6 mm  slip   0.4 mm  CoT   0.61  pitch   0.0 deg  
+wave_mu015_05: OK   [patch mu=0.15] v   25.3 mm/s  SSMmin   99.6 mm  slip   0.4 mm  CoT   0.57  pitch   0.0 deg  
+wave_soft_05: OK   [patch mu=0.8 soft] v   25.2 mm/s  SSMmin   99.6 mm  slip   0.3 mm  CoT   0.75  pitch   0.0 deg  
+tripod_mu100_06: OK   [patch mu=1] v   22.4 mm/s  SSMmin   99.4 mm  slip   0.6 mm  CoT   1.34  pitch   0.0 deg  
+tripod_mu060_06: OK   [patch mu=0.6] v   22.4 mm/s  SSMmin   99.4 mm  slip   0.6 mm  CoT   1.19  pitch   0.0 deg  
+tripod_mu030_06: teleport attempt 1 failed (Service call timed out), retrying
+tripod_mu030_06: OK   [patch mu=0.3] v   22.4 mm/s  SSMmin   99.4 mm  slip   0.6 mm  CoT   1.08  pitch   0.0 deg  
+tripod_mu015_06: OK   [patch mu=0.15] v   22.4 mm/s  SSMmin   99.4 mm  slip   0.6 mm  CoT   1.02  pitch  -0.0 deg  
+tripod_soft_06: OK   [patch mu=0.8 soft] v   22.4 mm/s  SSMmin   99.4 mm  slip   0.6 mm  CoT   1.26  pitch   0.0 deg  
+ripple_mu100_06: OK   [patch mu=1] v   25.5 mm/s  SSMmin  102.5 mm  slip   0.3 mm  CoT   1.09  pitch   0.0 deg  
+ripple_mu060_06: SKIP - could not create the terrain piece: Service call timed out
+ripple_mu030_06: OK   [patch mu=0.3] v   25.5 mm/s  SSMmin  102.5 mm  slip   0.3 mm  CoT   0.82  pitch   0.0 deg  
+ripple_mu015_06: OK   [patch mu=0.15] v   25.5 mm/s  SSMmin  102.5 mm  slip   0.4 mm  CoT   0.78  pitch   0.0 deg  
+ripple_soft_06: SKIP - could not create the terrain piece: Service call timed out
+wave_mu100_06: SKIP - could not create the terrain piece: Service call timed out
+wave_mu060_06: OK   [patch mu=0.6] v   25.2 mm/s  SSMmin   99.7 mm  slip   0.3 mm  CoT   0.73  pitch   0.0 deg  
+wave_mu030_06: OK   [patch mu=0.3] v   25.3 mm/s  SSMmin   99.7 mm  slip   0.4 mm  CoT   0.70  pitch   0.0 deg  
+wave_mu030_06: WARNING - terrain piece not removed: Service call timed out
+wave_mu015_06: OK   [patch mu=0.15] v   25.3 mm/s  SSMmin   99.7 mm  slip   0.3 mm  CoT   0.66  pitch   0.0 deg  
+wave_soft_06: OK   [patch mu=0.8 soft] v   25.2 mm/s  SSMmin   99.7 mm  slip   0.3 mm  CoT   0.74  pitch   0.0 deg  
+tripod_mu100_07: OK   [patch mu=1] v   22.4 mm/s  SSMmin   99.4 mm  slip   0.6 mm  CoT   1.28  pitch   0.0 deg  
+tripod_mu060_07: OK   [patch mu=0.6] v   22.4 mm/s  SSMmin   99.4 mm  slip   0.6 mm  CoT   1.21  pitch   0.0 deg  
+tripod_mu030_07: SKIP - could not create the terrain piece: Service call timed out
+tripod_mu015_07: OK   [patch mu=0.15] v   22.4 mm/s  SSMmin   99.4 mm  slip   0.6 mm  CoT   1.06  pitch   0.0 deg  
+tripod_soft_07: OK   [patch mu=0.8 soft] v   22.4 mm/s  SSMmin   99.4 mm  slip   0.6 mm  CoT   1.18  pitch   0.0 deg  
+ripple_mu100_07: OK   [patch mu=1] v   25.4 mm/s  SSMmin  102.4 mm  slip   0.3 mm  CoT   0.99  pitch   0.0 deg  
+ripple_mu060_07: SKIP - could not create the terrain piece: Service call timed out
+ripple_mu030_07: OK   [patch mu=0.3] v   25.5 mm/s  SSMmin  102.4 mm  slip   0.3 mm  CoT   0.86  pitch   0.0 deg  
+ripple_mu015_07: OK   [patch mu=0.15] v   25.5 mm/s  SSMmin  102.4 mm  slip   0.3 mm  CoT   0.84  pitch   0.0 deg  
+ripple_soft_07: OK   [patch mu=0.8 soft] v   25.5 mm/s  SSMmin  102.4 mm  slip   0.3 mm  CoT   0.94  pitch   0.0 deg  
+wave_mu100_07: SKIP - could not create the terrain piece: Service call timed out
+wave_mu060_07: OK   [patch mu=0.6] v   25.2 mm/s  SSMmin   99.7 mm  slip   0.4 mm  CoT   0.69  pitch   0.0 deg  
+wave_mu030_07: OK   [patch mu=0.3] v   25.3 mm/s  SSMmin   99.7 mm  slip   0.4 mm  CoT   0.66  pitch   0.0 deg  
+wave_mu015_07: OK   [patch mu=0.15] v   25.3 mm/s  SSMmin   99.7 mm  slip   0.3 mm  CoT   0.64  pitch   0.0 deg  
+wave_soft_07: OK   [patch mu=0.8 soft] v   25.2 mm/s  SSMmin   99.7 mm  slip   0.3 mm  CoT   0.71  pitch   0.0 deg  
+tripod_mu100_08: teleport attempt 1 failed (Service call timed out), retrying
+tripod_mu100_08: OK   [patch mu=1] v   22.4 mm/s  SSMmin   99.5 mm  slip   0.6 mm  CoT   1.22  pitch   0.0 deg  
+tripod_mu060_08: OK   [patch mu=0.6] v   22.4 mm/s  SSMmin   99.5 mm  slip   0.6 mm  CoT   1.15  pitch   0.0 deg  
+tripod_mu030_08: OK   [patch mu=0.3] v   22.4 mm/s  SSMmin   99.3 mm  slip   0.6 mm  CoT   1.12  pitch   0.0 deg  
+tripod_mu015_08: OK   [patch mu=0.15] v   22.4 mm/s  SSMmin   99.5 mm  slip   0.6 mm  CoT   1.10  pitch   0.0 deg  
+tripod_soft_08: OK   [patch mu=0.8 soft] v   22.4 mm/s  SSMmin   99.5 mm  slip   0.6 mm  CoT   1.18  pitch   0.0 deg  
+ripple_mu100_08: OK   [patch mu=1] v   25.5 mm/s  SSMmin  102.2 mm  slip   0.3 mm  CoT   0.98  pitch   0.0 deg  
+ripple_mu060_08: OK   [patch mu=0.6] v   25.5 mm/s  SSMmin  102.2 mm  slip   0.3 mm  CoT   0.92  pitch   0.0 deg  
+ripple_mu030_08: OK   [patch mu=0.3] v   25.5 mm/s  SSMmin  102.2 mm  slip   0.3 mm  CoT   0.89  pitch   0.0 deg  
+ripple_mu015_08: teleport attempt 1 failed (Service call timed out), retrying
+ripple_mu015_08: OK   [patch mu=0.15] v   25.5 mm/s  SSMmin  102.2 mm  slip   0.3 mm  CoT   0.87  pitch   0.0 deg  
+ripple_soft_08: OK   [patch mu=0.8 soft] v   25.5 mm/s  SSMmin  102.2 mm  slip   0.3 mm  CoT   0.95  pitch   0.0 deg  
+wave_mu100_08: OK   [patch mu=1] v   25.2 mm/s  SSMmin   99.6 mm  slip   0.3 mm  CoT   0.71  pitch   0.0 deg  
+wave_mu060_08: OK   [patch mu=0.6] v   25.2 mm/s  SSMmin   99.6 mm  slip   0.3 mm  CoT   0.68  pitch   0.0 deg  
+wave_mu030_08: OK   [patch mu=0.3] v   25.3 mm/s  SSMmin   99.8 mm  slip   0.4 mm  CoT   0.65  pitch   0.0 deg  
+wave_mu015_08: OK   [patch mu=0.15] v   25.3 mm/s  SSMmin   99.6 mm  slip   0.4 mm  CoT   0.63  pitch   0.0 deg  
+wave_soft_08: OK   [patch mu=0.8 soft] v   25.3 mm/s  SSMmin   99.6 mm  slip   0.4 mm  CoT   0.70  pitch   0.0 deg  
+tripod_mu100_09: OK   [patch mu=1] v   22.4 mm/s  SSMmin   99.5 mm  slip   0.6 mm  CoT   1.20  pitch   0.0 deg  
+tripod_mu060_09: OK   [patch mu=0.6] v   22.4 mm/s  SSMmin   99.4 mm  slip   0.6 mm  CoT   1.14  pitch   0.0 deg  
+tripod_mu030_09: OK   [patch mu=0.3] v   22.4 mm/s  SSMmin   99.4 mm  slip   0.6 mm  CoT   1.11  pitch   0.0 deg  
+tripod_mu015_09: teleport attempt 1 failed (Service call timed out), retrying
+tripod_mu015_09: OK   [patch mu=0.15] v   22.4 mm/s  SSMmin   99.5 mm  slip   0.6 mm  CoT   1.09  pitch   0.0 deg  
+tripod_soft_09: OK   [patch mu=0.8 soft] v   22.4 mm/s  SSMmin   99.5 mm  slip   0.6 mm  CoT   1.17  pitch   0.0 deg  
+ripple_mu100_09: SKIP - could not create the terrain piece: Service call timed out
+ripple_mu060_09: OK   [patch mu=0.6] v   25.4 mm/s  SSMmin  102.3 mm  slip   0.3 mm  CoT   0.96  pitch   0.0 deg  
+ripple_mu030_09: SKIP - could not create the terrain piece: Service call timed out
+ripple_mu015_09: OK   [patch mu=0.15] v   25.5 mm/s  SSMmin  102.3 mm  slip   0.3 mm  CoT   0.87  pitch   0.0 deg  
+ripple_mu015_09: WARNING - terrain piece not removed: Service call timed out
+ripple_soft_09: OK   [patch mu=0.8 soft] v   25.4 mm/s  SSMmin  102.3 mm  slip   0.3 mm  CoT   0.94  pitch   0.0 deg  
+wave_mu100_09: OK   [patch mu=1] v   25.2 mm/s  SSMmin   99.6 mm  slip   0.3 mm  CoT   0.70  pitch   0.0 deg  
+wave_mu060_09: OK   [patch mu=0.6] v   25.2 mm/s  SSMmin   99.7 mm  slip   0.3 mm  CoT   0.66  pitch   0.0 deg  
+wave_mu030_09: OK   [patch mu=0.3] v   25.2 mm/s  SSMmin   99.6 mm  slip   0.3 mm  CoT   0.63  pitch   0.0 deg  
+wave_mu015_09: OK   [patch mu=0.15] v   25.2 mm/s  SSMmin   99.7 mm  slip   0.4 mm  CoT   0.62  pitch   0.0 deg  
+wave_soft_09: OK   [patch mu=0.8 soft] v   25.2 mm/s  SSMmin   99.7 mm  slip   0.3 mm  CoT   0.68  pitch   0.0 deg  
+wave_soft_09: WARNING - terrain piece not removed: Service call timed out
+tripod_mu100_10: OK   [patch mu=1] v   22.4 mm/s  SSMmin   99.4 mm  slip   0.6 mm  CoT   1.18  pitch   0.0 deg  
+tripod_mu060_10: OK   [patch mu=0.6] v   22.4 mm/s  SSMmin   99.4 mm  slip   0.6 mm  CoT   1.13  pitch  -0.0 deg  
+tripod_mu030_10: teleport attempt 1 failed (Service call timed out), retrying
+tripod_mu030_10: OK   [patch mu=0.3] v   22.5 mm/s  SSMmin   99.3 mm  slip   0.6 mm  CoT   1.11  pitch  -0.0 deg  
+tripod_mu015_10: OK   [patch mu=0.15] v   22.4 mm/s  SSMmin   99.4 mm  slip   0.6 mm  CoT   1.09  pitch   0.0 deg  
+tripod_mu015_10: WARNING - terrain piece not removed: Service call timed out
+tripod_soft_10: OK   [patch mu=0.8 soft] v   22.4 mm/s  SSMmin   99.4 mm  slip   0.6 mm  CoT   1.15  pitch   0.0 deg  
+ripple_mu100_10: OK   [patch mu=1] v   25.5 mm/s  SSMmin  102.4 mm  slip   0.3 mm  CoT   0.97  pitch   0.0 deg  
+ripple_mu060_10: OK   [patch mu=0.6] v   25.5 mm/s  SSMmin  102.4 mm  slip   0.3 mm  CoT   0.93  pitch   0.0 deg  
+ripple_mu030_10: OK   [patch mu=0.3] v   25.5 mm/s  SSMmin  102.3 mm  slip   0.3 mm  CoT   0.90  pitch   0.0 deg  
+ripple_mu015_10: OK   [patch mu=0.15] v   25.5 mm/s  SSMmin  102.4 mm  slip   0.3 mm  CoT   0.88  pitch   0.0 deg  
+ripple_soft_10: OK   [patch mu=0.8 soft] v   25.5 mm/s  SSMmin  102.4 mm  slip   0.3 mm  CoT   0.95  pitch   0.0 deg  
+ripple_soft_10: WARNING - terrain piece not removed: Service call timed out
+wave_mu100_10: OK   [patch mu=1] v   25.2 mm/s  SSMmin   99.6 mm  slip   0.3 mm  CoT   0.70  pitch   0.0 deg  
+wave_mu060_10: OK   [patch mu=0.6] v   25.2 mm/s  SSMmin   99.7 mm  slip   0.3 mm  CoT   0.66  pitch   0.0 deg  
+wave_mu030_10: SKIP - could not create the terrain piece: Service call timed out
+wave_mu015_10: SKIP - could not create the terrain piece: Service call timed out
+wave_soft_10: OK   [patch mu=0.8 soft] v   25.3 mm/s  SSMmin   99.7 mm  slip   0.3 mm  CoT   0.62  pitch   0.0 deg  
+# E3 - gait x surface (chapter 4.1.3, Gait Performance Map)
+
+- Generated 2026-09-25 23:13:29; seed 2; course 1.0 m, success = goal within 2.0 x nominal time without a fall (|roll|/|pitch| > 30.0°, z < 60 mm)
+- Mass 4.147 kg; cycle times {'tripod': 0.95, 'ripple': 1.3, 'wave': 2.4}; metrics exclude the warm-up (1 gait cycle); Mean ± SD (sample SD) over all trials of a condition
+- Ground truth only (OdometryPublisher, joint states, contact and joint F/T sensors); slip = sliding of the foot contact point per stance, centre slip = ball-centre displacement
+
+| Condition | Cmd (mm/s) | Success | Falls | Speed (mm/s) | Speed / cmd (%) | SSM min (mm) | SSM p5 (mm) | SSM mean (mm) | SSM min, contact only (mm) | Support feet | Feet in contact | Slip/stance (mm) | Centre slip (mm) | CoT | Roll RMS (°) | Pitch RMS (°) | Lateral drift (mm) |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| tripod_mu100 | 25 | 10/10 (100%) | 0 | 22.4 ± 0.0 | 90 ± 0 | 99.4 ± 0.1 | 100.1 ± 0.1 | 128.8 ± 0.6 | 98.5 ± 0.0 | 3.83 ± 0.02 | 3.15 ± 0.01 | 0.58 ± 0.01 | 0.36 ± 0.01 | 1.38 ± 0.15 | 0.00 ± 0.00 | 0.00 ± 0.00 | 2.2 ± 1.1 |
+| tripod_mu060 | 25 | 10/10 (100%) | 0 | 22.4 ± 0.0 | 90 ± 0 | 99.4 ± 0.1 | 100.1 ± 0.1 | 128.7 ± 0.8 | 98.5 ± 0.0 | 3.82 ± 0.02 | 3.15 ± 0.01 | 0.58 ± 0.01 | 0.36 ± 0.01 | 1.10 ± 0.08 | 0.00 ± 0.00 | 0.00 ± 0.00 | 1.5 ± 1.0 |
+| tripod_mu030 | 25 | 9/9 (100%) | 0 | 22.5 ± 0.0 | 90 ± 0 | 99.4 ± 0.1 | 100.1 ± 0.1 | 128.9 ± 0.6 | 98.5 ± 0.0 | 3.83 ± 0.02 | 3.15 ± 0.01 | 0.58 ± 0.01 | 0.36 ± 0.01 | 0.90 ± 0.20 | 0.00 ± 0.00 | 0.00 ± 0.00 | 1.8 ± 1.2 |
+| tripod_mu015 | 25 | 10/10 (100%) | 0 | 22.5 ± 0.0 | 90 ± 0 | 99.4 ± 0.1 | 100.1 ± 0.0 | 128.8 ± 0.6 | 98.5 ± 0.0 | 3.83 ± 0.02 | 3.15 ± 0.00 | 0.58 ± 0.00 | 0.36 ± 0.01 | 0.83 ± 0.26 | 0.00 ± 0.00 | 0.00 ± 0.00 | 1.6 ± 0.9 |
+| tripod_soft | 25 | 10/10 (100%) | 0 | 22.4 ± 0.0 | 90 ± 0 | 99.4 ± 0.1 | 100.1 ± 0.0 | 128.8 ± 0.7 | 98.5 ± 0.0 | 3.82 ± 0.02 | 3.15 ± 0.01 | 0.58 ± 0.01 | 0.36 ± 0.01 | 1.22 ± 0.04 | 0.00 ± 0.00 | 0.00 ± 0.00 | 1.9 ± 1.0 |
+| ripple_mu100 | 25 | 8/8 (100%) | 0 | 25.5 ± 0.0 | 102 ± 0 | 102.4 ± 0.1 | 103.3 ± 0.1 | 112.2 ± 0.2 | -4.5 ± 0.2 | 4.38 ± 0.00 | 2.69 ± 0.02 | 0.32 ± 0.02 | 0.62 ± 0.02 | 1.12 ± 0.12 | 0.07 ± 0.00 | 0.06 ± 0.00 | 0.5 ± 1.8 |
+| ripple_mu060 | 25 | 7/7 (100%) | 0 | 25.5 ± 0.0 | 102 ± 0 | 102.4 ± 0.1 | 103.2 ± 0.1 | 112.2 ± 0.1 | -4.1 ± 0.4 | 4.37 ± 0.01 | 2.73 ± 0.02 | 0.34 ± 0.01 | 0.62 ± 0.03 | 0.86 ± 0.07 | 0.06 ± 0.00 | 0.06 ± 0.00 | 1.4 ± 0.7 |
+| ripple_mu030 | 25 | 9/9 (100%) | 0 | 25.5 ± 0.0 | 102 ± 0 | 102.4 ± 0.1 | 103.2 ± 0.1 | 112.1 ± 0.2 | -4.2 ± 0.2 | 4.37 ± 0.01 | 2.70 ± 0.02 | 0.34 ± 0.01 | 0.63 ± 0.02 | 0.70 ± 0.19 | 0.06 ± 0.00 | 0.06 ± 0.00 | 1.4 ± 1.0 |
+| ripple_mu015 | 25 | 10/10 (100%) | 0 | 25.5 ± 0.1 | 102 ± 0 | 102.4 ± 0.1 | 103.3 ± 0.1 | 112.2 ± 0.2 | -4.2 ± 0.3 | 4.37 ± 0.01 | 2.70 ± 0.02 | 0.34 ± 0.01 | 0.63 ± 0.02 | 0.64 ± 0.26 | 0.07 ± 0.01 | 0.06 ± 0.00 | 1.4 ± 0.8 |
+| ripple_soft | 25 | 9/9 (100%) | 0 | 25.5 ± 0.0 | 102 ± 0 | 102.4 ± 0.1 | 103.2 ± 0.1 | 112.3 ± 0.2 | -4.4 ± 0.2 | 4.38 ± 0.01 | 2.71 ± 0.02 | 0.35 ± 0.01 | 0.59 ± 0.01 | 0.99 ± 0.05 | 0.07 ± 0.00 | 0.06 ± 0.00 | 1.4 ± 1.4 |
+| wave_mu100 | 24 | 8/8 (100%) | 0 | 25.2 ± 0.0 | 103 ± 0 | 99.6 ± 0.0 | 101.5 ± 0.0 | 137.4 ± 0.3 | -6.1 ± 0.2 | 5.20 ± 0.00 | 2.92 ± 0.03 | 0.35 ± 0.02 | 0.65 ± 0.01 | 0.79 ± 0.07 | 0.04 ± 0.00 | 0.05 ± 0.00 | 6.9 ± 1.1 |
+| wave_mu060 | 24 | 10/10 (100%) | 0 | 25.3 ± 0.0 | 103 ± 0 | 99.7 ± 0.0 | 101.5 ± 0.0 | 137.4 ± 0.3 | -6.0 ± 0.4 | 5.20 ± 0.00 | 2.85 ± 0.01 | 0.37 ± 0.04 | 0.69 ± 0.04 | 0.64 ± 0.06 | 0.04 ± 0.00 | 0.05 ± 0.00 | 5.6 ± 1.5 |
+| wave_mu030 | 24 | 9/9 (100%) | 0 | 25.3 ± 0.0 | 103 ± 0 | 99.7 ± 0.1 | 101.5 ± 0.0 | 137.4 ± 0.4 | -5.1 ± 1.1 | 5.20 ± 0.00 | 2.84 ± 0.02 | 0.40 ± 0.04 | 0.74 ± 0.06 | 0.52 ± 0.16 | 0.05 ± 0.00 | 0.05 ± 0.00 | 4.1 ± 1.8 |
+| wave_mu015 | 24 | 9/9 (100%) | 0 | 25.3 ± 0.0 | 103 ± 0 | 99.7 ± 0.0 | 101.5 ± 0.1 | 137.4 ± 0.3 | -4.9 ± 1.4 | 5.20 ± 0.00 | 2.86 ± 0.02 | 0.47 ± 0.15 | 0.80 ± 0.17 | 0.45 ± 0.21 | 0.05 ± 0.00 | 0.05 ± 0.00 | 4.1 ± 1.2 |
+| wave_soft | 24 | 10/10 (100%) | 0 | 25.2 ± 0.0 | 103 ± 0 | 99.7 ± 0.0 | 101.5 ± 0.1 | 137.4 ± 0.4 | -6.2 ± 0.1 | 5.20 ± 0.00 | 2.89 ± 0.04 | 0.35 ± 0.03 | 0.65 ± 0.03 | 0.72 ± 0.04 | 0.04 ± 0.00 | 0.05 ± 0.00 | 5.6 ± 1.0 |
+
+Peak joint speed / torque in % of the servo limit (3.65 rad/s, 3.29 N·m at 6.0 V; max over the trials of the condition):
+
+| Condition | ω coxa | ω femur | ω tibia | τ coxa | τ femur | τ tibia |
+|---|---:|---:|---:|---:|---:|---:|
+| tripod_mu100 | 11% | 19% | 17% | 100% | 100% | 100% |
+| tripod_mu060 | 11% | 19% | 17% | 100% | 100% | 100% |
+| tripod_mu030 | 11% | 19% | 17% | 82% | 100% | 92% |
+| tripod_mu015 | 11% | 19% | 17% | 100% | 100% | 90% |
+| tripod_soft | 11% | 19% | 17% | 66% | 100% | 100% |
+| ripple_mu100 | 18% | 21% | 22% | 100% | 100% | 100% |
+| ripple_mu060 | 18% | 21% | 22% | 100% | 100% | 100% |
+| ripple_mu030 | 18% | 21% | 22% | 100% | 100% | 100% |
+| ripple_mu015 | 18% | 21% | 22% | 94% | 100% | 100% |
+| ripple_soft | 18% | 21% | 22% | 100% | 100% | 100% |
+| wave_mu100 | 40% | 25% | 40% | 100% | 100% | 100% |
+| wave_mu060 | 40% | 25% | 40% | 86% | 100% | 100% |
+| wave_mu030 | 39% | 24% | 40% | 100% | 100% | 100% |
+| wave_mu015 | 39% | 25% | 40% | 98% | 100% | 100% |
+| wave_soft | 40% | 25% | 40% | 100% | 100% | 100% |
+
+Joint torque p95 in % of the limit (mean over trials) and fraction of samples at the limit (>= 98 %) - the peak above is often a single touch-down sample:
+
+| Condition | τ p95 coxa | τ p95 femur | τ p95 tibia | femur at limit | tibia at limit |
+|---|---:|---:|---:|---:|---:|
+| tripod_mu100 | 47% | 74% | 73% | 0.2% | 0.0% |
+| tripod_mu060 | 35% | 61% | 55% | 0.1% | 0.0% |
+| tripod_mu030 | 25% | 50% | 40% | 0.1% | 0.0% |
+| tripod_mu015 | 21% | 48% | 35% | 0.1% | 0.0% |
+| tripod_soft | 41% | 67% | 63% | 0.2% | 0.0% |
+| ripple_mu100 | 45% | 70% | 91% | 0.9% | 7.8% |
+| ripple_mu060 | 33% | 59% | 67% | 0.5% | 0.0% |
+| ripple_mu030 | 25% | 51% | 49% | 0.2% | 0.0% |
+| ripple_mu015 | 22% | 49% | 44% | 0.2% | 0.0% |
+| ripple_soft | 38% | 65% | 79% | 1.4% | 0.1% |
+| wave_mu100 | 13% | 100% | 92% | 11.7% | 0.8% |
+| wave_mu060 | 12% | 93% | 79% | 3.3% | 0.0% |
+| wave_mu030 | 9% | 80% | 61% | 0.8% | 0.0% |
+| wave_mu015 | 8% | 73% | 52% | 0.2% | 0.0% |
+| wave_soft | 13% | 99% | 87% | 8.6% | 0.0% |
+
+| Condition | Foot sink max (mm) | Foot sink mean (mm) | Slip max (mm) |
+|---|---:|---:|---:|
+| tripod_mu100 | 0.3 ± 0.0 | -0.0 ± 0.0 | 1.0 ± 0.0 |
+| tripod_mu060 | 0.3 ± 0.0 | -0.0 ± 0.0 | 1.0 ± 0.0 |
+| tripod_mu030 | 0.3 ± 0.0 | -0.0 ± 0.0 | 1.0 ± 0.0 |
+| tripod_mu015 | 0.3 ± 0.0 | -0.0 ± 0.0 | 1.0 ± 0.0 |
+| tripod_soft | 0.3 ± 0.0 | -0.0 ± 0.0 | 1.0 ± 0.0 |
+| ripple_mu100 | 0.1 ± 0.0 | -0.0 ± 0.0 | 0.6 ± 0.0 |
+| ripple_mu060 | 0.1 ± 0.0 | -0.0 ± 0.0 | 0.7 ± 0.0 |
+| ripple_mu030 | 0.1 ± 0.0 | -0.0 ± 0.0 | 0.6 ± 0.0 |
+| ripple_mu015 | 0.1 ± 0.0 | -0.0 ± 0.0 | 0.6 ± 0.0 |
+| ripple_soft | 0.1 ± 0.0 | -0.0 ± 0.0 | 0.7 ± 0.0 |
+| wave_mu100 | 0.1 ± 0.0 | -0.0 ± 0.0 | 1.8 ± 0.2 |
+| wave_mu060 | 0.1 ± 0.0 | -0.0 ± 0.0 | 1.9 ± 0.2 |
+| wave_mu030 | 0.1 ± 0.0 | -0.0 ± 0.0 | 2.0 ± 0.2 |
+| wave_mu015 | 0.1 ± 0.0 | -0.0 ± 0.0 | 2.3 ± 0.5 |
+| wave_soft | 0.1 ± 0.0 | -0.0 ± 0.0 | 1.8 ± 0.3 |
+
+
+--- launch log: errors / warnings (last 40 lines) ---
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+
+results: /home/t/49x_Hexapod/ros2_ws/results/e3 (exit 0)
+
+=== trim_contaminated: kept 38 of 138 trial(s) (up to ripple_mu030_03); first lost reply: ripple_mu030_03: WARNING - terrain piece not removed: Service call timed out ===
+=== run_e2 2026-09-26T10:27:53+07:00  plan=e3 camera=true mode=--resume build=build_final1 install=install_final1 quick=0 args= ===
+GZ_PARTITION=hexapod_59603_e2
+--- e2_runner --config /home/t/49x_Hexapod/ros2_ws/install_final1/hexapod_evaluation/share/hexapod_evaluation/config/e3.yaml --resume  ---
+waiting for locomotion_node and ground-truth pose ...
+standing base_link z = 116.3 mm; mass 4.147 kg; 12 conditions x 5 trials, 1.0 m; camera snapshots on
+resume: 38 trial(s) already in /home/t/49x_Hexapod/ros2_ws/results/e3/e2_trials.csv
+resume: dropped 7 of 38 trial(s) (condition not in the plan or distance != 1.0 m); previous csv -> /home/t/49x_Hexapod/ros2_ws/results/e3/e2_trials.pruned_20260926_102807.csv
+world state readable via pose/info; no terrain left over
+ripple_mu015_03: OK   [patch mu=0.15] v   25.6 mm/s  SSMmin  102.5 mm  slip   0.4 mm  CoT   0.34  pitch   0.0 deg  
+wave_mu100_03: OK   [patch mu=1] v   25.2 mm/s  SSMmin   99.7 mm  slip   0.3 mm  CoT   0.85  pitch   0.0 deg  
+wave_mu060_03: OK   [patch mu=0.6] v   25.3 mm/s  SSMmin   99.7 mm  slip   0.4 mm  CoT   0.58  pitch   0.0 deg  
+wave_mu030_03: OK   [patch mu=0.3] v   25.3 mm/s  SSMmin   99.7 mm  slip   0.4 mm  CoT   0.35  pitch   0.0 deg  
+wave_mu015_03: OK   [patch mu=0.15] v   25.3 mm/s  SSMmin   99.7 mm  slip   0.6 mm  CoT   0.23  pitch   0.0 deg  
+tripod_mu100_04: OK   [patch mu=1] v   22.4 mm/s  SSMmin   99.4 mm  slip   0.6 mm  CoT   1.51  pitch   0.0 deg  
+tripod_mu060_04: OK   [patch mu=0.6] v   22.4 mm/s  SSMmin   99.4 mm  slip   0.6 mm  CoT   1.02  pitch   0.0 deg  
+tripod_mu030_04: OK   [patch mu=0.3] v   22.5 mm/s  SSMmin   99.4 mm  slip   0.6 mm  CoT   0.72  pitch   0.0 deg  
+tripod_mu015_04: OK   [patch mu=0.15] v   22.5 mm/s  SSMmin   99.4 mm  slip   0.6 mm  CoT   0.58  pitch   0.0 deg  
+ripple_mu100_04: OK   [patch mu=1] v   25.5 mm/s  SSMmin  102.4 mm  slip   0.3 mm  CoT   1.23  pitch   0.0 deg  
+ripple_mu060_04: OK   [patch mu=0.6] v   25.5 mm/s  SSMmin  102.4 mm  slip   0.3 mm  CoT   0.80  pitch   0.0 deg  
+ripple_mu030_04: OK   [patch mu=0.3] v   25.6 mm/s  SSMmin  102.4 mm  slip   0.3 mm  CoT   0.49  pitch   0.0 deg  
+ripple_mu015_04: OK   [patch mu=0.15] v   25.6 mm/s  SSMmin  102.4 mm  slip   0.3 mm  CoT   0.34  pitch   0.0 deg  
+wave_mu100_04: OK   [patch mu=1] v   25.2 mm/s  SSMmin   99.7 mm  slip   0.4 mm  CoT   0.86  pitch   0.0 deg  
+wave_mu060_04: OK   [patch mu=0.6] v   25.3 mm/s  SSMmin   99.7 mm  slip   0.4 mm  CoT   0.58  pitch   0.0 deg  
+wave_mu030_04: OK   [patch mu=0.3] v   25.3 mm/s  SSMmin   99.7 mm  slip   0.5 mm  CoT   0.35  pitch   0.0 deg  
+wave_mu015_04: OK   [patch mu=0.15] v   25.3 mm/s  SSMmin   99.7 mm  slip   0.6 mm  CoT   0.23  pitch   0.0 deg  
+tripod_mu100_05: OK   [patch mu=1] v   22.4 mm/s  SSMmin   99.3 mm  slip   0.6 mm  CoT   1.50  pitch   0.0 deg  
+tripod_mu060_05: OK   [patch mu=0.6] v   22.4 mm/s  SSMmin   99.3 mm  slip   0.6 mm  CoT   1.02  pitch   0.0 deg  
+tripod_mu030_05: OK   [patch mu=0.3] v   22.5 mm/s  SSMmin   99.3 mm  slip   0.6 mm  CoT   0.73  pitch   0.0 deg  
+tripod_mu015_05: OK   [patch mu=0.15] v   22.5 mm/s  SSMmin   99.3 mm  slip   0.6 mm  CoT   0.59  pitch   0.0 deg  
+ripple_mu100_05: OK   [patch mu=1] v   25.5 mm/s  SSMmin  102.4 mm  slip   0.3 mm  CoT   1.22  pitch   0.0 deg  
+ripple_mu060_05: OK   [patch mu=0.6] v   25.5 mm/s  SSMmin  102.4 mm  slip   0.4 mm  CoT   0.81  pitch   0.0 deg  
+ripple_mu030_05: OK   [patch mu=0.3] v   25.6 mm/s  SSMmin  102.4 mm  slip   0.3 mm  CoT   0.50  pitch   0.0 deg  
+ripple_mu015_05: OK   [patch mu=0.15] v   25.6 mm/s  SSMmin  102.4 mm  slip   0.3 mm  CoT   0.34  pitch   0.0 deg  
+wave_mu100_05: OK   [patch mu=1] v   25.2 mm/s  SSMmin   99.7 mm  slip   0.4 mm  CoT   0.86  pitch   0.0 deg  
+wave_mu060_05: OK   [patch mu=0.6] v   25.3 mm/s  SSMmin   99.7 mm  slip   0.4 mm  CoT   0.59  pitch   0.0 deg  
+wave_mu030_05: OK   [patch mu=0.3] v   25.3 mm/s  SSMmin   99.7 mm  slip   0.5 mm  CoT   0.35  pitch   0.0 deg  
+wave_mu015_05: OK   [patch mu=0.15] v   25.3 mm/s  SSMmin   99.7 mm  slip   0.6 mm  CoT   0.24  pitch   0.0 deg  
+# E3 - gait x surface (chapter 4.1.3, Gait Performance Map)
+
+- Generated 2026-09-26 10:27:55; seed 2; course 1.0 m, success = goal within 2.0 x nominal time without a fall (|roll|/|pitch| > 30.0°, z < 60 mm)
+- Mass 4.147 kg; cycle times {'tripod': 0.95, 'ripple': 1.3, 'wave': 2.4}; metrics exclude the warm-up (1 gait cycle); Mean ± SD (sample SD) over all trials of a condition
+- Ground truth only (OdometryPublisher, joint states, contact and joint F/T sensors); slip = sliding of the foot contact point per stance, centre slip = ball-centre displacement
+
+| Condition | Cmd (mm/s) | Success | Falls | Speed (mm/s) | Speed / cmd (%) | SSM min (mm) | SSM p5 (mm) | SSM mean (mm) | SSM min, contact only (mm) | Support feet | Feet in contact | Slip/stance (mm) | Centre slip (mm) | CoT | Roll RMS (°) | Pitch RMS (°) | Lateral drift (mm) |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| tripod_mu100 | 25 | 5/5 (100%) | 0 | 22.4 ± 0.0 | 90 ± 0 | 99.4 ± 0.1 | 100.2 ± 0.1 | 129.4 ± 0.8 | 98.5 ± 0.0 | 3.84 ± 0.02 | 3.16 ± 0.00 | 0.58 ± 0.01 | 0.36 ± 0.01 | 1.50 ± 0.01 | 0.00 ± 0.00 | 0.00 ± 0.00 | 2.2 ± 1.1 |
+| tripod_mu060 | 25 | 5/5 (100%) | 0 | 22.4 ± 0.0 | 90 ± 0 | 99.4 ± 0.1 | 100.2 ± 0.1 | 129.2 ± 1.1 | 98.5 ± 0.0 | 3.84 ± 0.03 | 3.16 ± 0.00 | 0.58 ± 0.00 | 0.36 ± 0.01 | 1.02 ± 0.00 | 0.00 ± 0.00 | 0.00 ± 0.00 | 1.4 ± 0.6 |
+| tripod_mu030 | 25 | 5/5 (100%) | 0 | 22.5 ± 0.0 | 90 ± 0 | 99.4 ± 0.1 | 100.1 ± 0.1 | 129.3 ± 0.8 | 98.5 ± 0.0 | 3.84 ± 0.02 | 3.16 ± 0.00 | 0.58 ± 0.00 | 0.37 ± 0.01 | 0.73 ± 0.00 | 0.00 ± 0.00 | 0.00 ± 0.00 | 1.6 ± 1.3 |
+| tripod_mu015 | 25 | 5/5 (100%) | 0 | 22.5 ± 0.0 | 90 ± 0 | 99.4 ± 0.1 | 100.1 ± 0.1 | 129.3 ± 0.6 | 98.5 ± 0.0 | 3.84 ± 0.02 | 3.15 ± 0.00 | 0.58 ± 0.00 | 0.37 ± 0.01 | 0.59 ± 0.00 | 0.00 ± 0.00 | 0.00 ± 0.00 | 2.2 ± 0.4 |
+| ripple_mu100 | 25 | 5/5 (100%) | 0 | 25.5 ± 0.0 | 102 ± 0 | 102.4 ± 0.0 | 103.3 ± 0.1 | 112.3 ± 0.1 | -4.6 ± 0.0 | 4.38 ± 0.01 | 2.69 ± 0.02 | 0.31 ± 0.01 | 0.64 ± 0.00 | 1.22 ± 0.01 | 0.07 ± 0.00 | 0.06 ± 0.00 | 0.4 ± 1.8 |
+| ripple_mu060 | 25 | 5/5 (100%) | 0 | 25.5 ± 0.0 | 102 ± 0 | 102.4 ± 0.0 | 103.2 ± 0.1 | 112.3 ± 0.1 | -4.0 ± 0.3 | 4.37 ± 0.01 | 2.73 ± 0.02 | 0.35 ± 0.01 | 0.64 ± 0.01 | 0.80 ± 0.01 | 0.06 ± 0.00 | 0.05 ± 0.00 | 1.3 ± 0.4 |
+| ripple_mu030 | 25 | 5/5 (100%) | 0 | 25.6 ± 0.0 | 102 ± 0 | 102.4 ± 0.0 | 103.3 ± 0.0 | 112.2 ± 0.1 | -4.1 ± 0.2 | 4.38 ± 0.01 | 2.69 ± 0.02 | 0.34 ± 0.01 | 0.65 ± 0.01 | 0.49 ± 0.00 | 0.06 ± 0.00 | 0.05 ± 0.00 | 0.7 ± 0.6 |
+| ripple_mu015 | 25 | 5/5 (100%) | 0 | 25.6 ± 0.0 | 102 ± 0 | 102.4 ± 0.1 | 103.3 ± 0.1 | 112.4 ± 0.2 | -4.0 ± 0.1 | 4.38 ± 0.01 | 2.68 ± 0.02 | 0.34 ± 0.01 | 0.64 ± 0.02 | 0.34 ± 0.00 | 0.07 ± 0.00 | 0.06 ± 0.00 | 1.3 ± 0.9 |
+| wave_mu100 | 24 | 5/5 (100%) | 0 | 25.2 ± 0.0 | 103 ± 0 | 99.7 ± 0.0 | 101.5 ± 0.0 | 137.3 ± 0.2 | -6.3 ± 0.1 | 5.20 ± 0.00 | 2.94 ± 0.01 | 0.36 ± 0.01 | 0.64 ± 0.01 | 0.86 ± 0.01 | 0.04 ± 0.00 | 0.05 ± 0.00 | 8.0 ± 0.6 |
+| wave_mu060 | 24 | 5/5 (100%) | 0 | 25.3 ± 0.0 | 103 ± 0 | 99.7 ± 0.0 | 101.5 ± 0.0 | 137.3 ± 0.3 | -5.9 ± 0.6 | 5.20 ± 0.01 | 2.85 ± 0.01 | 0.41 ± 0.02 | 0.72 ± 0.03 | 0.58 ± 0.00 | 0.05 ± 0.00 | 0.05 ± 0.00 | 4.3 ± 0.4 |
+| wave_mu030 | 24 | 5/5 (100%) | 0 | 25.3 ± 0.0 | 103 ± 0 | 99.7 ± 0.0 | 101.5 ± 0.0 | 137.4 ± 0.3 | -4.1 ± 0.4 | 5.20 ± 0.00 | 2.84 ± 0.00 | 0.45 ± 0.01 | 0.81 ± 0.02 | 0.35 ± 0.00 | 0.05 ± 0.00 | 0.06 ± 0.00 | 2.5 ± 0.2 |
+| wave_mu015 | 24 | 5/5 (100%) | 0 | 25.3 ± 0.0 | 103 ± 0 | 99.7 ± 0.0 | 101.5 ± 0.1 | 137.4 ± 0.6 | -3.6 ± 0.8 | 5.20 ± 0.01 | 2.89 ± 0.01 | 0.62 ± 0.01 | 0.98 ± 0.01 | 0.23 ± 0.00 | 0.05 ± 0.00 | 0.06 ± 0.00 | 2.8 ± 0.6 |
+
+Peak joint speed / torque in % of the servo limit (3.65 rad/s, 3.29 N·m at 6.0 V; max over the trials of the condition):
+
+| Condition | ω coxa | ω femur | ω tibia | τ coxa | τ femur | τ tibia |
+|---|---:|---:|---:|---:|---:|---:|
+| tripod_mu100 | 10% | 18% | 16% | 78% | 100% | 100% |
+| tripod_mu060 | 10% | 18% | 16% | 48% | 100% | 84% |
+| tripod_mu030 | 10% | 18% | 16% | 82% | 100% | 38% |
+| tripod_mu015 | 10% | 18% | 16% | 41% | 100% | 29% |
+| ripple_mu100 | 18% | 20% | 22% | 100% | 100% | 100% |
+| ripple_mu060 | 18% | 20% | 22% | 83% | 100% | 100% |
+| ripple_mu030 | 18% | 20% | 22% | 40% | 74% | 55% |
+| ripple_mu015 | 18% | 20% | 22% | 20% | 65% | 27% |
+| wave_mu100 | 38% | 24% | 39% | 100% | 100% | 100% |
+| wave_mu060 | 38% | 24% | 39% | 57% | 100% | 100% |
+| wave_mu030 | 38% | 24% | 39% | 23% | 100% | 57% |
+| wave_mu015 | 38% | 24% | 39% | 31% | 100% | 35% |
+
+Joint torque p95 in % of the limit (mean over trials) and fraction of samples at the limit (>= 98 %) - the peak above is often a single touch-down sample:
+
+| Condition | τ p95 coxa | τ p95 femur | τ p95 tibia | femur at limit | tibia at limit |
+|---|---:|---:|---:|---:|---:|
+| tripod_mu100 | 53% | 79% | 80% | 0.0% | 0.0% |
+| tripod_mu060 | 31% | 58% | 50% | 0.0% | 0.0% |
+| tripod_mu030 | 16% | 41% | 27% | 0.0% | 0.0% |
+| tripod_mu015 | 8% | 36% | 16% | 0.0% | 0.0% |
+| ripple_mu100 | 50% | 73% | 100% | 0.5% | 15.3% |
+| ripple_mu060 | 30% | 56% | 61% | 0.0% | 0.0% |
+| ripple_mu030 | 15% | 40% | 26% | 0.0% | 0.0% |
+| ripple_mu015 | 8% | 35% | 14% | 0.0% | 0.0% |
+| wave_mu100 | 13% | 100% | 95% | 13.2% | 2.1% |
+| wave_mu060 | 10% | 87% | 70% | 0.0% | 0.0% |
+| wave_mu030 | 5% | 63% | 36% | 0.0% | 0.0% |
+| wave_mu015 | 3% | 51% | 19% | 0.0% | 0.0% |
+
+| Condition | Foot sink max (mm) | Foot sink mean (mm) | Slip max (mm) |
+|---|---:|---:|---:|
+| tripod_mu100 | 0.3 ± 0.0 | -0.0 ± 0.0 | 1.0 ± 0.0 |
+| tripod_mu060 | 0.3 ± 0.0 | -0.0 ± 0.0 | 1.0 ± 0.0 |
+| tripod_mu030 | 0.3 ± 0.0 | -0.0 ± 0.0 | 1.0 ± 0.0 |
+| tripod_mu015 | 0.3 ± 0.0 | -0.0 ± 0.0 | 1.0 ± 0.0 |
+| ripple_mu100 | 0.1 ± 0.0 | -0.0 ± 0.0 | 0.6 ± 0.0 |
+| ripple_mu060 | 0.1 ± 0.0 | -0.0 ± 0.0 | 0.6 ± 0.0 |
+| ripple_mu030 | 0.1 ± 0.0 | -0.0 ± 0.0 | 0.6 ± 0.0 |
+| ripple_mu015 | 0.1 ± 0.0 | -0.0 ± 0.0 | 0.6 ± 0.0 |
+| wave_mu100 | 0.0 ± 0.0 | -0.0 ± 0.0 | 1.9 ± 0.1 |
+| wave_mu060 | 0.1 ± 0.0 | -0.0 ± 0.0 | 2.0 ± 0.2 |
+| wave_mu030 | 0.1 ± 0.0 | -0.0 ± 0.0 | 2.2 ± 0.1 |
+| wave_mu015 | 0.1 ± 0.0 | -0.0 ± 0.0 | 2.8 ± 0.1 |
+
+
+--- launch log: errors / warnings (last 40 lines) ---
+
+results: /home/t/49x_Hexapod/ros2_ws/results/e3 (exit 0)

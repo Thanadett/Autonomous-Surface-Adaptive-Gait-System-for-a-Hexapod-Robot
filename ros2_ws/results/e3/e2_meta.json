@@ -1,0 +1,233 @@
+{
+  "generated": "2026-09-26 10:27:55",
+  "seed": 2,
+  "n": 5,
+  "distance_m": 1.0,
+  "plan": {
+    "n": 5,
+    "distance_m": 1.0,
+    "time_factor": 2.0,
+    "warmup_cycles": 1.0,
+    "gaits": [
+      "tripod",
+      "ripple",
+      "wave"
+    ],
+    "speeds": {
+      "common": 0.025
+    },
+    "nominal_posture": [
+      0.1,
+      0.02
+    ],
+    "surfaces": [
+      {
+        "name": "mu100",
+        "mu": 1.0
+      },
+      {
+        "name": "mu060",
+        "mu": 0.6
+      },
+      {
+        "name": "mu030",
+        "mu": 0.3
+      },
+      {
+        "name": "mu015",
+        "mu": 0.15
+      }
+    ],
+    "record_camera": true,
+    "world": "flat_world",
+    "model": "hexapod",
+    "start": {
+      "x": -5.45,
+      "y": -1.4,
+      "yaw_deg": 0.0
+    },
+    "park": {
+      "x": -8.0,
+      "y": 1.0
+    },
+    "jitter": {
+      "xy_m": 0.02,
+      "yaw_deg": 3.0
+    },
+    "fall": {
+      "tilt_deg": 30.0,
+      "min_z_m": 0.06
+    },
+    "settle_s": 2.0,
+    "name": "e3"
+  },
+  "cycle_times_s": {
+    "tripod": 0.95,
+    "ripple": 1.3,
+    "wave": 2.4
+  },
+  "conditions": [
+    {
+      "gait": "tripod",
+      "speed": 0.025,
+      "label": "common",
+      "stance": 0.1,
+      "step": 0.02,
+      "scenario": {
+        "type": "patch",
+        "mu": 1.0,
+        "soft": false
+      },
+      "name": "tripod_mu100"
+    },
+    {
+      "gait": "tripod",
+      "speed": 0.025,
+      "label": "common",
+      "stance": 0.1,
+      "step": 0.02,
+      "scenario": {
+        "type": "patch",
+        "mu": 0.6,
+        "soft": false
+      },
+      "name": "tripod_mu060"
+    },
+    {
+      "gait": "tripod",
+      "speed": 0.025,
+      "label": "common",
+      "stance": 0.1,
+      "step": 0.02,
+      "scenario": {
+        "type": "patch",
+        "mu": 0.3,
+        "soft": false
+      },
+      "name": "tripod_mu030"
+    },
+    {
+      "gait": "tripod",
+      "speed": 0.025,
+      "label": "common",
+      "stance": 0.1,
+      "step": 0.02,
+      "scenario": {
+        "type": "patch",
+        "mu": 0.15,
+        "soft": false
+      },
+      "name": "tripod_mu015"
+    },
+    {
+      "gait": "ripple",
+      "speed": 0.025,
+      "label": "common",
+      "stance": 0.1,
+      "step": 0.02,
+      "scenario": {
+        "type": "patch",
+        "mu": 1.0,
+        "soft": false
+      },
+      "name": "ripple_mu100"
+    },
+    {
+      "gait": "ripple",
+      "speed": 0.025,
+      "label": "common",
+      "stance": 0.1,
+      "step": 0.02,
+      "scenario": {
+        "type": "patch",
+        "mu": 0.6,
+        "soft": false
+      },
+      "name": "ripple_mu060"
+    },
+    {
+      "gait": "ripple",
+      "speed": 0.025,
+      "label": "common",
+      "stance": 0.1,
+      "step": 0.02,
+      "scenario": {
+        "type": "patch",
+        "mu": 0.3,
+        "soft": false
+      },
+      "name": "ripple_mu030"
+    },
+    {
+      "gait": "ripple",
+      "speed": 0.025,
+      "label": "common",
+      "stance": 0.1,
+      "step": 0.02,
+      "scenario": {
+        "type": "patch",
+        "mu": 0.15,
+        "soft": false
+      },
+      "name": "ripple_mu015"
+    },
+    {
+      "gait": "wave",
+      "speed": 0.0245,
+      "label": "capped",
+      "stance": 0.1,
+      "step": 0.02,
+      "scenario": {
+        "type": "patch",
+        "mu": 1.0,
+        "soft": false
+      },
+      "name": "wave_mu100"
+    },
+    {
+      "gait": "wave",
+      "speed": 0.0245,
+      "label": "capped",
+      "stance": 0.1,
+      "step": 0.02,
+      "scenario": {
+        "type": "patch",
+        "mu": 0.6,
+        "soft": false
+      },
+      "name": "wave_mu060"
+    },
+    {
+      "gait": "wave",
+      "speed": 0.0245,
+      "label": "capped",
+      "stance": 0.1,
+      "step": 0.02,
+      "scenario": {
+        "type": "patch",
+        "mu": 0.3,
+        "soft": false
+      },
+      "name": "wave_mu030"
+    },
+    {
+      "gait": "wave",
+      "speed": 0.0245,
+      "label": "capped",
+      "stance": 0.1,
+      "step": 0.02,
+      "scenario": {
+        "type": "patch",
+        "mu": 0.15,
+        "soft": false
+      },
+      "name": "wave_mu015"
+    }
+  ],
+  "mass_kg": 4.1472494,
+  "foot_radius_m": 0.0163182,
+  "effort_limit_nm": 3.29,
+  "velocity_limit_rad_s": 3.65,
+  "gz_partition": "hexapod_59603_e2",
+  "mode": "full"
+}
