@@ -26,10 +26,6 @@ def generate_launch_description():
         "use_camera", default_value="true",
         description="false: no depth-camera rendering (faster; E2/E3 runs), also skips the point-cloud nodes",
     )
-    camera_visual_arg = DeclareLaunchArgument(
-        "camera_visual", default_value="true",
-        description="false: hide the depth-camera box (visual only; for figure screenshots)",
-    )
     x_arg = DeclareLaunchArgument("spawn_x", default_value="-5.45")
     y_arg = DeclareLaunchArgument("spawn_y", default_value="-1.4")
     rviz_arg = DeclareLaunchArgument(
@@ -55,7 +51,6 @@ def generate_launch_description():
             FindExecutable(name="xacro"), " ", model,
             " use_sim:=true controllers_file:=", controllers,
             " use_camera:=", LaunchConfiguration("use_camera"),
-            " camera_visual:=", LaunchConfiguration("camera_visual"),
         ]),
         value_type=str,
     )
@@ -187,7 +182,6 @@ def generate_launch_description():
             world_arg,
             gait_arg,
             camera_arg,
-            camera_visual_arg,
             x_arg,
             y_arg,
             rviz_arg,

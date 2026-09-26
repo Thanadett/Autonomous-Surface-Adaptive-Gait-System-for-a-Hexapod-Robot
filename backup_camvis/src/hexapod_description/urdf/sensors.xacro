@@ -21,13 +21,11 @@
   <xacro:property name="csy" value="${float(cs[1])}"/>
   <xacro:property name="csz" value="${float(cs[2])}"/>
   <link name="camera_link">
-    <xacro:if value="$(arg camera_visual)">
-      <visual>
-        <origin xyz="${-csx/2} 0 0" rpy="0 0 0"/>
-        <geometry><box size="${csx} ${csy} ${csz}"/></geometry>
-        <material name="sensor_blue"/>
-      </visual>
-    </xacro:if>
+    <visual>
+      <origin xyz="${-csx/2} 0 0" rpy="0 0 0"/>
+      <geometry><box size="${csx} ${csy} ${csz}"/></geometry>
+      <material name="sensor_blue"/>
+    </visual>
     <collision>
       <origin xyz="${-csx/2} 0 0" rpy="0 0 0"/>
       <geometry><box size="${csx} ${csy} ${csz}"/></geometry>

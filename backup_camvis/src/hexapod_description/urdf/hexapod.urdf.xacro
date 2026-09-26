@@ -29,9 +29,6 @@
        revolute joint (joint torque for CoT / peak torque, hexapod_evaluation). -->
   <xacro:arg name="use_camera"   default="true"/>
   <xacro:arg name="use_joint_ft" default="true"/>
-  <!-- camera_visual:=false hides the depth-camera box (visual only - collision, mass and the
-       sensor stay), e.g. for figure screenshots (scripts/capture_figures.sh). -->
-  <xacro:arg name="camera_visual" default="true"/>
   <!-- Battery + boards inside the body (masses from tools/mass_budget.yaml). false = bare CAD robot -->
   <xacro:arg name="use_electronics" default="true"/>
   <!-- Draw the (invisible, mass-only) electronics boxes inside the body - placement check only -->
