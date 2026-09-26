@@ -1,0 +1,898 @@
+=== run_e2 2026-09-26T02:06:26+07:00  plan=e4 camera=true mode=--resume build=build_final1 install=install_final1 quick=0 args= ===
+GZ_PARTITION=hexapod_47613_e2
+--- e2_runner --config /home/t/49x_Hexapod/ros2_ws/install_final1/hexapod_evaluation/share/hexapod_evaluation/config/e4.yaml --resume  ---
+waiting for locomotion_node and ground-truth pose ...
+standing base_link z = 116.3 mm; mass 4.147 kg; 36 conditions x 5 trials, 0.8 m; camera snapshots on
+tripod_r00_nopc_01: OK   [ramp 0 deg] v   22.4 mm/s  SSMmin   99.6 mm  slip   0.6 mm  CoT   1.25  pitch   0.0 deg  
+tripod_r00_pc_01: OK   [ramp 0 deg] v   22.4 mm/s  SSMmin   99.6 mm  slip   0.6 mm  CoT   1.25  pitch  -0.0 deg  
+tripod_r05_nopc_01: OK   [ramp 5 deg] v   22.4 mm/s  SSMmin   95.3 mm  slip   0.6 mm  CoT   1.22  pitch  -5.0 deg  
+tripod_r05_pc_01: OK   [ramp 5 deg] v   22.4 mm/s  SSMmin   99.9 mm  slip   0.6 mm  CoT   1.30  pitch   0.0 deg  
+tripod_r10_nopc_01: OK   [ramp 10 deg] v   22.4 mm/s  SSMmin   86.7 mm  slip   0.6 mm  CoT   1.19  pitch -10.0 deg  
+tripod_r10_pc_01: OK   [ramp 10 deg] v   22.0 mm/s  SSMmin   98.2 mm  slip   0.6 mm  CoT   1.37  pitch  -1.5 deg  
+tripod_r15_nopc_01: OK   [ramp 15 deg] v   22.4 mm/s  SSMmin   77.2 mm  slip   0.6 mm  CoT   1.15  pitch -15.0 deg  
+tripod_r15_pc_01: OK   [ramp 15 deg] v   22.0 mm/s  SSMmin   88.8 mm  slip   0.6 mm  CoT   1.33  pitch  -6.6 deg  
+tripod_r20_nopc_01: OK   [ramp 20 deg] v   22.3 mm/s  SSMmin   67.6 mm  slip   0.6 mm  CoT   1.12  pitch -20.0 deg  
+tripod_r20_pc_01: OK   [ramp 20 deg] v   21.9 mm/s  SSMmin   78.0 mm  slip   0.6 mm  CoT   1.29  pitch -11.7 deg  
+tripod_r25_nopc_01: OK   [ramp 25 deg] v   21.0 mm/s  SSMmin   57.2 mm  slip   1.0 mm  CoT   1.06  pitch -25.0 deg  
+tripod_r25_pc_01: OK   [ramp 25 deg] v   21.0 mm/s  SSMmin   68.1 mm  slip   0.8 mm  CoT   1.17  pitch -16.6 deg  
+ripple_r00_nopc_01: OK   [ramp 0 deg] v   25.4 mm/s  SSMmin  102.4 mm  slip   0.4 mm  CoT   1.04  pitch   0.0 deg  
+ripple_r00_pc_01: OK   [ramp 0 deg] v   25.5 mm/s  SSMmin  102.6 mm  slip   0.3 mm  CoT   1.05  pitch  -0.2 deg  
+ripple_r05_nopc_01: OK   [ramp 5 deg] v   25.3 mm/s  SSMmin    0.5 mm  slip   0.4 mm  CoT   0.99  pitch  -5.0 deg  
+ripple_r05_pc_01: OK   [ramp 5 deg] v   22.7 mm/s  SSMmin   -1.0 mm  slip   0.4 mm  CoT   1.02  pitch  -0.1 deg  
+ripple_r10_nopc_01: OK   [ramp 10 deg] v   25.2 mm/s  SSMmin    6.0 mm  slip   0.6 mm  CoT   0.94  pitch -10.0 deg  
+ripple_r10_pc_01: OK   [ramp 10 deg] v   21.1 mm/s  SSMmin    2.4 mm  slip   0.4 mm  CoT   1.08  pitch  -1.7 deg  
+ripple_r10_pc_01: WARNING - terrain piece not removed: Service call timed out
+ripple_r15_nopc_01: OK   [ramp 15 deg] v   25.2 mm/s  SSMmin   11.3 mm  slip   0.6 mm  CoT   0.91  pitch -15.0 deg  
+ripple_r15_pc_01: OK   [ramp 15 deg] v   20.9 mm/s  SSMmin    7.1 mm  slip   0.6 mm  CoT   1.10  pitch  -6.8 deg  
+ripple_r20_nopc_01: OK   [ramp 20 deg] v   25.2 mm/s  SSMmin   17.0 mm  slip   0.6 mm  CoT   0.87  pitch -20.0 deg  
+ripple_r20_pc_01: OK   [ramp 20 deg] v   19.3 mm/s  SSMmin   13.1 mm  slip   1.3 mm  CoT   1.19  pitch -11.8 deg  
+ripple_r25_nopc_01: OK   [ramp 25 deg] v   24.6 mm/s  SSMmin   22.4 mm  slip   0.7 mm  CoT   0.82  pitch -25.0 deg  
+ripple_r25_pc_01: OK   [ramp 25 deg] v   17.3 mm/s  SSMmin   18.2 mm  slip   2.6 mm  CoT   1.29  pitch -16.8 deg  
+wave_r00_nopc_01: OK   [ramp 0 deg] v   25.2 mm/s  SSMmin   99.6 mm  slip   0.4 mm  CoT   0.75  pitch   0.0 deg  
+wave_r00_pc_01: OK   [ramp 0 deg] v   25.2 mm/s  SSMmin   99.4 mm  slip   0.4 mm  CoT   0.77  pitch  -0.0 deg  
+wave_r05_nopc_01: OK   [ramp 5 deg] v   25.0 mm/s  SSMmin   -0.9 mm  slip   0.8 mm  CoT   0.72  pitch  -5.0 deg  
+wave_r05_pc_01: OK   [ramp 5 deg] v   18.2 mm/s  SSMmin    0.7 mm  slip   2.0 mm  CoT   1.06  pitch  -0.3 deg  
+wave_r10_nopc_01: OK   [ramp 10 deg] v   25.0 mm/s  SSMmin    3.7 mm  slip   0.9 mm  CoT   0.70  pitch -10.0 deg  
+wave_r10_pc_01: OK   [ramp 10 deg] v   13.8 mm/s  SSMmin    3.4 mm  slip   2.1 mm  CoT   1.42  pitch  -1.9 deg  
+wave_r15_nopc_01: teleport attempt 1 failed (Service call timed out), retrying
+wave_r15_nopc_01: OK   [ramp 15 deg] v   24.9 mm/s  SSMmin    9.2 mm  slip   0.9 mm  CoT   0.72  pitch -15.0 deg  
+wave_r15_pc_01: OK   [ramp 15 deg] v   13.5 mm/s  SSMmin   88.5 mm  slip   2.1 mm  CoT   1.46  pitch  -6.9 deg  
+wave_r20_nopc_01: OK   [ramp 20 deg] v   24.9 mm/s  SSMmin   13.5 mm  slip   0.9 mm  CoT   0.72  pitch -20.0 deg  
+wave_r20_pc_01: OK   [ramp 20 deg] v   13.3 mm/s  SSMmin   78.0 mm  slip   2.4 mm  CoT   1.57  pitch -11.9 deg  
+wave_r25_nopc_01: OK   [ramp 25 deg] v   24.8 mm/s  SSMmin   21.7 mm  slip   0.8 mm  CoT   0.74  pitch -25.0 deg  
+wave_r25_pc_01: OK   [ramp 25 deg] v   13.1 mm/s  SSMmin   65.9 mm  slip   2.5 mm  CoT   1.64  pitch -16.9 deg  
+tripod_r00_nopc_02: OK   [ramp 0 deg] v   22.4 mm/s  SSMmin   99.3 mm  slip   0.6 mm  CoT   1.26  pitch   0.0 deg  
+tripod_r00_pc_02: OK   [ramp 0 deg] v   22.4 mm/s  SSMmin   99.3 mm  slip   0.6 mm  CoT   1.24  pitch  -0.0 deg  
+tripod_r05_nopc_02: OK   [ramp 5 deg] v   22.4 mm/s  SSMmin   95.4 mm  slip   0.6 mm  CoT   1.22  pitch  -5.0 deg  
+tripod_r05_pc_02: OK   [ramp 5 deg] v   22.4 mm/s  SSMmin  100.2 mm  slip   0.6 mm  CoT   1.29  pitch   0.0 deg  
+tripod_r10_nopc_02: OK   [ramp 10 deg] v   22.4 mm/s  SSMmin   86.8 mm  slip   0.6 mm  CoT   1.19  pitch -10.0 deg  
+tripod_r10_pc_02: SKIP - could not create the terrain piece: Service call timed out
+tripod_r15_nopc_02: OK   [ramp 15 deg] v   22.4 mm/s  SSMmin   77.4 mm  slip   0.6 mm  CoT   1.16  pitch -15.0 deg  
+tripod_r15_pc_02: OK   [ramp 15 deg] v   22.0 mm/s  SSMmin   89.1 mm  slip   0.6 mm  CoT   1.33  pitch  -6.5 deg  
+tripod_r20_nopc_02: OK   [ramp 20 deg] v   22.3 mm/s  SSMmin   67.3 mm  slip   0.6 mm  CoT   1.12  pitch -20.0 deg  
+tripod_r20_pc_02: OK   [ramp 20 deg] v   21.9 mm/s  SSMmin   78.1 mm  slip   0.6 mm  CoT   1.29  pitch -11.7 deg  
+tripod_r25_nopc_02: OK   [ramp 25 deg] v   21.0 mm/s  SSMmin   56.3 mm  slip   1.0 mm  CoT   1.06  pitch -25.0 deg  
+tripod_r25_pc_02: OK   [ramp 25 deg] v   21.0 mm/s  SSMmin   68.6 mm  slip   0.7 mm  CoT   1.17  pitch -16.5 deg  
+ripple_r00_nopc_02: OK   [ramp 0 deg] v   20.7 mm/s  SSMmin    5.8 mm  slip   2.5 mm  CoT   1.19  pitch  -9.5 deg  
+ripple_r00_pc_02: OK   [ramp 0 deg] v   16.1 mm/s  SSMmin -123.5 mm  slip   1.8 mm  CoT   2.32  pitch  -1.7 deg  
+ripple_r05_nopc_02: SKIP - could not create the terrain piece: Service call timed out
+ripple_r05_pc_02: OK   [ramp 5 deg] v   20.3 mm/s  SSMmin    2.1 mm  slip   0.9 mm  CoT   1.17  pitch  -1.9 deg  
+ripple_r10_nopc_02: SKIP - could not create the terrain piece: Service call timed out
+ripple_r10_pc_02: OK   [ramp 10 deg] v   21.1 mm/s  SSMmin    2.3 mm  slip   0.4 mm  CoT   1.07  pitch  -1.8 deg  
+ripple_r15_nopc_02: OK   [ramp 15 deg] v   25.2 mm/s  SSMmin   11.3 mm  slip   0.6 mm  CoT   0.89  pitch -15.0 deg  
+ripple_r15_pc_02: OK   [ramp 15 deg] v   20.8 mm/s  SSMmin    7.8 mm  slip   0.6 mm  CoT   1.08  pitch  -6.7 deg  
+ripple_r20_nopc_02: OK   [ramp 20 deg] v   25.1 mm/s  SSMmin   16.3 mm  slip   0.7 mm  CoT   0.85  pitch -20.0 deg  
+ripple_r20_pc_02: OK   [ramp 20 deg] v   19.3 mm/s  SSMmin   13.3 mm  slip   1.2 mm  CoT   1.18  pitch -11.7 deg  
+ripple_r25_nopc_02: OK   [ramp 25 deg] v   24.6 mm/s  SSMmin   22.6 mm  slip   0.7 mm  CoT   0.79  pitch -25.0 deg  
+ripple_r25_pc_02: OK   [ramp 25 deg] v   17.2 mm/s  SSMmin   18.5 mm  slip   2.2 mm  CoT   1.26  pitch -16.8 deg  
+ripple_r25_pc_02: WARNING - terrain piece not removed: Service call timed out
+wave_r00_nopc_02: OK   [ramp 0 deg] v   18.8 mm/s  SSMmin    5.1 mm  slip   2.9 mm  CoT   1.08  pitch  -9.1 deg  
+wave_r00_pc_02: FAIL [ramp 0 deg] v   12.1 mm/s  SSMmin   97.0 mm  slip   3.1 mm  CoT   1.86  pitch  -2.2 deg  
+wave_r05_nopc_02: OK   [ramp 5 deg] v   22.7 mm/s  SSMmin    4.8 mm  slip   1.8 mm  CoT   0.81  pitch  -9.9 deg  
+wave_r05_pc_02: OK   [ramp 5 deg] v   13.8 mm/s  SSMmin   -3.2 mm  slip   2.2 mm  CoT   1.51  pitch  -2.1 deg  
+wave_r10_nopc_02: OK   [ramp 10 deg] v   24.9 mm/s  SSMmin    3.6 mm  slip   0.9 mm  CoT   0.69  pitch -10.0 deg  
+wave_r10_pc_02: OK   [ramp 10 deg] v   14.6 mm/s  SSMmin   98.5 mm  slip   1.9 mm  CoT   1.41  pitch  -1.9 deg  
+wave_r15_nopc_02: OK   [ramp 15 deg] v   24.9 mm/s  SSMmin   10.7 mm  slip   0.9 mm  CoT   0.71  pitch -15.0 deg  
+wave_r15_pc_02: SKIP - could not create the terrain piece: Service call timed out
+wave_r20_nopc_02: OK   [ramp 20 deg] v   24.9 mm/s  SSMmin   14.1 mm  slip   0.9 mm  CoT   0.72  pitch -20.0 deg  
+wave_r20_pc_02: OK   [ramp 20 deg] v   13.5 mm/s  SSMmin   77.0 mm  slip   2.4 mm  CoT   1.53  pitch -12.0 deg  
+wave_r25_nopc_02: OK   [ramp 25 deg] v   24.7 mm/s  SSMmin   20.9 mm  slip   0.8 mm  CoT   0.74  pitch -25.0 deg  
+wave_r25_pc_02: teleport attempt 1 failed (Service call timed out), retrying
+wave_r25_pc_02: OK   [ramp 25 deg] v   13.0 mm/s  SSMmin   66.4 mm  slip   2.6 mm  CoT   1.67  pitch -16.9 deg  
+tripod_r00_nopc_03: FAIL [ramp 0 deg] v   -0.4 mm/s  SSMmin  189.2 mm  slip   8.8 mm  CoT  79.85  pitch   2.4 deg  
+tripod_r00_pc_03: FAIL [ramp 0 deg] v    1.2 mm/s  SSMmin -217.6 mm  slip  26.0 mm  CoT  39.27  pitch   8.2 deg  
+tripod_r05_nopc_03: OK   [ramp 5 deg] v   18.7 mm/s  SSMmin   77.5 mm  slip   1.4 mm  CoT   1.49  pitch -14.1 deg  
+tripod_r05_pc_03: OK   [ramp 5 deg] v   19.7 mm/s  SSMmin   88.6 mm  slip   1.1 mm  CoT   1.47  pitch  -6.4 deg  
+tripod_r10_nopc_03: OK   [ramp 10 deg] v   21.4 mm/s  SSMmin   77.1 mm  slip   0.9 mm  CoT   1.23  pitch -14.9 deg  
+tripod_r10_pc_03: OK   [ramp 10 deg] v   21.1 mm/s  SSMmin   88.3 mm  slip   0.7 mm  CoT   1.40  pitch  -6.6 deg  
+tripod_r15_nopc_03: OK   [ramp 15 deg] v   22.4 mm/s  SSMmin   77.4 mm  slip   0.6 mm  CoT   1.15  pitch -15.0 deg  
+tripod_r15_pc_03: teleport attempt 1 failed (Service call timed out), retrying
+tripod_r15_pc_03: OK   [ramp 15 deg] v   22.0 mm/s  SSMmin   88.4 mm  slip   0.7 mm  CoT   1.34  pitch  -6.7 deg  
+tripod_r20_nopc_03: OK   [ramp 20 deg] v   22.3 mm/s  SSMmin   67.3 mm  slip   0.6 mm  CoT   1.12  pitch -20.0 deg  
+tripod_r20_pc_03: OK   [ramp 20 deg] v   21.9 mm/s  SSMmin   78.5 mm  slip   0.6 mm  CoT   1.30  pitch -11.6 deg  
+tripod_r25_nopc_03: OK   [ramp 25 deg] v   21.0 mm/s  SSMmin   56.6 mm  slip   1.0 mm  CoT   1.06  pitch -25.0 deg  
+tripod_r25_pc_03: OK   [ramp 25 deg] v   21.0 mm/s  SSMmin   67.5 mm  slip   0.8 mm  CoT   1.17  pitch -16.7 deg  
+ripple_r00_nopc_03: FAIL [ramp 0 deg] v   -2.3 mm/s  SSMmin  191.9 mm  slip   9.5 mm  CoT  34.69  pitch   2.0 deg  
+ripple_r00_pc_03: FAIL [ramp 0 deg] v   -0.7 mm/s  SSMmin    7.8 mm  slip  16.9 mm  CoT 139.44  pitch   2.7 deg  
+ripple_r05_nopc_03: OK   [ramp 5 deg] v   20.8 mm/s  SSMmin   11.4 mm  slip   2.7 mm  CoT   1.13  pitch -14.6 deg  
+ripple_r05_pc_03: OK   [ramp 5 deg] v   18.4 mm/s  SSMmin    7.3 mm  slip   1.5 mm  CoT   1.27  pitch  -6.7 deg  
+ripple_r10_nopc_03: OK   [ramp 10 deg] v   23.8 mm/s  SSMmin   11.4 mm  slip   1.4 mm  CoT   0.98  pitch -15.0 deg  
+ripple_r10_pc_03: OK   [ramp 10 deg] v   20.0 mm/s  SSMmin    7.3 mm  slip   1.0 mm  CoT   1.18  pitch  -6.7 deg  
+ripple_r15_nopc_03: OK   [ramp 15 deg] v   25.2 mm/s  SSMmin   11.2 mm  slip   0.6 mm  CoT   0.90  pitch -15.0 deg  
+ripple_r15_pc_03: OK   [ramp 15 deg] v   20.7 mm/s  SSMmin    7.5 mm  slip   0.6 mm  CoT   1.11  pitch  -6.7 deg  
+ripple_r20_nopc_03: OK   [ramp 20 deg] v   25.1 mm/s  SSMmin   16.1 mm  slip   0.6 mm  CoT   0.89  pitch -20.0 deg  
+ripple_r20_pc_03: OK   [ramp 20 deg] v   19.3 mm/s  SSMmin   12.9 mm  slip   1.5 mm  CoT   1.17  pitch -11.8 deg  
+ripple_r20_pc_03: WARNING - terrain piece not removed: Service call timed out
+ripple_r25_nopc_03: SKIP - could not create the terrain piece: Service call timed out
+ripple_r25_pc_03: OK   [ramp 25 deg] v   17.1 mm/s  SSMmin   18.6 mm  slip   2.7 mm  CoT   1.31  pitch -16.7 deg  
+wave_r00_nopc_03: FAIL [ramp 0 deg] v    nan mm/s  SSMmin    nan mm  slip   nan mm  CoT    nan  pitch   nan deg  
+wave_r00_nopc_03: WARNING - terrain piece not removed: Service call timed out
+wave_r00_pc_03: FAIL [ramp 0 deg] v    nan mm/s  SSMmin    nan mm  slip   nan mm  CoT    nan  pitch   nan deg  
+wave_r05_nopc_03: FAIL [ramp 5 deg] v    0.7 mm/s  SSMmin  202.2 mm  slip   2.2 mm  CoT  17.83  pitch  -4.2 deg  
+wave_r05_pc_03: FAIL [ramp 5 deg] v    nan mm/s  SSMmin    nan mm  slip   nan mm  CoT    nan  pitch   nan deg  
+wave_r10_nopc_03: SKIP - could not create the terrain piece: Service call timed out
+wave_r10_pc_03: SKIP - could not create the terrain piece: Service call timed out
+wave_r15_nopc_03: OK   [ramp 15 deg] v   18.9 mm/s  SSMmin   18.0 mm  slip   4.3 mm  CoT   1.06  pitch -24.6 deg  
+wave_r15_pc_03: FAIL [ramp 15 deg] v   11.6 mm/s  SSMmin   66.1 mm  slip   3.6 mm  CoT   1.92  pitch -16.9 deg  
+wave_r20_nopc_03: OK   [ramp 20 deg] v   23.2 mm/s  SSMmin   19.0 mm  slip   1.7 mm  CoT   0.80  pitch -25.0 deg  
+wave_r20_pc_03: OK   [ramp 20 deg] v   12.6 mm/s  SSMmin   66.2 mm  slip   2.8 mm  CoT   1.76  pitch -16.9 deg  
+wave_r25_nopc_03: OK   [ramp 25 deg] v   24.7 mm/s  SSMmin   21.3 mm  slip   0.9 mm  CoT   0.74  pitch -25.0 deg  
+wave_r25_pc_03: OK   [ramp 25 deg] v   13.0 mm/s  SSMmin   66.6 mm  slip   3.5 mm  CoT   1.62  pitch -17.2 deg  
+tripod_r00_nopc_04: FAIL [ramp 0 deg] v    0.1 mm/s  SSMmin  194.2 mm  slip   2.0 mm  CoT 241.14  pitch   0.5 deg  
+tripod_r00_nopc_04: WARNING - terrain piece not removed: Service call timed out
+tripod_r00_pc_04: FAIL [ramp 0 deg] v   -0.0 mm/s  SSMmin  196.9 mm  slip   2.9 mm  CoT 436.35  pitch   0.1 deg  
+tripod_r05_nopc_04: FAIL [ramp 5 deg] v    0.3 mm/s  SSMmin  197.3 mm  slip   3.4 mm  CoT  40.36  pitch  -4.4 deg  
+tripod_r05_pc_04: teleport attempt 1 failed (Service call timed out), retrying
+tripod_r05_pc_04: FAIL [ramp 5 deg] v   -0.2 mm/s  SSMmin  196.7 mm  slip   1.0 mm  CoT  24.23  pitch  -4.5 deg  
+tripod_r10_nopc_04: SKIP - could not create the terrain piece: Service call timed out
+tripod_r10_pc_04: FAIL [ramp 10 deg] v    0.6 mm/s  SSMmin  150.5 mm  slip  47.7 mm  CoT  28.31  pitch -17.4 deg  
+tripod_r15_nopc_04: OK   [ramp 15 deg] v   18.6 mm/s  SSMmin   57.3 mm  slip   1.4 mm  CoT   1.25  pitch -24.5 deg  
+tripod_r15_pc_04: OK   [ramp 15 deg] v   19.1 mm/s  SSMmin   66.8 mm  slip   1.3 mm  CoT   1.29  pitch -16.6 deg  
+tripod_r20_nopc_04: OK   [ramp 20 deg] v   20.2 mm/s  SSMmin   57.2 mm  slip   1.1 mm  CoT   1.16  pitch -24.9 deg  
+tripod_r20_pc_04: OK   [ramp 20 deg] v   20.0 mm/s  SSMmin   68.6 mm  slip   1.0 mm  CoT   1.24  pitch -16.4 deg  
+tripod_r20_pc_04: WARNING - terrain piece not removed: Service call timed out
+tripod_r25_nopc_04: OK   [ramp 25 deg] v   21.0 mm/s  SSMmin   56.6 mm  slip   1.0 mm  CoT   1.08  pitch -25.0 deg  
+tripod_r25_pc_04: OK   [ramp 25 deg] v   21.0 mm/s  SSMmin   67.5 mm  slip   0.8 mm  CoT   1.16  pitch -16.7 deg  
+
+--- launch log: errors / warnings (last 40 lines) ---
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+
+results: /home/t/49x_Hexapod/ros2_ws/results/e4 (exit 1)
+
+=== trim_contaminated: kept 18 of 112 trial(s) (up to ripple_r10_pc_01); first lost reply: ripple_r10_pc_01: WARNING - terrain piece not removed: Service call timed out ===
+=== run_e2 2026-09-26T10:54:35+07:00  plan=e4 camera=true mode=--resume build=build_final1 install=install_final1 quick=0 args= ===
+GZ_PARTITION=hexapod_62094_e2
+--- e2_runner --config /home/t/49x_Hexapod/ros2_ws/install_final1/hexapod_evaluation/share/hexapod_evaluation/config/e4.yaml --resume  ---
+waiting for locomotion_node and ground-truth pose ...
+standing base_link z = 116.3 mm; mass 4.147 kg; 36 conditions x 5 trials, 0.5 m; camera snapshots on
+resume: 18 trial(s) already in /home/t/49x_Hexapod/ros2_ws/results/e4/e2_trials.csv
+resume: dropped 18 of 18 trial(s) (condition not in the plan or distance != 0.5 m); previous csv -> /home/t/49x_Hexapod/ros2_ws/results/e4/e2_trials.pruned_20260926_105450.csv
+world state readable via pose/info; no terrain left over
+tripod_r00_nopc_01: OK   [ramp 0 deg] v   22.4 mm/s  SSMmin   99.4 mm  slip   0.6 mm  CoT   1.24  pitch   0.0 deg  
+tripod_r00_pc_01: OK   [ramp 0 deg] v   22.4 mm/s  SSMmin   99.6 mm  slip   0.6 mm  CoT   1.25  pitch   0.0 deg  
+tripod_r05_nopc_01: OK   [ramp 5 deg] v   22.4 mm/s  SSMmin   95.3 mm  slip   0.6 mm  CoT   1.22  pitch  -5.0 deg  
+tripod_r05_pc_01: OK   [ramp 5 deg] v   22.4 mm/s  SSMmin  100.1 mm  slip   0.6 mm  CoT   1.30  pitch  -0.0 deg  
+tripod_r10_nopc_01: OK   [ramp 10 deg] v   22.4 mm/s  SSMmin   86.7 mm  slip   0.6 mm  CoT   1.19  pitch -10.0 deg  
+tripod_r10_pc_01: OK   [ramp 10 deg] v   22.0 mm/s  SSMmin   98.2 mm  slip   0.6 mm  CoT   1.37  pitch  -1.5 deg  
+tripod_r15_nopc_01: OK   [ramp 15 deg] v   22.4 mm/s  SSMmin   77.2 mm  slip   0.6 mm  CoT   1.15  pitch -15.0 deg  
+tripod_r15_pc_01: OK   [ramp 15 deg] v   22.0 mm/s  SSMmin   88.8 mm  slip   0.6 mm  CoT   1.33  pitch  -6.6 deg  
+tripod_r20_nopc_01: OK   [ramp 20 deg] v   22.3 mm/s  SSMmin   67.6 mm  slip   0.6 mm  CoT   1.12  pitch -20.0 deg  
+tripod_r20_pc_01: OK   [ramp 20 deg] v   21.8 mm/s  SSMmin   78.0 mm  slip   0.6 mm  CoT   1.30  pitch -11.8 deg  
+tripod_r25_nopc_01: OK   [ramp 25 deg] v   21.0 mm/s  SSMmin   57.2 mm  slip   1.0 mm  CoT   1.06  pitch -25.0 deg  
+tripod_r25_pc_01: OK   [ramp 25 deg] v   21.0 mm/s  SSMmin   68.0 mm  slip   0.8 mm  CoT   1.17  pitch -16.6 deg  
+ripple_r00_nopc_01: OK   [ramp 0 deg] v   25.4 mm/s  SSMmin  102.3 mm  slip   0.3 mm  CoT   1.03  pitch   0.0 deg  
+ripple_r00_pc_01: OK   [ramp 0 deg] v   25.4 mm/s  SSMmin  102.4 mm  slip   0.4 mm  CoT   1.05  pitch  -0.2 deg  
+ripple_r05_nopc_01: OK   [ramp 5 deg] v   25.3 mm/s  SSMmin    0.4 mm  slip   0.4 mm  CoT   1.00  pitch  -5.0 deg  
+ripple_r05_pc_01: OK   [ramp 5 deg] v   22.6 mm/s  SSMmin   -1.0 mm  slip   0.4 mm  CoT   1.03  pitch  -0.1 deg  
+ripple_r10_nopc_01: OK   [ramp 10 deg] v   25.2 mm/s  SSMmin    6.0 mm  slip   0.6 mm  CoT   0.94  pitch -10.0 deg  
+ripple_r10_pc_01: OK   [ramp 10 deg] v   21.0 mm/s  SSMmin    2.2 mm  slip   0.4 mm  CoT   1.08  pitch  -1.7 deg  
+ripple_r15_nopc_01: OK   [ramp 15 deg] v   25.2 mm/s  SSMmin   11.3 mm  slip   0.6 mm  CoT   0.88  pitch -15.0 deg  
+ripple_r15_pc_01: OK   [ramp 15 deg] v   20.9 mm/s  SSMmin    7.4 mm  slip   0.5 mm  CoT   1.08  pitch  -6.8 deg  
+ripple_r20_nopc_01: OK   [ramp 20 deg] v   25.1 mm/s  SSMmin   17.0 mm  slip   0.7 mm  CoT   0.84  pitch -20.0 deg  
+ripple_r20_pc_01: OK   [ramp 20 deg] v   19.3 mm/s  SSMmin   13.1 mm  slip   1.4 mm  CoT   1.19  pitch -11.7 deg  
+ripple_r25_nopc_01: OK   [ramp 25 deg] v   24.6 mm/s  SSMmin   22.7 mm  slip   0.7 mm  CoT   0.79  pitch -25.0 deg  
+ripple_r25_pc_01: OK   [ramp 25 deg] v   17.3 mm/s  SSMmin   18.3 mm  slip   2.2 mm  CoT   1.25  pitch -16.8 deg  
+wave_r00_nopc_01: create reply lost (Service call timed out) but the piece is in the world - continuing
+wave_r00_nopc_01: OK   [ramp 0 deg] v   25.2 mm/s  SSMmin   99.7 mm  slip   0.4 mm  CoT   0.75  pitch   0.0 deg  
+wave_r00_pc_01: OK   [ramp 0 deg] v   25.2 mm/s  SSMmin   99.5 mm  slip   0.3 mm  CoT   0.78  pitch  -0.1 deg  
+wave_r05_nopc_01: OK   [ramp 5 deg] v   25.0 mm/s  SSMmin   -0.8 mm  slip   0.8 mm  CoT   0.75  pitch  -5.0 deg  
+wave_r05_pc_01: OK   [ramp 5 deg] v   18.1 mm/s  SSMmin    0.5 mm  slip   2.0 mm  CoT   1.09  pitch  -0.2 deg  
+wave_r10_nopc_01: OK   [ramp 10 deg] v   25.0 mm/s  SSMmin    3.6 mm  slip   0.9 mm  CoT   0.72  pitch -10.0 deg  
+wave_r10_pc_01: OK   [ramp 10 deg] v   13.8 mm/s  SSMmin    3.1 mm  slip   2.0 mm  CoT   1.51  pitch  -1.8 deg  
+wave_r15_nopc_01: OK   [ramp 15 deg] v   25.0 mm/s  SSMmin    9.1 mm  slip   0.9 mm  CoT   0.72  pitch -15.0 deg  
+wave_r15_pc_01: OK   [ramp 15 deg] v   13.5 mm/s  SSMmin   89.2 mm  slip   2.3 mm  CoT   1.51  pitch  -6.8 deg  
+wave_r20_nopc_01: create reply lost (Service call timed out) but the piece is in the world - continuing
+wave_r20_nopc_01: OK   [ramp 20 deg] v   24.9 mm/s  SSMmin   14.5 mm  slip   0.8 mm  CoT   0.72  pitch -20.0 deg  
+wave_r20_pc_01: OK   [ramp 20 deg] v   13.4 mm/s  SSMmin   78.2 mm  slip   2.1 mm  CoT   1.56  pitch -11.9 deg  
+wave_r25_nopc_01: OK   [ramp 25 deg] v   24.8 mm/s  SSMmin   21.7 mm  slip   0.8 mm  CoT   0.74  pitch -25.0 deg  
+wave_r25_pc_01: OK   [ramp 25 deg] v   13.0 mm/s  SSMmin   67.1 mm  slip   2.6 mm  CoT   1.69  pitch -16.8 deg  
+tripod_r00_nopc_02: OK   [ramp 0 deg] v   22.4 mm/s  SSMmin   99.4 mm  slip   0.6 mm  CoT   1.28  pitch   0.0 deg  
+tripod_r00_pc_02: OK   [ramp 0 deg] v   22.5 mm/s  SSMmin   99.4 mm  slip   0.6 mm  CoT   1.25  pitch   0.0 deg  
+tripod_r05_nopc_02: OK   [ramp 5 deg] v   22.4 mm/s  SSMmin   95.4 mm  slip   0.6 mm  CoT   1.23  pitch  -5.0 deg  
+tripod_r05_pc_02: OK   [ramp 5 deg] v   22.4 mm/s  SSMmin  100.3 mm  slip   0.6 mm  CoT   1.31  pitch  -0.0 deg  
+tripod_r10_nopc_02: OK   [ramp 10 deg] v   22.4 mm/s  SSMmin   86.7 mm  slip   0.6 mm  CoT   1.20  pitch -10.0 deg  
+tripod_r10_pc_02: OK   [ramp 10 deg] v   22.0 mm/s  SSMmin   98.1 mm  slip   0.6 mm  CoT   1.37  pitch  -1.6 deg  
+tripod_r15_nopc_02: OK   [ramp 15 deg] v   22.4 mm/s  SSMmin   77.3 mm  slip   0.6 mm  CoT   1.18  pitch -15.0 deg  
+tripod_r15_pc_02: OK   [ramp 15 deg] v   22.0 mm/s  SSMmin   89.0 mm  slip   0.6 mm  CoT   1.33  pitch  -6.5 deg  
+tripod_r20_nopc_02: create reply lost (Service call timed out) but the piece is in the world - continuing
+tripod_r20_nopc_02: OK   [ramp 20 deg] v   22.3 mm/s  SSMmin   67.3 mm  slip   0.6 mm  CoT   1.13  pitch -20.0 deg  
+tripod_r20_pc_02: OK   [ramp 20 deg] v   21.9 mm/s  SSMmin   78.3 mm  slip   0.6 mm  CoT   1.29  pitch -11.7 deg  
+tripod_r25_nopc_02: OK   [ramp 25 deg] v   21.0 mm/s  SSMmin   56.2 mm  slip   1.0 mm  CoT   1.09  pitch -25.0 deg  
+tripod_r25_pc_02: OK   [ramp 25 deg] v   21.0 mm/s  SSMmin   68.5 mm  slip   0.8 mm  CoT   1.16  pitch -16.5 deg  
+ripple_r00_nopc_02: OK   [ramp 0 deg] v   25.5 mm/s  SSMmin  102.2 mm  slip   0.3 mm  CoT   1.02  pitch   0.0 deg  
+ripple_r00_pc_02: OK   [ramp 0 deg] v   25.5 mm/s  SSMmin  102.2 mm  slip   0.4 mm  CoT   1.04  pitch   0.1 deg  
+ripple_r05_nopc_02: OK   [ramp 5 deg] v   25.3 mm/s  SSMmin    0.6 mm  slip   0.5 mm  CoT   0.97  pitch  -5.0 deg  
+ripple_r05_pc_02: OK   [ramp 5 deg] v   22.6 mm/s  SSMmin   -1.0 mm  slip   0.4 mm  CoT   1.04  pitch   0.0 deg  
+ripple_r10_nopc_02: OK   [ramp 10 deg] v   25.2 mm/s  SSMmin    6.1 mm  slip   0.6 mm  CoT   0.95  pitch -10.0 deg  
+ripple_r10_pc_02: teleport attempt 1 failed (Service call timed out), retrying
+ripple_r10_pc_02: OK   [ramp 10 deg] v   20.9 mm/s  SSMmin    2.3 mm  slip   0.4 mm  CoT   1.11  pitch  -1.6 deg  
+ripple_r15_nopc_02: OK   [ramp 15 deg] v   25.2 mm/s  SSMmin   11.5 mm  slip   0.6 mm  CoT   0.89  pitch -15.0 deg  
+ripple_r15_pc_02: OK   [ramp 15 deg] v   20.7 mm/s  SSMmin    7.6 mm  slip   0.6 mm  CoT   1.10  pitch  -6.7 deg  
+ripple_r20_nopc_02: teleport attempt 1 failed (Service call timed out), retrying
+ripple_r20_nopc_02: OK   [ramp 20 deg] v   25.1 mm/s  SSMmin   16.3 mm  slip   0.6 mm  CoT   0.85  pitch -20.0 deg  
+ripple_r20_pc_02: OK   [ramp 20 deg] v   19.4 mm/s  SSMmin   13.2 mm  slip   1.4 mm  CoT   1.19  pitch -11.6 deg  
+ripple_r25_nopc_02: OK   [ramp 25 deg] v   24.6 mm/s  SSMmin   22.8 mm  slip   0.7 mm  CoT   0.81  pitch -25.0 deg  
+ripple_r25_pc_02: OK   [ramp 25 deg] v   17.3 mm/s  SSMmin   18.1 mm  slip   2.2 mm  CoT   1.31  pitch -16.7 deg  
+wave_r00_nopc_02: OK   [ramp 0 deg] v   25.2 mm/s  SSMmin   99.7 mm  slip   0.4 mm  CoT   0.75  pitch   0.0 deg  
+wave_r00_pc_02: OK   [ramp 0 deg] v   25.3 mm/s  SSMmin   99.7 mm  slip   0.4 mm  CoT   0.78  pitch  -0.0 deg  
+wave_r05_nopc_02: OK   [ramp 5 deg] v   25.0 mm/s  SSMmin   -0.8 mm  slip   0.8 mm  CoT   0.75  pitch  -5.0 deg  
+wave_r05_pc_02: OK   [ramp 5 deg] v   18.2 mm/s  SSMmin    0.3 mm  slip   2.0 mm  CoT   1.09  pitch  -0.2 deg  
+wave_r10_nopc_02: OK   [ramp 10 deg] v   25.0 mm/s  SSMmin    3.9 mm  slip   0.9 mm  CoT   0.72  pitch -10.0 deg  
+wave_r10_pc_02: OK   [ramp 10 deg] v   14.0 mm/s  SSMmin   98.4 mm  slip   1.9 mm  CoT   1.45  pitch  -2.1 deg  
+wave_r15_nopc_02: OK   [ramp 15 deg] v   24.9 mm/s  SSMmin   10.3 mm  slip   0.9 mm  CoT   0.73  pitch -15.0 deg  
+wave_r15_pc_02: OK   [ramp 15 deg] v   13.6 mm/s  SSMmin   89.3 mm  slip   2.3 mm  CoT   1.51  pitch  -6.8 deg  
+wave_r20_nopc_02: OK   [ramp 20 deg] v   24.9 mm/s  SSMmin   13.9 mm  slip   0.9 mm  CoT   0.73  pitch -20.0 deg  
+wave_r20_nopc_02: remove reply: Service call timed out - checking the world
+wave_r20_pc_02: OK   [ramp 20 deg] v   13.3 mm/s  SSMmin   78.6 mm  slip   2.2 mm  CoT   1.62  pitch -11.8 deg  
+wave_r25_nopc_02: OK   [ramp 25 deg] v   24.8 mm/s  SSMmin   21.2 mm  slip   0.9 mm  CoT   0.74  pitch -25.0 deg  
+wave_r25_pc_02: OK   [ramp 25 deg] v   13.0 mm/s  SSMmin   66.7 mm  slip   2.6 mm  CoT   1.66  pitch -16.8 deg  
+tripod_r00_nopc_03: OK   [ramp 0 deg] v   22.4 mm/s  SSMmin   99.5 mm  slip   0.6 mm  CoT   1.26  pitch   0.0 deg  
+tripod_r00_pc_03: OK   [ramp 0 deg] v   22.4 mm/s  SSMmin   99.5 mm  slip   0.6 mm  CoT   1.26  pitch  -0.0 deg  
+tripod_r05_nopc_03: OK   [ramp 5 deg] v   22.4 mm/s  SSMmin   95.2 mm  slip   0.6 mm  CoT   1.22  pitch  -5.0 deg  
+tripod_r05_pc_03: OK   [ramp 5 deg] v   22.4 mm/s  SSMmin  100.1 mm  slip   0.6 mm  CoT   1.30  pitch  -0.1 deg  
+tripod_r10_nopc_03: OK   [ramp 10 deg] v   22.4 mm/s  SSMmin   86.4 mm  slip   0.6 mm  CoT   1.19  pitch -10.0 deg  
+tripod_r10_pc_03: OK   [ramp 10 deg] v   22.0 mm/s  SSMmin   97.7 mm  slip   0.6 mm  CoT   1.36  pitch  -1.7 deg  
+tripod_r15_nopc_03: OK   [ramp 15 deg] v   22.4 mm/s  SSMmin   77.4 mm  slip   0.6 mm  CoT   1.15  pitch -15.0 deg  
+tripod_r15_pc_03: OK   [ramp 15 deg] v   22.0 mm/s  SSMmin   88.8 mm  slip   0.6 mm  CoT   1.33  pitch  -6.6 deg  
+tripod_r20_nopc_03: OK   [ramp 20 deg] v   22.3 mm/s  SSMmin   67.3 mm  slip   0.6 mm  CoT   1.12  pitch -20.0 deg  
+tripod_r20_pc_03: teleport attempt 1 failed (Service call timed out), retrying
+tripod_r20_pc_03: OK   [ramp 20 deg] v   21.9 mm/s  SSMmin   78.0 mm  slip   0.7 mm  CoT   1.29  pitch -11.8 deg  
+tripod_r25_nopc_03: OK   [ramp 25 deg] v   21.0 mm/s  SSMmin   56.7 mm  slip   1.0 mm  CoT   1.06  pitch -25.0 deg  
+tripod_r25_pc_03: OK   [ramp 25 deg] v   21.0 mm/s  SSMmin   67.6 mm  slip   0.8 mm  CoT   1.16  pitch -16.7 deg  
+ripple_r00_nopc_03: OK   [ramp 0 deg] v   25.5 mm/s  SSMmin  102.4 mm  slip   0.3 mm  CoT   1.03  pitch   0.0 deg  
+ripple_r00_pc_03: OK   [ramp 0 deg] v   25.4 mm/s  SSMmin  102.3 mm  slip   0.3 mm  CoT   1.04  pitch   0.1 deg  
+ripple_r05_nopc_03: OK   [ramp 5 deg] v   25.3 mm/s  SSMmin    0.4 mm  slip   0.5 mm  CoT   0.99  pitch  -5.0 deg  
+ripple_r05_pc_03: OK   [ramp 5 deg] v   22.6 mm/s  SSMmin   -0.9 mm  slip   0.4 mm  CoT   1.03  pitch  -0.1 deg  
+ripple_r10_nopc_03: OK   [ramp 10 deg] v   25.2 mm/s  SSMmin    5.8 mm  slip   0.6 mm  CoT   0.94  pitch -10.0 deg  
+ripple_r10_pc_03: OK   [ramp 10 deg] v   21.1 mm/s  SSMmin    2.2 mm  slip   0.5 mm  CoT   1.11  pitch  -1.8 deg  
+ripple_r15_nopc_03: OK   [ramp 15 deg] v   25.2 mm/s  SSMmin   11.2 mm  slip   0.6 mm  CoT   0.90  pitch -15.0 deg  
+ripple_r15_pc_03: create reply lost (Service call timed out) but the piece is in the world - continuing
+ripple_r15_pc_03: OK   [ramp 15 deg] v   20.8 mm/s  SSMmin    7.5 mm  slip   0.6 mm  CoT   1.12  pitch  -6.7 deg  
+ripple_r20_nopc_03: OK   [ramp 20 deg] v   25.1 mm/s  SSMmin   16.2 mm  slip   0.6 mm  CoT   0.88  pitch -20.0 deg  
+ripple_r20_pc_03: teleport attempt 1 failed (Service call timed out), retrying
+ripple_r20_pc_03: OK   [ramp 20 deg] v   19.3 mm/s  SSMmin   12.9 mm  slip   1.4 mm  CoT   1.20  pitch -11.7 deg  
+ripple_r25_nopc_03: OK   [ramp 25 deg] v   24.6 mm/s  SSMmin   21.3 mm  slip   0.7 mm  CoT   0.82  pitch -25.0 deg  
+ripple_r25_pc_03: OK   [ramp 25 deg] v   17.1 mm/s  SSMmin   18.9 mm  slip   2.4 mm  CoT   1.31  pitch -16.6 deg  
+wave_r00_nopc_03: teleport attempt 1 failed (Service call timed out), retrying
+wave_r00_nopc_03: OK   [ramp 0 deg] v   25.3 mm/s  SSMmin   99.7 mm  slip   0.4 mm  CoT   0.75  pitch   0.0 deg  
+wave_r00_pc_03: OK   [ramp 0 deg] v   25.2 mm/s  SSMmin   99.4 mm  slip   0.3 mm  CoT   0.78  pitch  -0.0 deg  
+wave_r05_nopc_03: OK   [ramp 5 deg] v   25.0 mm/s  SSMmin   -1.0 mm  slip   0.8 mm  CoT   0.72  pitch  -5.0 deg  
+wave_r05_pc_03: OK   [ramp 5 deg] v   18.3 mm/s  SSMmin    0.6 mm  slip   2.1 mm  CoT   1.05  pitch  -0.3 deg  
+wave_r10_nopc_03: OK   [ramp 10 deg] v   25.0 mm/s  SSMmin    4.7 mm  slip   0.9 mm  CoT   0.70  pitch -10.0 deg  
+wave_r10_pc_03: OK   [ramp 10 deg] v   14.0 mm/s  SSMmin   98.4 mm  slip   2.0 mm  CoT   1.40  pitch  -2.0 deg  
+wave_r15_nopc_03: OK   [ramp 15 deg] v   25.0 mm/s  SSMmin    9.8 mm  slip   0.9 mm  CoT   0.70  pitch -15.0 deg  
+wave_r15_pc_03: OK   [ramp 15 deg] v   13.8 mm/s  SSMmin   88.4 mm  slip   2.0 mm  CoT   1.44  pitch  -7.1 deg  
+wave_r20_nopc_03: OK   [ramp 20 deg] v   24.8 mm/s  SSMmin   14.3 mm  slip   0.9 mm  CoT   0.71  pitch -20.0 deg  
+wave_r20_pc_03: OK   [ramp 20 deg] v   13.3 mm/s  SSMmin   78.8 mm  slip   2.1 mm  CoT   1.55  pitch -11.7 deg  
+wave_r25_nopc_03: OK   [ramp 25 deg] v   24.8 mm/s  SSMmin   22.0 mm  slip   0.9 mm  CoT   0.73  pitch -25.0 deg  
+wave_r25_pc_03: OK   [ramp 25 deg] v   13.1 mm/s  SSMmin   66.2 mm  slip   2.4 mm  CoT   1.66  pitch -17.0 deg  
+tripod_r00_nopc_04: OK   [ramp 0 deg] v   22.4 mm/s  SSMmin   99.6 mm  slip   0.6 mm  CoT   1.25  pitch   0.0 deg  
+tripod_r00_pc_04: OK   [ramp 0 deg] v   22.4 mm/s  SSMmin   99.6 mm  slip   0.6 mm  CoT   1.25  pitch   0.0 deg  
+tripod_r05_nopc_04: OK   [ramp 5 deg] v   22.4 mm/s  SSMmin   95.4 mm  slip   0.6 mm  CoT   1.22  pitch  -5.0 deg  
+tripod_r05_pc_04: OK   [ramp 5 deg] v   22.4 mm/s  SSMmin  100.1 mm  slip   0.6 mm  CoT   1.29  pitch  -0.0 deg  
+tripod_r10_nopc_04: OK   [ramp 10 deg] v   22.4 mm/s  SSMmin   86.4 mm  slip   0.6 mm  CoT   1.20  pitch -10.0 deg  
+tripod_r10_pc_04: OK   [ramp 10 deg] v   22.0 mm/s  SSMmin   98.2 mm  slip   0.6 mm  CoT   1.37  pitch  -1.6 deg  
+tripod_r15_nopc_04: OK   [ramp 15 deg] v   22.4 mm/s  SSMmin   77.5 mm  slip   0.6 mm  CoT   1.16  pitch -15.0 deg  
+tripod_r15_pc_04: OK   [ramp 15 deg] v   22.0 mm/s  SSMmin   88.1 mm  slip   0.6 mm  CoT   1.33  pitch  -6.8 deg  
+tripod_r20_nopc_04: OK   [ramp 20 deg] v   22.3 mm/s  SSMmin   67.8 mm  slip   0.6 mm  CoT   1.13  pitch -20.0 deg  
+tripod_r20_pc_04: create reply lost (Service call timed out) but the piece is in the world - continuing
+tripod_r20_pc_04: OK   [ramp 20 deg] v   21.8 mm/s  SSMmin   78.8 mm  slip   0.6 mm  CoT   1.30  pitch -11.6 deg  
+tripod_r25_nopc_04: OK   [ramp 25 deg] v   21.0 mm/s  SSMmin   56.7 mm  slip   1.0 mm  CoT   1.06  pitch -25.0 deg  
+tripod_r25_pc_04: OK   [ramp 25 deg] v   21.0 mm/s  SSMmin   67.6 mm  slip   0.8 mm  CoT   1.17  pitch -16.7 deg  
+ripple_r00_nopc_04: OK   [ramp 0 deg] v   25.4 mm/s  SSMmin  102.5 mm  slip   0.3 mm  CoT   1.01  pitch   0.0 deg  
+ripple_r00_pc_04: create reply lost (Service call timed out) but the piece is in the world - continuing
+ripple_r00_pc_04: OK   [ramp 0 deg] v   25.5 mm/s  SSMmin  102.1 mm  slip   0.4 mm  CoT   1.04  pitch   0.2 deg  
+ripple_r05_nopc_04: OK   [ramp 5 deg] v   25.3 mm/s  SSMmin    0.5 mm  slip   0.5 mm  CoT   0.98  pitch  -5.0 deg  
+ripple_r05_pc_04: OK   [ramp 5 deg] v   22.7 mm/s  SSMmin   -0.8 mm  slip   0.4 mm  CoT   1.03  pitch  -0.2 deg  
+ripple_r10_nopc_04: OK   [ramp 10 deg] v   25.2 mm/s  SSMmin    5.8 mm  slip   0.6 mm  CoT   0.92  pitch -10.0 deg  
+ripple_r10_pc_04: OK   [ramp 10 deg] v   21.0 mm/s  SSMmin    2.5 mm  slip   0.4 mm  CoT   1.11  pitch  -1.6 deg  
+ripple_r15_nopc_04: OK   [ramp 15 deg] v   25.2 mm/s  SSMmin   11.3 mm  slip   0.6 mm  CoT   0.89  pitch -15.0 deg  
+ripple_r15_pc_04: OK   [ramp 15 deg] v   20.8 mm/s  SSMmin    7.3 mm  slip   0.6 mm  CoT   1.07  pitch  -6.8 deg  
+ripple_r20_nopc_04: OK   [ramp 20 deg] v   25.1 mm/s  SSMmin   16.0 mm  slip   0.7 mm  CoT   0.85  pitch -20.0 deg  
+ripple_r20_pc_04: OK   [ramp 20 deg] v   19.3 mm/s  SSMmin   12.7 mm  slip   1.2 mm  CoT   1.17  pitch -11.8 deg  
+ripple_r25_nopc_04: OK   [ramp 25 deg] v   24.6 mm/s  SSMmin   22.0 mm  slip   0.7 mm  CoT   0.79  pitch -25.0 deg  
+ripple_r25_pc_04: OK   [ramp 25 deg] v   17.2 mm/s  SSMmin   18.7 mm  slip   2.4 mm  CoT   1.26  pitch -16.7 deg  
+wave_r00_nopc_04: OK   [ramp 0 deg] v   25.2 mm/s  SSMmin   99.6 mm  slip   0.4 mm  CoT   0.74  pitch   0.0 deg  
+wave_r00_pc_04: OK   [ramp 0 deg] v   25.2 mm/s  SSMmin   99.6 mm  slip   0.4 mm  CoT   0.77  pitch   0.0 deg  
+wave_r05_nopc_04: OK   [ramp 5 deg] v   25.0 mm/s  SSMmin   -0.7 mm  slip   0.8 mm  CoT   0.72  pitch  -5.0 deg  
+wave_r05_pc_04: OK   [ramp 5 deg] v   18.2 mm/s  SSMmin    0.4 mm  slip   2.0 mm  CoT   1.04  pitch  -0.4 deg  
+wave_r10_nopc_04: OK   [ramp 10 deg] v   25.0 mm/s  SSMmin    4.7 mm  slip   0.9 mm  CoT   0.71  pitch -10.0 deg  
+wave_r10_pc_04: OK   [ramp 10 deg] v   13.8 mm/s  SSMmin    3.1 mm  slip   2.0 mm  CoT   1.45  pitch  -1.8 deg  
+wave_r10_pc_04: remove reply: Service call timed out - checking the world
+wave_r15_nopc_04: OK   [ramp 15 deg] v   24.9 mm/s  SSMmin   10.2 mm  slip   0.9 mm  CoT   0.70  pitch -15.0 deg  
+wave_r15_pc_04: OK   [ramp 15 deg] v   13.7 mm/s  SSMmin   88.6 mm  slip   2.0 mm  CoT   1.45  pitch  -7.0 deg  
+wave_r20_nopc_04: OK   [ramp 20 deg] v   24.9 mm/s  SSMmin   14.0 mm  slip   0.9 mm  CoT   0.72  pitch -20.0 deg  
+wave_r20_pc_04: OK   [ramp 20 deg] v   13.2 mm/s  SSMmin   78.7 mm  slip   2.2 mm  CoT   1.57  pitch -11.8 deg  
+wave_r25_nopc_04: create reply lost (Service call timed out) but the piece is in the world - continuing
+wave_r25_nopc_04: OK   [ramp 25 deg] v   24.7 mm/s  SSMmin   20.0 mm  slip   0.8 mm  CoT   0.74  pitch -25.0 deg  
+wave_r25_pc_04: OK   [ramp 25 deg] v   13.2 mm/s  SSMmin   66.3 mm  slip   2.4 mm  CoT   1.66  pitch -16.9 deg  
+tripod_r00_nopc_05: OK   [ramp 0 deg] v   22.4 mm/s  SSMmin   99.4 mm  slip   0.6 mm  CoT   1.25  pitch   0.0 deg  
+tripod_r00_nopc_05: remove reply: Service call timed out - checking the world
+tripod_r00_pc_05: OK   [ramp 0 deg] v   22.4 mm/s  SSMmin   99.4 mm  slip   0.6 mm  CoT   1.24  pitch  -0.0 deg  
+tripod_r05_nopc_05: OK   [ramp 5 deg] v   22.4 mm/s  SSMmin   95.1 mm  slip   0.6 mm  CoT   1.23  pitch  -5.0 deg  
+tripod_r05_pc_05: OK   [ramp 5 deg] v   22.4 mm/s  SSMmin  100.1 mm  slip   0.6 mm  CoT   1.31  pitch  -0.0 deg  
+tripod_r10_nopc_05: OK   [ramp 10 deg] v   22.4 mm/s  SSMmin   86.6 mm  slip   0.6 mm  CoT   1.19  pitch -10.0 deg  
+tripod_r10_pc_05: OK   [ramp 10 deg] v   22.0 mm/s  SSMmin   98.1 mm  slip   0.6 mm  CoT   1.38  pitch  -1.6 deg  
+tripod_r15_nopc_05: teleport attempt 1 failed (Service call timed out), retrying
+tripod_r15_nopc_05: OK   [ramp 15 deg] v   22.4 mm/s  SSMmin   77.3 mm  slip   0.6 mm  CoT   1.15  pitch -15.0 deg  
+tripod_r15_pc_05: create reply lost (Service call timed out) but the piece is in the world - continuing
+tripod_r15_pc_05: OK   [ramp 15 deg] v   22.0 mm/s  SSMmin   88.4 mm  slip   0.6 mm  CoT   1.34  pitch  -6.7 deg  
+tripod_r20_nopc_05: OK   [ramp 20 deg] v   22.3 mm/s  SSMmin   67.0 mm  slip   0.6 mm  CoT   1.12  pitch -20.0 deg  
+tripod_r20_pc_05: OK   [ramp 20 deg] v   21.9 mm/s  SSMmin   78.7 mm  slip   0.6 mm  CoT   1.31  pitch -11.6 deg  
+tripod_r25_nopc_05: teleport attempt 1 failed (Service call timed out), retrying
+tripod_r25_nopc_05: teleport attempt 2 failed (Service call timed out), retrying
+tripod_r25_nopc_05: OK   [ramp 25 deg] v   21.0 mm/s  SSMmin   57.3 mm  slip   1.0 mm  CoT   1.06  pitch -25.0 deg  
+tripod_r25_pc_05: OK   [ramp 25 deg] v   21.0 mm/s  SSMmin   66.7 mm  slip   0.8 mm  CoT   1.17  pitch -16.8 deg  
+ripple_r00_nopc_05: OK   [ramp 0 deg] v   25.4 mm/s  SSMmin  102.3 mm  slip   0.3 mm  CoT   1.03  pitch   0.0 deg  
+ripple_r00_pc_05: OK   [ramp 0 deg] v   25.5 mm/s  SSMmin  102.7 mm  slip   0.3 mm  CoT   1.06  pitch  -0.3 deg  
+ripple_r05_nopc_05: OK   [ramp 5 deg] v   25.3 mm/s  SSMmin    0.4 mm  slip   0.4 mm  CoT   1.00  pitch  -5.0 deg  
+ripple_r05_pc_05: OK   [ramp 5 deg] v   22.7 mm/s  SSMmin   -0.9 mm  slip   0.4 mm  CoT   1.03  pitch  -0.2 deg  
+ripple_r10_nopc_05: OK   [ramp 10 deg] v   25.2 mm/s  SSMmin    5.7 mm  slip   0.6 mm  CoT   0.94  pitch -10.0 deg  
+ripple_r10_pc_05: OK   [ramp 10 deg] v   21.0 mm/s  SSMmin    2.4 mm  slip   0.4 mm  CoT   1.07  pitch  -1.6 deg  
+ripple_r15_nopc_05: OK   [ramp 15 deg] v   25.2 mm/s  SSMmin   10.1 mm  slip   0.6 mm  CoT   0.90  pitch -15.0 deg  
+ripple_r15_pc_05: OK   [ramp 15 deg] v   20.9 mm/s  SSMmin    7.5 mm  slip   0.6 mm  CoT   1.08  pitch  -6.8 deg  
+ripple_r20_nopc_05: create reply lost (Service call timed out) but the piece is in the world - continuing
+ripple_r20_nopc_05: OK   [ramp 20 deg] v   25.1 mm/s  SSMmin   16.8 mm  slip   0.6 mm  CoT   0.85  pitch -20.0 deg  
+ripple_r20_pc_05: create reply lost (Service call timed out) but the piece is in the world - continuing
+ripple_r20_pc_05: OK   [ramp 20 deg] v   19.3 mm/s  SSMmin   13.2 mm  slip   1.2 mm  CoT   1.18  pitch -11.7 deg  
+ripple_r20_pc_05: remove reply: Service call timed out - checking the world
+ripple_r25_nopc_05: OK   [ramp 25 deg] v   24.6 mm/s  SSMmin   22.7 mm  slip   0.7 mm  CoT   0.79  pitch -25.0 deg  
+ripple_r25_nopc_05: remove reply: Service call timed out - checking the world
+ripple_r25_pc_05: OK   [ramp 25 deg] v   17.1 mm/s  SSMmin   18.8 mm  slip   2.2 mm  CoT   1.27  pitch -16.7 deg  
+wave_r00_nopc_05: OK   [ramp 0 deg] v   25.2 mm/s  SSMmin   99.7 mm  slip   0.4 mm  CoT   0.75  pitch   0.0 deg  
+wave_r00_nopc_05: remove reply: Service call timed out - checking the world
+wave_r00_pc_05: create reply lost (Service call timed out) but the piece is in the world - continuing
+wave_r00_pc_05: OK   [ramp 0 deg] v   25.1 mm/s  SSMmin   99.6 mm  slip   0.4 mm  CoT   0.78  pitch   0.0 deg  
+wave_r00_pc_05: remove reply: Service call timed out - checking the world
+wave_r05_nopc_05: OK   [ramp 5 deg] v   25.0 mm/s  SSMmin   -0.4 mm  slip   0.7 mm  CoT   0.74  pitch  -5.0 deg  
+wave_r05_pc_05: OK   [ramp 5 deg] v   18.1 mm/s  SSMmin    0.6 mm  slip   2.0 mm  CoT   1.08  pitch  -0.3 deg  
+wave_r05_pc_05: remove reply: Service call timed out - checking the world
+wave_r10_nopc_05: OK   [ramp 10 deg] v   25.0 mm/s  SSMmin    4.9 mm  slip   0.9 mm  CoT   0.71  pitch -10.0 deg  
+wave_r10_pc_05: create reply lost (Service call timed out) but the piece is in the world - continuing
+wave_r10_pc_05: OK   [ramp 10 deg] v   14.0 mm/s  SSMmin   98.3 mm  slip   1.9 mm  CoT   1.46  pitch  -2.1 deg  
+wave_r10_pc_05: remove reply: Service call timed out - checking the world
+wave_r15_nopc_05: OK   [ramp 15 deg] v   24.9 mm/s  SSMmin    9.1 mm  slip   0.9 mm  CoT   0.71  pitch -15.0 deg  
+wave_r15_pc_05: teleport attempt 1 failed (Service call timed out), retrying
+wave_r15_pc_05: OK   [ramp 15 deg] v   13.6 mm/s  SSMmin   89.3 mm  slip   2.3 mm  CoT   1.56  pitch  -6.8 deg  
+wave_r20_nopc_05: OK   [ramp 20 deg] v   24.9 mm/s  SSMmin   14.9 mm  slip   0.9 mm  CoT   0.72  pitch -20.0 deg  
+wave_r20_pc_05: teleport attempt 1 failed (Service call timed out), retrying
+wave_r20_pc_05: OK   [ramp 20 deg] v   13.4 mm/s  SSMmin   78.2 mm  slip   2.2 mm  CoT   1.58  pitch -11.8 deg  
+wave_r25_nopc_05: OK   [ramp 25 deg] v   24.8 mm/s  SSMmin   19.4 mm  slip   0.9 mm  CoT   0.75  pitch -25.0 deg  
+wave_r25_nopc_05: remove reply: Service call timed out - checking the world
+wave_r25_pc_05: OK   [ramp 25 deg] v   13.2 mm/s  SSMmin   66.5 mm  slip   2.6 mm  CoT   1.69  pitch -16.9 deg  
+wave_r25_pc_05: remove reply: Service call timed out - checking the world
+# E4 - ramps, posture control off / on (chapter 4.1.4)
+
+- Generated 2026-09-26 10:54:38; seed 2; course 0.5 m, success = goal within 2.0 x nominal time without a fall (|roll|/|pitch| > 30.0°, z < 60 mm)
+- Mass 4.147 kg; cycle times {'tripod': 0.95, 'ripple': 1.3, 'wave': 2.4}; metrics exclude the warm-up (1 gait cycle); Mean ± SD (sample SD) over all trials of a condition
+- Ground truth only (OdometryPublisher, joint states, contact and joint F/T sensors); slip = sliding of the foot contact point per stance, centre slip = ball-centre displacement
+
+| Condition | Cmd (mm/s) | Success | Falls | Speed (mm/s) | Speed / cmd (%) | SSM min (mm) | SSM p5 (mm) | SSM mean (mm) | SSM min, contact only (mm) | Support feet | Feet in contact | Slip/stance (mm) | Centre slip (mm) | CoT | Roll RMS (°) | Pitch RMS (°) | Lateral drift (mm) |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| tripod_r00_nopc | 25 | 5/5 (100%) | 0 | 22.4 ± 0.0 | 90 ± 0 | 99.5 ± 0.1 | 100.1 ± 0.0 | 129.2 ± 0.8 | 98.5 ± 0.0 | 3.84 ± 0.02 | 3.15 ± 0.01 | 0.58 ± 0.00 | 0.35 ± 0.02 | 1.26 ± 0.01 | 0.00 ± 0.00 | 0.00 ± 0.00 | 0.8 ± 0.4 |
+| tripod_r00_pc | 25 | 5/5 (100%) | 0 | 22.4 ± 0.0 | 90 ± 0 | 99.5 ± 0.1 | 100.1 ± 0.0 | 128.9 ± 0.9 | 98.5 ± 0.0 | 3.83 ± 0.03 | 3.15 ± 0.01 | 0.58 ± 0.01 | 0.36 ± 0.01 | 1.25 ± 0.00 | 0.04 ± 0.05 | 0.03 ± 0.02 | 0.7 ± 0.3 |
+| tripod_r05_nopc | 25 | 5/5 (100%) | 0 | 22.4 ± 0.0 | 90 ± 0 | 95.3 ± 0.1 | 95.8 ± 0.1 | 114.3 ± 0.8 | 94.9 ± 0.1 | 3.47 ± 0.03 | 3.15 ± 0.01 | 0.58 ± 0.00 | 0.36 ± 0.01 | 1.22 ± 0.01 | 0.18 ± 0.06 | 5.00 ± 0.00 | 0.7 ± 0.3 |
+| tripod_r05_pc | 25 | 5/5 (100%) | 0 | 22.4 ± 0.0 | 89 ± 0 | 100.1 ± 0.1 | 100.8 ± 0.1 | 118.9 ± 0.5 | 100.0 ± 0.1 | 3.50 ± 0.02 | 3.15 ± 0.01 | 0.59 ± 0.01 | 0.40 ± 0.01 | 1.30 ± 0.01 | 0.03 ± 0.03 | 0.05 ± 0.04 | 0.6 ± 0.2 |
+| tripod_r10_nopc | 25 | 5/5 (100%) | 0 | 22.4 ± 0.0 | 90 ± 0 | 86.5 ± 0.2 | 87.2 ± 0.0 | 102.5 ± 0.2 | 86.2 ± 0.2 | 3.38 ± 0.01 | 3.15 ± 0.01 | 0.60 ± 0.00 | 0.37 ± 0.00 | 1.19 ± 0.01 | 0.20 ± 0.17 | 10.00 ± 0.00 | 0.8 ± 0.2 |
+| tripod_r10_pc | 25 | 5/5 (100%) | 0 | 22.0 ± 0.0 | 88 ± 0 | 98.1 ± 0.2 | 98.4 ± 0.1 | 114.6 ± 0.4 | 97.8 ± 0.2 | 3.41 ± 0.01 | 3.15 ± 0.01 | 0.61 ± 0.01 | 0.40 ± 0.01 | 1.37 ± 0.01 | 0.06 ± 0.03 | 1.61 ± 0.08 | 0.8 ± 0.4 |
+| tripod_r15_nopc | 25 | 5/5 (100%) | 0 | 22.4 ± 0.0 | 90 ± 0 | 77.3 ± 0.1 | 78.0 ± 0.0 | 92.8 ± 0.2 | 77.1 ± 0.1 | 3.37 ± 0.01 | 3.15 ± 0.01 | 0.62 ± 0.01 | 0.37 ± 0.02 | 1.16 ± 0.01 | 0.22 ± 0.17 | 15.00 ± 0.00 | 0.9 ± 0.3 |
+| tripod_r15_pc | 25 | 5/5 (100%) | 0 | 22.0 ± 0.0 | 88 ± 0 | 88.6 ± 0.3 | 89.1 ± 0.2 | 105.2 ± 0.3 | 88.4 ± 0.3 | 3.42 ± 0.00 | 3.15 ± 0.00 | 0.63 ± 0.01 | 0.40 ± 0.00 | 1.33 ± 0.01 | 0.15 ± 0.09 | 6.62 ± 0.11 | 0.7 ± 0.4 |
+| tripod_r20_nopc | 25 | 5/5 (100%) | 0 | 22.3 ± 0.0 | 89 ± 0 | 67.4 ± 0.3 | 68.0 ± 0.2 | 82.4 ± 0.4 | 67.1 ± 0.3 | 3.37 ± 0.01 | 3.15 ± 0.01 | 0.64 ± 0.00 | 0.34 ± 0.01 | 1.13 ± 0.01 | 0.41 ± 0.31 | 19.99 ± 0.01 | 0.8 ± 0.2 |
+| tripod_r20_pc | 25 | 5/5 (100%) | 0 | 21.9 ± 0.0 | 87 ± 0 | 78.4 ± 0.4 | 78.9 ± 0.4 | 94.8 ± 0.3 | 65.0 ± 29.5 | 3.42 ± 0.00 | 3.15 ± 0.01 | 0.64 ± 0.02 | 0.31 ± 0.02 | 1.30 ± 0.01 | 0.46 ± 0.17 | 11.67 ± 0.09 | 0.9 ± 0.3 |
+| tripod_r25_nopc | 25 | 5/5 (100%) | 0 | 21.0 ± 0.0 | 84 ± 0 | 56.8 ± 0.4 | 57.4 ± 0.3 | 71.5 ± 0.2 | 56.6 ± 0.5 | 3.38 ± 0.01 | 3.16 ± 0.01 | 0.98 ± 0.01 | 0.50 ± 0.01 | 1.07 ± 0.01 | 0.57 ± 0.30 | 24.99 ± 0.01 | 1.6 ± 0.8 |
+| tripod_r25_pc | 25 | 5/5 (100%) | 0 | 21.0 ± 0.0 | 84 ± 0 | 67.7 ± 0.7 | 68.2 ± 0.5 | 83.9 ± 0.3 | 67.5 ± 0.6 | 3.43 ± 0.01 | 3.16 ± 0.01 | 0.77 ± 0.01 | 0.29 ± 0.01 | 1.16 ± 0.00 | 0.44 ± 0.30 | 16.65 ± 0.12 | -0.7 ± 1.4 |
+| ripple_r00_nopc | 25 | 5/5 (100%) | 0 | 25.4 ± 0.0 | 102 ± 0 | 102.4 ± 0.1 | 103.2 ± 0.0 | 112.3 ± 0.2 | -4.4 ± 0.2 | 4.39 ± 0.01 | 2.74 ± 0.02 | 0.34 ± 0.01 | 0.60 ± 0.01 | 1.02 ± 0.01 | 0.07 ± 0.00 | 0.06 ± 0.00 | 0.3 ± 0.5 |
+| ripple_r00_pc | 25 | 5/5 (100%) | 0 | 25.4 ± 0.0 | 102 ± 0 | 102.3 ± 0.2 | 103.3 ± 0.2 | 112.4 ± 0.2 | -4.6 ± 0.2 | 4.38 ± 0.01 | 2.72 ± 0.01 | 0.35 ± 0.01 | 0.60 ± 0.02 | 1.04 ± 0.01 | 0.14 ± 0.02 | 0.23 ± 0.06 | 0.4 ± 0.4 |
+| ripple_r05_nopc | 25 | 5/5 (100%) | 0 | 25.3 ± 0.0 | 101 ± 0 | 0.5 ± 0.1 | 1.2 ± 0.0 | 49.7 ± 0.8 | -5.4 ± 0.2 | 3.31 ± 0.01 | 2.97 ± 0.03 | 0.45 ± 0.02 | 0.75 ± 0.02 | 0.99 ± 0.01 | 0.13 ± 0.05 | 5.03 ± 0.00 | 0.7 ± 0.3 |
+| ripple_r05_pc | 25 | 5/5 (100%) | 0 | 22.7 ± 0.1 | 91 ± 0 | -0.9 ± 0.1 | -0.0 ± 0.0 | 73.8 ± 1.9 | -3.6 ± 0.1 | 3.78 ± 0.02 | 2.76 ± 0.01 | 0.37 ± 0.01 | 0.59 ± 0.01 | 1.03 ± 0.00 | 0.19 ± 0.03 | 0.24 ± 0.06 | -0.4 ± 1.2 |
+| ripple_r10_nopc | 25 | 5/5 (100%) | 0 | 25.2 ± 0.0 | 101 ± 0 | 5.9 ± 0.2 | 6.6 ± 0.0 | 49.9 ± 0.5 | -4.2 ± 9.2 | 3.31 ± 0.01 | 3.10 ± 0.02 | 0.61 ± 0.03 | 1.02 ± 0.05 | 0.94 ± 0.01 | 0.29 ± 0.12 | 10.03 ± 0.00 | 0.3 ± 0.6 |
+| ripple_r10_pc | 25 | 5/5 (100%) | 0 | 21.0 ± 0.0 | 84 ± 0 | 2.3 ± 0.1 | 3.0 ± 0.1 | 63.4 ± 0.6 | -6.4 ± 0.2 | 3.68 ± 0.02 | 2.91 ± 0.02 | 0.44 ± 0.02 | 0.58 ± 0.01 | 1.10 ± 0.02 | 0.24 ± 0.02 | 1.70 ± 0.08 | 0.2 ± 2.7 |
+| ripple_r15_nopc | 25 | 5/5 (100%) | 0 | 25.2 ± 0.0 | 101 ± 0 | 11.1 ± 0.6 | 12.0 ± 0.3 | 50.8 ± 0.6 | 11.1 ± 0.6 | 3.31 ± 0.01 | 3.11 ± 0.02 | 0.64 ± 0.01 | 1.06 ± 0.01 | 0.89 ± 0.01 | 0.38 ± 0.25 | 15.02 ± 0.01 | 0.6 ± 0.5 |
+| ripple_r15_pc | 25 | 5/5 (100%) | 0 | 20.8 ± 0.1 | 83 ± 0 | 7.5 ± 0.1 | 8.3 ± 0.2 | 64.6 ± 0.4 | -11.9 ± 0.3 | 3.68 ± 0.01 | 3.06 ± 0.01 | 0.58 ± 0.02 | 0.68 ± 0.01 | 1.09 ± 0.02 | 0.35 ± 0.05 | 6.74 ± 0.06 | 1.5 ± 4.3 |
+| ripple_r20_nopc | 25 | 5/5 (100%) | 0 | 25.1 ± 0.0 | 101 ± 0 | 16.5 ± 0.4 | 17.5 ± 0.2 | 50.8 ± 0.6 | 16.5 ± 0.4 | 3.31 ± 0.01 | 3.12 ± 0.02 | 0.63 ± 0.02 | 1.03 ± 0.02 | 0.85 ± 0.01 | 0.49 ± 0.13 | 20.02 ± 0.00 | 0.9 ± 0.7 |
+| ripple_r20_pc | 25 | 5/5 (100%) | 0 | 19.3 ± 0.0 | 77 ± 0 | 13.0 ± 0.2 | 13.8 ± 0.2 | 75.5 ± 0.9 | -17.3 ± 0.5 | 3.81 ± 0.02 | 3.09 ± 0.02 | 1.30 ± 0.13 | 1.16 ± 0.14 | 1.19 ± 0.01 | 0.42 ± 0.07 | 11.73 ± 0.07 | 3.2 ± 4.6 |
+| ripple_r25_nopc | 25 | 5/5 (100%) | 0 | 24.6 ± 0.0 | 98 ± 0 | 22.3 ± 0.6 | 23.3 ± 0.5 | 51.1 ± 0.7 | 22.3 ± 0.6 | 3.31 ± 0.02 | 3.12 ± 0.02 | 0.69 ± 0.01 | 0.96 ± 0.02 | 0.80 ± 0.01 | 0.55 ± 0.47 | 25.02 ± 0.01 | 0.8 ± 0.6 |
+| ripple_r25_pc | 25 | 5/5 (100%) | 0 | 17.2 ± 0.1 | 69 ± 0 | 18.6 ± 0.3 | 19.4 ± 0.2 | 86.1 ± 0.6 | -22.8 ± 0.6 | 3.94 ± 0.02 | 3.09 ± 0.01 | 2.29 ± 0.13 | 2.00 ± 0.12 | 1.28 ± 0.03 | 0.51 ± 0.31 | 16.72 ± 0.07 | 4.7 ± 7.1 |
+| wave_r00_nopc | 24 | 5/5 (100%) | 0 | 25.2 ± 0.0 | 103 ± 0 | 99.7 ± 0.0 | 101.5 ± 0.1 | 137.5 ± 0.3 | -6.0 ± 0.1 | 5.20 ± 0.00 | 2.94 ± 0.02 | 0.38 ± 0.02 | 0.65 ± 0.03 | 0.75 ± 0.00 | 0.04 ± 0.00 | 0.05 ± 0.00 | 2.3 ± 0.6 |
+| wave_r00_pc | 24 | 5/5 (100%) | 0 | 25.2 ± 0.1 | 103 ± 0 | 99.6 ± 0.1 | 101.7 ± 0.1 | 137.5 ± 0.6 | -6.0 ± 0.3 | 5.21 ± 0.01 | 2.92 ± 0.03 | 0.37 ± 0.02 | 0.63 ± 0.03 | 0.78 ± 0.00 | 0.13 ± 0.02 | 0.16 ± 0.04 | 1.9 ± 1.2 |
+| wave_r05_nopc | 24 | 5/5 (100%) | 0 | 25.0 ± 0.0 | 102 ± 0 | -0.7 ± 0.2 | 0.4 ± 0.1 | 81.1 ± 2.1 | -5.9 ± 1.1 | 4.68 ± 0.02 | 3.08 ± 0.01 | 0.76 ± 0.05 | 1.08 ± 0.04 | 0.73 ± 0.01 | 0.20 ± 0.08 | 5.03 ± 0.00 | -1.3 ± 0.4 |
+| wave_r05_pc | 24 | 5/5 (100%) | 0 | 18.2 ± 0.1 | 74 ± 0 | 0.5 ± 0.1 | 102.3 ± 0.0 | 128.3 ± 0.3 | -5.6 ± 1.0 | 5.10 ± 0.00 | 3.29 ± 0.02 | 2.02 ± 0.03 | 1.71 ± 0.03 | 1.07 ± 0.02 | 0.25 ± 0.01 | 0.44 ± 0.01 | 41.6 ± 4.8 |
+| wave_r10_nopc | 24 | 5/5 (100%) | 0 | 25.0 ± 0.0 | 102 ± 0 | 4.3 ± 0.6 | 5.9 ± 0.3 | 78.9 ± 1.9 | 4.3 ± 0.5 | 4.67 ± 0.02 | 3.15 ± 0.01 | 0.89 ± 0.01 | 1.39 ± 0.02 | 0.71 ± 0.01 | 0.33 ± 0.17 | 10.03 ± 0.01 | -1.6 ± 0.4 |
+| wave_r10_pc | 24 | 5/5 (100%) | 0 | 13.9 ± 0.1 | 57 ± 1 | 60.3 ± 52.2 | 99.3 ± 0.2 | 132.1 ± 0.4 | -11.6 ± 0.3 | 5.14 ± 0.00 | 3.05 ± 0.01 | 1.97 ± 0.04 | 1.75 ± 0.04 | 1.45 ± 0.04 | 0.38 ± 0.05 | 2.01 ± 0.13 | 50.0 ± 7.3 |
+| wave_r15_nopc | 24 | 5/5 (100%) | 0 | 24.9 ± 0.0 | 102 ± 0 | 9.7 ± 0.6 | 11.4 ± 0.3 | 77.4 ± 1.6 | 9.6 ± 0.4 | 4.66 ± 0.01 | 3.16 ± 0.01 | 0.89 ± 0.02 | 1.36 ± 0.03 | 0.71 ± 0.01 | 0.33 ± 0.14 | 15.03 ± 0.00 | -1.3 ± 0.3 |
+| wave_r15_pc | 24 | 5/5 (100%) | 0 | 13.6 ± 0.1 | 56 ± 0 | 89.0 ± 0.4 | 90.3 ± 0.1 | 130.6 ± 0.5 | -19.5 ± 0.7 | 5.15 ± 0.01 | 3.09 ± 0.01 | 2.17 ± 0.16 | 1.92 ± 0.15 | 1.49 ± 0.05 | 0.66 ± 0.21 | 6.92 ± 0.14 | 54.2 ± 6.0 |
+| wave_r20_nopc | 24 | 5/5 (100%) | 0 | 24.9 ± 0.0 | 102 ± 0 | 14.3 ± 0.4 | 16.4 ± 0.4 | 74.7 ± 1.6 | 14.3 ± 0.4 | 4.66 ± 0.03 | 3.16 ± 0.01 | 0.89 ± 0.04 | 1.34 ± 0.06 | 0.72 ± 0.01 | 0.57 ± 0.29 | 20.03 ± 0.01 | -1.2 ± 0.6 |
+| wave_r20_pc | 24 | 5/5 (100%) | 0 | 13.3 ± 0.1 | 54 ± 0 | 78.5 ± 0.3 | 80.5 ± 0.1 | 128.2 ± 0.7 | -23.9 ± 5.1 | 5.17 ± 0.01 | 3.11 ± 0.02 | 2.17 ± 0.05 | 1.87 ± 0.05 | 1.58 ± 0.03 | 0.74 ± 0.18 | 11.81 ± 0.05 | 54.3 ± 6.5 |
+| wave_r25_nopc | 24 | 5/5 (100%) | 0 | 24.8 ± 0.0 | 101 ± 0 | 20.9 ± 1.1 | 22.6 ± 0.7 | 71.4 ± 1.0 | 20.2 ± 0.5 | 4.66 ± 0.01 | 3.17 ± 0.01 | 0.86 ± 0.01 | 1.26 ± 0.02 | 0.74 ± 0.00 | 0.75 ± 0.23 | 25.03 ± 0.01 | -0.9 ± 0.4 |
+| wave_r25_pc | 24 | 5/5 (100%) | 0 | 13.1 ± 0.1 | 53 ± 0 | 66.6 ± 0.4 | 68.8 ± 0.5 | 123.3 ± 0.7 | -29.2 ± 5.3 | 5.19 ± 0.01 | 3.12 ± 0.01 | 2.50 ± 0.09 | 2.18 ± 0.09 | 1.67 ± 0.02 | 1.54 ± 0.29 | 16.90 ± 0.06 | 70.7 ± 4.3 |
+
+Peak joint speed / torque in % of the servo limit (3.65 rad/s, 3.29 N·m at 6.0 V; max over the trials of the condition):
+
+| Condition | ω coxa | ω femur | ω tibia | τ coxa | τ femur | τ tibia |
+|---|---:|---:|---:|---:|---:|---:|
+| tripod_r00_nopc | 10% | 18% | 16% | 100% | 100% | 100% |
+| tripod_r00_pc | 10% | 18% | 16% | 100% | 100% | 96% |
+| tripod_r05_nopc | 10% | 19% | 16% | 100% | 100% | 100% |
+| tripod_r05_pc | 10% | 19% | 17% | 100% | 100% | 100% |
+| tripod_r10_nopc | 10% | 18% | 16% | 100% | 100% | 100% |
+| tripod_r10_pc | 10% | 20% | 18% | 100% | 100% | 89% |
+| tripod_r15_nopc | 10% | 18% | 16% | 100% | 100% | 100% |
+| tripod_r15_pc | 10% | 20% | 18% | 100% | 100% | 94% |
+| tripod_r20_nopc | 10% | 18% | 16% | 100% | 100% | 100% |
+| tripod_r20_pc | 10% | 20% | 18% | 100% | 100% | 100% |
+| tripod_r25_nopc | 10% | 18% | 16% | 100% | 100% | 100% |
+| tripod_r25_pc | 10% | 20% | 18% | 35% | 100% | 83% |
+| ripple_r00_nopc | 17% | 20% | 22% | 100% | 100% | 100% |
+| ripple_r00_pc | 18% | 21% | 22% | 100% | 100% | 100% |
+| ripple_r05_nopc | 18% | 20% | 21% | 87% | 100% | 100% |
+| ripple_r05_pc | 17% | 21% | 22% | 100% | 100% | 100% |
+| ripple_r10_nopc | 17% | 20% | 22% | 88% | 100% | 100% |
+| ripple_r10_pc | 17% | 23% | 23% | 100% | 100% | 100% |
+| ripple_r15_nopc | 18% | 20% | 22% | 79% | 100% | 100% |
+| ripple_r15_pc | 17% | 24% | 23% | 100% | 100% | 100% |
+| ripple_r20_nopc | 17% | 20% | 22% | 94% | 100% | 100% |
+| ripple_r20_pc | 18% | 23% | 23% | 100% | 100% | 100% |
+| ripple_r25_nopc | 18% | 20% | 22% | 50% | 100% | 100% |
+| ripple_r25_pc | 18% | 23% | 23% | 100% | 100% | 100% |
+| wave_r00_nopc | 38% | 24% | 39% | 100% | 100% | 100% |
+| wave_r00_pc | 38% | 24% | 39% | 100% | 100% | 100% |
+| wave_r05_nopc | 38% | 24% | 39% | 100% | 100% | 100% |
+| wave_r05_pc | 38% | 28% | 41% | 100% | 100% | 100% |
+| wave_r10_nopc | 38% | 24% | 39% | 78% | 100% | 100% |
+| wave_r10_pc | 38% | 32% | 42% | 100% | 100% | 100% |
+| wave_r15_nopc | 38% | 24% | 39% | 100% | 100% | 99% |
+| wave_r15_pc | 38% | 32% | 42% | 100% | 100% | 100% |
+| wave_r20_nopc | 38% | 24% | 39% | 100% | 100% | 100% |
+| wave_r20_pc | 38% | 32% | 42% | 100% | 100% | 100% |
+| wave_r25_nopc | 38% | 24% | 39% | 82% | 100% | 97% |
+| wave_r25_pc | 38% | 33% | 43% | 100% | 100% | 100% |
+
+Joint torque p95 in % of the limit (mean over trials) and fraction of samples at the limit (>= 98 %) - the peak above is often a single touch-down sample:
+
+| Condition | τ p95 coxa | τ p95 femur | τ p95 tibia | femur at limit | tibia at limit |
+|---|---:|---:|---:|---:|---:|
+| tripod_r00_nopc | 42% | 68% | 65% | 0.1% | 0.0% |
+| tripod_r00_pc | 42% | 68% | 65% | 0.1% | 0.0% |
+| tripod_r05_nopc | 37% | 66% | 64% | 0.1% | 0.0% |
+| tripod_r05_pc | 42% | 63% | 69% | 0.2% | 0.0% |
+| tripod_r10_nopc | 31% | 62% | 64% | 0.1% | 0.0% |
+| tripod_r10_pc | 40% | 57% | 71% | 0.0% | 0.0% |
+| tripod_r15_nopc | 26% | 59% | 62% | 0.1% | 0.0% |
+| tripod_r15_pc | 34% | 54% | 69% | 0.1% | 0.0% |
+| tripod_r20_nopc | 20% | 55% | 60% | 0.1% | 0.0% |
+| tripod_r20_pc | 28% | 52% | 67% | 0.1% | 0.0% |
+| tripod_r25_nopc | 12% | 50% | 57% | 0.1% | 0.0% |
+| tripod_r25_pc | 14% | 46% | 62% | 0.0% | 0.0% |
+| ripple_r00_nopc | 40% | 67% | 83% | 1.4% | 0.1% |
+| ripple_r00_pc | 40% | 67% | 83% | 1.3% | 0.1% |
+| ripple_r05_nopc | 35% | 65% | 78% | 1.2% | 0.0% |
+| ripple_r05_pc | 31% | 68% | 77% | 0.0% | 0.1% |
+| ripple_r10_nopc | 30% | 61% | 72% | 0.2% | 0.1% |
+| ripple_r10_pc | 41% | 74% | 70% | 0.2% | 0.2% |
+| ripple_r15_nopc | 24% | 58% | 65% | 0.0% | 0.0% |
+| ripple_r15_pc | 36% | 60% | 63% | 0.0% | 0.0% |
+| ripple_r20_nopc | 23% | 54% | 60% | 0.1% | 0.0% |
+| ripple_r20_pc | 40% | 59% | 57% | 0.2% | 0.2% |
+| ripple_r25_nopc | 26% | 49% | 55% | 0.1% | 0.0% |
+| ripple_r25_pc | 37% | 55% | 50% | 0.1% | 0.2% |
+| wave_r00_nopc | 13% | 100% | 89% | 10.8% | 0.0% |
+| wave_r00_pc | 13% | 100% | 89% | 9.9% | 0.3% |
+| wave_r05_nopc | 15% | 98% | 86% | 4.5% | 0.0% |
+| wave_r05_pc | 14% | 97% | 97% | 4.8% | 5.1% |
+| wave_r10_nopc | 17% | 89% | 78% | 0.4% | 0.0% |
+| wave_r10_pc | 12% | 99% | 100% | 5.4% | 5.5% |
+| wave_r15_nopc | 21% | 82% | 75% | 0.1% | 0.0% |
+| wave_r15_pc | 16% | 93% | 100% | 0.8% | 5.3% |
+| wave_r20_nopc | 26% | 74% | 68% | 0.1% | 0.0% |
+| wave_r20_pc | 21% | 87% | 100% | 0.7% | 5.3% |
+| wave_r25_nopc | 31% | 66% | 64% | 0.1% | 0.0% |
+| wave_r25_pc | 26% | 80% | 81% | 0.5% | 4.5% |
+
+| Condition | Body pitch mean (°) | |pitch| max (°) | Roll RMS (°) | Tilt vs slope max (°) | Correction pitch (°) | IMU est. err pitch RMS (°) | IMU est. err roll RMS (°) |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| tripod_r00_nopc | 0.0 ± 0.0 | 0.0 ± 0.0 | 0.00 ± 0.00 | 0.0 ± 0.0 | -0.0 ± 0.0 | 0.03 ± 0.03 | 0.07 ± 0.06 |
+| tripod_r00_pc | -0.0 ± 0.0 | 0.1 ± 0.1 | 0.04 ± 0.05 | 0.2 ± 0.1 | 0.0 ± 0.0 | 0.03 ± 0.02 | 0.06 ± 0.06 |
+| tripod_r05_nopc | -5.0 ± 0.0 | 5.0 ± 0.0 | 0.18 ± 0.06 | 0.2 ± 0.1 | 0.0 ± 0.0 | 0.03 ± 0.01 | 0.06 ± 0.05 |
+| tripod_r05_pc | -0.0 ± 0.0 | 0.1 ± 0.1 | 0.03 ± 0.03 | 5.0 ± 0.0 | -5.0 ± 0.0 | 0.06 ± 0.05 | 0.05 ± 0.04 |
+| tripod_r10_nopc | -10.0 ± 0.0 | 10.0 ± 0.0 | 0.20 ± 0.17 | 0.2 ± 0.2 | -0.0 ± 0.0 | 0.04 ± 0.03 | 0.06 ± 0.06 |
+| tripod_r10_pc | -1.6 ± 0.1 | 1.7 ± 0.1 | 0.06 ± 0.03 | 8.5 ± 0.1 | -8.4 ± 0.1 | 0.09 ± 0.09 | 0.06 ± 0.05 |
+| tripod_r15_nopc | -15.0 ± 0.0 | 15.0 ± 0.0 | 0.22 ± 0.17 | 0.2 ± 0.2 | -0.0 ± 0.0 | 0.07 ± 0.05 | 0.08 ± 0.05 |
+| tripod_r15_pc | -6.6 ± 0.1 | 6.7 ± 0.1 | 0.15 ± 0.09 | 8.4 ± 0.1 | -8.4 ± 0.1 | 0.11 ± 0.06 | 0.06 ± 0.02 |
+| tripod_r20_nopc | -20.0 ± 0.0 | 20.0 ± 0.0 | 0.41 ± 0.31 | 0.4 ± 0.3 | -0.0 ± 0.0 | 0.08 ± 0.04 | 0.06 ± 0.04 |
+| tripod_r20_pc | -11.7 ± 0.1 | 11.8 ± 0.3 | 0.46 ± 0.17 | 8.4 ± 0.1 | -8.3 ± 0.1 | 0.16 ± 0.08 | 0.07 ± 0.06 |
+| tripod_r25_nopc | -25.0 ± 0.0 | 25.0 ± 0.0 | 0.57 ± 0.30 | 0.6 ± 0.3 | -0.0 ± 0.0 | 0.09 ± 0.08 | 0.05 ± 0.04 |
+| tripod_r25_pc | -16.6 ± 0.1 | 16.7 ± 0.1 | 0.44 ± 0.30 | 8.4 ± 0.1 | -8.3 ± 0.1 | 0.07 ± 0.04 | 0.03 ± 0.02 |
+| ripple_r00_nopc | 0.0 ± 0.0 | 0.2 ± 0.0 | 0.07 ± 0.00 | 0.2 ± 0.0 | -0.0 ± 0.0 | 0.35 ± 0.10 | 0.21 ± 0.06 |
+| ripple_r00_pc | -0.0 ± 0.2 | 0.6 ± 0.0 | 0.14 ± 0.02 | 0.6 ± 0.0 | 0.0 ± 0.2 | 0.32 ± 0.04 | 0.19 ± 0.03 |
+| ripple_r05_nopc | -5.0 ± 0.0 | 5.2 ± 0.0 | 0.13 ± 0.05 | 0.3 ± 0.1 | -0.0 ± 0.0 | 0.25 ± 0.07 | 0.20 ± 0.05 |
+| ripple_r05_pc | -0.1 ± 0.1 | 0.6 ± 0.1 | 0.19 ± 0.03 | 5.4 ± 0.1 | -4.9 ± 0.1 | 0.28 ± 0.04 | 0.22 ± 0.03 |
+| ripple_r10_nopc | -10.0 ± 0.0 | 10.2 ± 0.0 | 0.29 ± 0.12 | 0.5 ± 0.1 | -0.0 ± 0.0 | 0.21 ± 0.06 | 0.22 ± 0.06 |
+| ripple_r10_pc | -1.7 ± 0.1 | 2.1 ± 0.1 | 0.24 ± 0.02 | 8.7 ± 0.0 | -8.4 ± 0.1 | 0.45 ± 0.19 | 0.23 ± 0.04 |
+| ripple_r15_nopc | -15.0 ± 0.0 | 15.2 ± 0.0 | 0.38 ± 0.25 | 0.6 ± 0.3 | -0.0 ± 0.0 | 0.23 ± 0.11 | 0.24 ± 0.08 |
+| ripple_r15_pc | -6.7 ± 0.1 | 7.1 ± 0.1 | 0.35 ± 0.05 | 8.7 ± 0.1 | -8.3 ± 0.1 | 0.38 ± 0.20 | 0.25 ± 0.05 |
+| ripple_r20_nopc | -20.0 ± 0.0 | 20.2 ± 0.0 | 0.49 ± 0.13 | 0.7 ± 0.1 | -0.0 ± 0.0 | 0.16 ± 0.08 | 0.24 ± 0.07 |
+| ripple_r20_pc | -11.7 ± 0.1 | 12.0 ± 0.1 | 0.42 ± 0.07 | 8.7 ± 0.1 | -8.4 ± 0.1 | 0.56 ± 0.34 | 0.19 ± 0.02 |
+| ripple_r25_nopc | -25.0 ± 0.0 | 25.2 ± 0.0 | 0.55 ± 0.47 | 0.7 ± 0.5 | -0.0 ± 0.0 | 0.16 ± 0.06 | 0.24 ± 0.04 |
+| ripple_r25_pc | -16.7 ± 0.1 | 17.0 ± 0.1 | 0.51 ± 0.31 | 8.7 ± 0.1 | -8.4 ± 0.1 | 0.51 ± 0.33 | 0.21 ± 0.09 |
+| wave_r00_nopc | 0.0 ± 0.0 | 0.2 ± 0.0 | 0.04 ± 0.00 | 0.2 ± 0.0 | -0.0 ± 0.0 | 0.21 ± 0.02 | 0.19 ± 0.03 |
+| wave_r00_pc | -0.0 ± 0.1 | 0.5 ± 0.1 | 0.13 ± 0.02 | 0.5 ± 0.1 | 0.0 ± 0.1 | 0.23 ± 0.05 | 0.17 ± 0.02 |
+| wave_r05_nopc | -5.0 ± 0.0 | 5.3 ± 0.0 | 0.20 ± 0.08 | 0.5 ± 0.1 | -0.0 ± 0.0 | 0.18 ± 0.07 | 0.15 ± 0.03 |
+| wave_r05_pc | -0.3 ± 0.1 | 0.9 ± 0.1 | 0.25 ± 0.01 | 5.5 ± 0.1 | -4.8 ± 0.1 | 0.41 ± 0.02 | 0.20 ± 0.03 |
+| wave_r10_nopc | -10.0 ± 0.0 | 10.3 ± 0.0 | 0.33 ± 0.17 | 0.6 ± 0.2 | -0.0 ± 0.0 | 0.28 ± 0.07 | 0.18 ± 0.05 |
+| wave_r10_pc | -2.0 ± 0.1 | 2.7 ± 0.2 | 0.38 ± 0.05 | 9.1 ± 0.2 | -8.1 ± 0.2 | 0.68 ± 0.07 | 0.27 ± 0.01 |
+| wave_r15_nopc | -15.0 ± 0.0 | 15.3 ± 0.0 | 0.33 ± 0.14 | 0.6 ± 0.2 | -0.0 ± 0.0 | 0.26 ± 0.04 | 0.19 ± 0.07 |
+| wave_r15_pc | -6.9 ± 0.1 | 7.7 ± 0.1 | 0.66 ± 0.21 | 9.0 ± 0.2 | -8.1 ± 0.2 | 0.70 ± 0.08 | 0.25 ± 0.01 |
+| wave_r20_nopc | -20.0 ± 0.0 | 20.3 ± 0.0 | 0.57 ± 0.29 | 0.9 ± 0.3 | -0.0 ± 0.0 | 0.20 ± 0.05 | 0.17 ± 0.07 |
+| wave_r20_pc | -11.8 ± 0.1 | 12.6 ± 0.1 | 0.74 ± 0.18 | 9.2 ± 0.0 | -8.2 ± 0.1 | 0.79 ± 0.06 | 0.27 ± 0.02 |
+| wave_r25_nopc | -25.0 ± 0.0 | 25.3 ± 0.0 | 0.75 ± 0.23 | 1.0 ± 0.2 | -0.0 ± 0.0 | 0.25 ± 0.13 | 0.21 ± 0.10 |
+| wave_r25_pc | -16.9 ± 0.1 | 17.6 ± 0.1 | 1.54 ± 0.29 | 9.2 ± 0.1 | -8.1 ± 0.1 | 0.83 ± 0.07 | 0.26 ± 0.02 |
+
+
+--- launch log: errors / warnings (last 40 lines) ---
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+
+results: /home/t/49x_Hexapod/ros2_ws/results/e4 (exit 0)
+=== run_e2 2026-09-26T14:06:51+07:00  plan=e4 camera=true mode=--resume build=build_final1 install=install_final1 quick=0 args=--redo _pc$ ===
+--- build ---
+
+        See https://setuptools.pypa.io/en/latest/userguide/declarative_config.html for details.
+        ********************************************************************************
+
+!!
+  opt = self.warn_dash_deprecation(opt, section)
+---
+Finished <<< hexapod_locomotion [1.19s]
+Starting >>> hexapod_bringup
+Finished <<< hexapod_bringup [0.06s]
+Starting >>> hexapod_evaluation
+Finished <<< hexapod_evaluation [1.05s]
+
+Summary: 11 packages finished [3.91s]
+  5 packages had stderr output: hexapod_gait_selector hexapod_kinematics hexapod_locomotion hexapod_perception hexapod_state_estimation
+GZ_PARTITION=hexapod_78220_e2
+--- e2_runner --config /home/t/49x_Hexapod/ros2_ws/install_final1/hexapod_evaluation/share/hexapod_evaluation/config/e4.yaml --resume --redo _pc$ ---
+waiting for locomotion_node and ground-truth pose ...
+standing base_link z = 116.3 mm; mass 4.147 kg; 36 conditions x 5 trials, 0.5 m; camera snapshots on
+resume: 180 trial(s) already in /home/t/49x_Hexapod/ros2_ws/results/e4/e2_trials.csv
+resume: dropped 90 of 180 trial(s) (condition not in the plan or distance != 0.5 m); previous csv -> /home/t/49x_Hexapod/ros2_ws/results/e4/e2_trials.pruned_20260926_140710.csv
+world state readable via pose/info; no terrain left over
+tripod_r00_pc_01: OK   [ramp 0 deg] v   22.4 mm/s  SSMmin   99.6 mm  slip   0.6 mm  CoT   1.24  pitch  -0.0 deg  
+tripod_r05_pc_01: OK   [ramp 5 deg] v   22.5 mm/s  SSMmin  100.6 mm  slip   0.6 mm  CoT   1.30  pitch   0.0 deg  
+tripod_r10_pc_01: OK   [ramp 10 deg] v   22.6 mm/s  SSMmin   97.3 mm  slip   0.6 mm  CoT   1.31  pitch  -2.5 deg  
+tripod_r15_pc_01: OK   [ramp 15 deg] v   22.6 mm/s  SSMmin   87.8 mm  slip   0.6 mm  CoT   1.27  pitch  -7.5 deg  
+tripod_r20_pc_01: OK   [ramp 20 deg] v   22.4 mm/s  SSMmin   77.1 mm  slip   0.6 mm  CoT   1.24  pitch -12.6 deg  
+tripod_r25_pc_01: OK   [ramp 25 deg] v   21.1 mm/s  SSMmin   67.1 mm  slip   1.0 mm  CoT   1.15  pitch -17.5 deg  
+ripple_r00_pc_01: OK   [ramp 0 deg] v   25.4 mm/s  SSMmin  102.7 mm  slip   0.3 mm  CoT   1.06  pitch  -0.2 deg  
+ripple_r05_pc_01: OK   [ramp 5 deg] v   25.4 mm/s  SSMmin  103.2 mm  slip   0.4 mm  CoT   1.00  pitch  -0.1 deg  
+ripple_r10_pc_01: OK   [ramp 10 deg] v   25.4 mm/s  SSMmin   99.4 mm  slip   0.4 mm  CoT   0.94  pitch  -2.6 deg  
+ripple_r15_pc_01: OK   [ramp 15 deg] v   25.3 mm/s  SSMmin   89.6 mm  slip   0.6 mm  CoT   0.90  pitch  -7.7 deg  
+ripple_r20_pc_01: OK   [ramp 20 deg] v   25.2 mm/s  SSMmin   79.7 mm  slip   0.6 mm  CoT   0.84  pitch -12.6 deg  
+ripple_r25_pc_01: OK   [ramp 25 deg] v   24.7 mm/s  SSMmin   68.5 mm  slip   0.7 mm  CoT   0.81  pitch -17.6 deg  
+wave_r00_pc_01: OK   [ramp 0 deg] v   25.2 mm/s  SSMmin   99.4 mm  slip   0.4 mm  CoT   0.77  pitch   0.0 deg  
+wave_r05_pc_01: OK   [ramp 5 deg] v   25.2 mm/s  SSMmin  100.8 mm  slip   0.3 mm  CoT   0.73  pitch   0.0 deg  
+wave_r10_pc_01: OK   [ramp 10 deg] v   25.1 mm/s  SSMmin   97.1 mm  slip   0.8 mm  CoT   0.67  pitch  -2.8 deg  
+wave_r15_pc_01: OK   [ramp 15 deg] v   25.1 mm/s  SSMmin   88.7 mm  slip   0.8 mm  CoT   0.64  pitch  -7.5 deg  
+wave_r20_pc_01: OK   [ramp 20 deg] v   25.1 mm/s  SSMmin   78.9 mm  slip   0.8 mm  CoT   0.67  pitch -12.5 deg  
+wave_r25_pc_01: OK   [ramp 25 deg] v   24.9 mm/s  SSMmin   67.9 mm  slip   0.8 mm  CoT   0.70  pitch -17.7 deg  
+tripod_r00_pc_02: OK   [ramp 0 deg] v   22.4 mm/s  SSMmin   99.4 mm  slip   0.6 mm  CoT   1.24  pitch  -0.0 deg  
+tripod_r05_pc_02: OK   [ramp 5 deg] v   22.6 mm/s  SSMmin  100.6 mm  slip   0.6 mm  CoT   1.29  pitch  -0.0 deg  
+tripod_r10_pc_02: OK   [ramp 10 deg] v   22.6 mm/s  SSMmin   97.2 mm  slip   0.6 mm  CoT   1.31  pitch  -2.5 deg  
+tripod_r15_pc_02: OK   [ramp 15 deg] v   22.6 mm/s  SSMmin   88.0 mm  slip   0.6 mm  CoT   1.27  pitch  -7.4 deg  
+tripod_r20_pc_02: OK   [ramp 20 deg] v   22.5 mm/s  SSMmin   77.2 mm  slip   0.6 mm  CoT   1.25  pitch -12.6 deg  
+tripod_r25_pc_02: OK   [ramp 25 deg] v   21.2 mm/s  SSMmin   67.4 mm  slip   1.0 mm  CoT   1.15  pitch -17.5 deg  
+ripple_r00_pc_02: OK   [ramp 0 deg] v   25.5 mm/s  SSMmin  101.9 mm  slip   0.4 mm  CoT   1.04  pitch   0.2 deg  
+ripple_r05_pc_02: OK   [ramp 5 deg] v   25.4 mm/s  SSMmin  103.3 mm  slip   0.4 mm  CoT   1.00  pitch  -0.0 deg  
+ripple_r10_pc_02: OK   [ramp 10 deg] v   25.4 mm/s  SSMmin   99.4 mm  slip   0.4 mm  CoT   0.94  pitch  -2.6 deg  
+ripple_r15_pc_02: OK   [ramp 15 deg] v   25.2 mm/s  SSMmin   90.2 mm  slip   0.6 mm  CoT   0.88  pitch  -7.5 deg  
+ripple_r20_pc_02: OK   [ramp 20 deg] v   25.2 mm/s  SSMmin   80.2 mm  slip   0.6 mm  CoT   0.83  pitch -12.5 deg  
+ripple_r25_pc_02: OK   [ramp 25 deg] v   24.7 mm/s  SSMmin   68.7 mm  slip   0.6 mm  CoT   0.80  pitch -17.6 deg  
+wave_r00_pc_02: OK   [ramp 0 deg] v   25.2 mm/s  SSMmin   99.6 mm  slip   0.4 mm  CoT   0.77  pitch   0.1 deg  
+wave_r05_pc_02: OK   [ramp 5 deg] v   25.2 mm/s  SSMmin  100.2 mm  slip   0.3 mm  CoT   0.73  pitch   0.0 deg  
+wave_r10_pc_02: OK   [ramp 10 deg] v   25.1 mm/s  SSMmin   97.6 mm  slip   0.7 mm  CoT   0.69  pitch  -2.6 deg  
+wave_r15_pc_02: OK   [ramp 15 deg] v   25.1 mm/s  SSMmin   88.4 mm  slip   0.8 mm  CoT   0.65  pitch  -7.6 deg  
+wave_r20_pc_02: OK   [ramp 20 deg] v   25.0 mm/s  SSMmin   78.7 mm  slip   0.8 mm  CoT   0.65  pitch -12.6 deg  
+wave_r25_pc_02: OK   [ramp 25 deg] v   24.9 mm/s  SSMmin   67.9 mm  slip   0.8 mm  CoT   0.71  pitch -17.7 deg  
+tripod_r00_pc_03: OK   [ramp 0 deg] v   22.4 mm/s  SSMmin   99.3 mm  slip   0.6 mm  CoT   1.24  pitch   0.0 deg  
+tripod_r05_pc_03: OK   [ramp 5 deg] v   22.5 mm/s  SSMmin  100.5 mm  slip   0.6 mm  CoT   1.30  pitch  -0.0 deg  
+tripod_r10_pc_03: OK   [ramp 10 deg] v   22.6 mm/s  SSMmin   96.7 mm  slip   0.6 mm  CoT   1.32  pitch  -2.7 deg  
+tripod_r15_pc_03: OK   [ramp 15 deg] v   22.6 mm/s  SSMmin   87.8 mm  slip   0.6 mm  CoT   1.28  pitch  -7.5 deg  
+tripod_r20_pc_03: OK   [ramp 20 deg] v   22.4 mm/s  SSMmin   77.4 mm  slip   0.6 mm  CoT   1.26  pitch -12.6 deg  
+tripod_r25_pc_03: OK   [ramp 25 deg] v   21.1 mm/s  SSMmin   66.6 mm  slip   1.0 mm  CoT   1.16  pitch -17.6 deg  
+ripple_r00_pc_03: OK   [ramp 0 deg] v   25.5 mm/s  SSMmin  102.4 mm  slip   0.3 mm  CoT   1.03  pitch   0.1 deg  
+ripple_r05_pc_03: OK   [ramp 5 deg] v   25.4 mm/s  SSMmin  103.7 mm  slip   0.4 mm  CoT   0.99  pitch  -0.1 deg  
+ripple_r10_pc_03: OK   [ramp 10 deg] v   25.4 mm/s  SSMmin   99.1 mm  slip   0.4 mm  CoT   0.94  pitch  -2.7 deg  
+ripple_r15_pc_03: OK   [ramp 15 deg] v   25.3 mm/s  SSMmin   90.1 mm  slip   0.5 mm  CoT   0.91  pitch  -7.6 deg  
+ripple_r20_pc_03: OK   [ramp 20 deg] v   25.2 mm/s  SSMmin   79.5 mm  slip   0.6 mm  CoT   0.86  pitch -12.6 deg  
+ripple_r25_pc_03: OK   [ramp 25 deg] v   24.8 mm/s  SSMmin   69.4 mm  slip   0.6 mm  CoT   0.82  pitch -17.5 deg  
+wave_r00_pc_03: OK   [ramp 0 deg] v   25.2 mm/s  SSMmin   99.5 mm  slip   0.4 mm  CoT   0.78  pitch  -0.0 deg  
+wave_r05_pc_03: OK   [ramp 5 deg] v   25.2 mm/s  SSMmin  100.1 mm  slip   0.3 mm  CoT   0.72  pitch   0.1 deg  
+wave_r10_pc_03: OK   [ramp 10 deg] v   25.1 mm/s  SSMmin   97.8 mm  slip   0.7 mm  CoT   0.66  pitch  -2.6 deg  
+wave_r15_pc_03: create reply lost (Service call timed out) but the piece is in the world - continuing
+wave_r15_pc_03: OK   [ramp 15 deg] v   25.1 mm/s  SSMmin   88.9 mm  slip   0.8 mm  CoT   0.65  pitch  -7.5 deg  
+wave_r20_pc_03: OK   [ramp 20 deg] v   25.0 mm/s  SSMmin   78.1 mm  slip   0.8 mm  CoT   0.64  pitch -12.7 deg  
+wave_r25_pc_03: create reply lost (Service call timed out) but the piece is in the world - continuing
+wave_r25_pc_03: OK   [ramp 25 deg] v   24.9 mm/s  SSMmin   68.1 mm  slip   0.8 mm  CoT   0.71  pitch -17.7 deg  
+tripod_r00_pc_04: OK   [ramp 0 deg] v   22.4 mm/s  SSMmin   99.4 mm  slip   0.6 mm  CoT   1.25  pitch  -0.0 deg  
+tripod_r05_pc_04: OK   [ramp 5 deg] v   22.5 mm/s  SSMmin  100.6 mm  slip   0.6 mm  CoT   1.30  pitch  -0.0 deg  
+tripod_r10_pc_04: OK   [ramp 10 deg] v   22.6 mm/s  SSMmin   97.2 mm  slip   0.6 mm  CoT   1.31  pitch  -2.5 deg  
+tripod_r15_pc_04: OK   [ramp 15 deg] v   22.6 mm/s  SSMmin   87.2 mm  slip   0.6 mm  CoT   1.28  pitch  -7.7 deg  
+tripod_r20_pc_04: OK   [ramp 20 deg] v   22.5 mm/s  SSMmin   77.8 mm  slip   0.6 mm  CoT   1.25  pitch -12.5 deg  
+tripod_r25_pc_04: OK   [ramp 25 deg] v   21.1 mm/s  SSMmin   66.6 mm  slip   1.0 mm  CoT   1.15  pitch -17.6 deg  
+ripple_r00_pc_04: OK   [ramp 0 deg] v   25.4 mm/s  SSMmin  102.2 mm  slip   0.4 mm  CoT   1.04  pitch  -0.2 deg  
+ripple_r05_pc_04: OK   [ramp 5 deg] v   25.4 mm/s  SSMmin  103.9 mm  slip   0.4 mm  CoT   0.98  pitch  -0.2 deg  
+ripple_r10_pc_04: OK   [ramp 10 deg] v   25.4 mm/s  SSMmin   99.5 mm  slip   0.4 mm  CoT   0.93  pitch  -2.5 deg  
+ripple_r15_pc_04: OK   [ramp 15 deg] v   25.3 mm/s  SSMmin   89.5 mm  slip   0.6 mm  CoT   0.91  pitch  -7.7 deg  
+ripple_r20_pc_04: OK   [ramp 20 deg] v   25.2 mm/s  SSMmin   79.5 mm  slip   0.6 mm  CoT   0.86  pitch -12.6 deg  
+ripple_r25_pc_04: OK   [ramp 25 deg] v   24.8 mm/s  SSMmin   69.0 mm  slip   0.6 mm  CoT   0.83  pitch -17.5 deg  
+wave_r00_pc_04: OK   [ramp 0 deg] v   25.3 mm/s  SSMmin   99.3 mm  slip   0.3 mm  CoT   0.79  pitch   0.0 deg  
+wave_r05_pc_04: OK   [ramp 5 deg] v   25.3 mm/s  SSMmin  100.5 mm  slip   0.3 mm  CoT   0.72  pitch  -0.1 deg  
+wave_r10_pc_04: OK   [ramp 10 deg] v   25.1 mm/s  SSMmin   97.6 mm  slip   0.7 mm  CoT   0.65  pitch  -2.5 deg  
+wave_r15_pc_04: OK   [ramp 15 deg] v   25.1 mm/s  SSMmin   88.6 mm  slip   0.8 mm  CoT   0.65  pitch  -7.5 deg  
+wave_r15_pc_04: remove reply: Service call timed out - checking the world
+wave_r20_pc_04: OK   [ramp 20 deg] v   25.0 mm/s  SSMmin   78.1 mm  slip   0.9 mm  CoT   0.66  pitch -12.7 deg  
+wave_r25_pc_04: OK   [ramp 25 deg] v   24.9 mm/s  SSMmin   67.9 mm  slip   0.8 mm  CoT   0.72  pitch -17.5 deg  
+tripod_r00_pc_05: OK   [ramp 0 deg] v   22.4 mm/s  SSMmin   99.4 mm  slip   0.6 mm  CoT   1.25  pitch  -0.0 deg  
+tripod_r05_pc_05: OK   [ramp 5 deg] v   22.5 mm/s  SSMmin  100.5 mm  slip   0.6 mm  CoT   1.31  pitch  -0.0 deg  
+tripod_r05_pc_05: remove reply: Service call timed out - checking the world
+tripod_r10_pc_05: OK   [ramp 10 deg] v   22.6 mm/s  SSMmin   97.1 mm  slip   0.6 mm  CoT   1.31  pitch  -2.5 deg  
+tripod_r15_pc_05: OK   [ramp 15 deg] v   22.6 mm/s  SSMmin   87.5 mm  slip   0.6 mm  CoT   1.28  pitch  -7.6 deg  
+tripod_r20_pc_05: OK   [ramp 20 deg] v   22.5 mm/s  SSMmin   77.7 mm  slip   0.6 mm  CoT   1.25  pitch -12.5 deg  
+tripod_r25_pc_05: OK   [ramp 25 deg] v   21.1 mm/s  SSMmin   65.8 mm  slip   1.0 mm  CoT   1.15  pitch -17.7 deg  
+ripple_r00_pc_05: OK   [ramp 0 deg] v   25.4 mm/s  SSMmin  102.1 mm  slip   0.3 mm  CoT   1.03  pitch  -0.1 deg  
+ripple_r05_pc_05: OK   [ramp 5 deg] v   25.4 mm/s  SSMmin  103.5 mm  slip   0.4 mm  CoT   0.99  pitch  -0.0 deg  
+ripple_r10_pc_05: OK   [ramp 10 deg] v   25.4 mm/s  SSMmin   99.7 mm  slip   0.4 mm  CoT   0.92  pitch  -2.5 deg  
+ripple_r15_pc_05: OK   [ramp 15 deg] v   25.3 mm/s  SSMmin   89.8 mm  slip   0.6 mm  CoT   0.88  pitch  -7.6 deg  
+ripple_r20_pc_05: OK   [ramp 20 deg] v   25.2 mm/s  SSMmin   79.9 mm  slip   0.6 mm  CoT   0.83  pitch -12.6 deg  
+ripple_r25_pc_05: create reply lost (Service call timed out) but the piece is in the world - continuing
+ripple_r25_pc_05: OK   [ramp 25 deg] v   24.7 mm/s  SSMmin   69.2 mm  slip   0.7 mm  CoT   0.80  pitch -17.5 deg  
+wave_r00_pc_05: OK   [ramp 0 deg] v   25.2 mm/s  SSMmin   99.3 mm  slip   0.4 mm  CoT   0.77  pitch   0.1 deg  
+wave_r05_pc_05: OK   [ramp 5 deg] v   25.2 mm/s  SSMmin  100.8 mm  slip   0.3 mm  CoT   0.74  pitch  -0.1 deg  
+wave_r10_pc_05: OK   [ramp 10 deg] v   25.2 mm/s  SSMmin   97.6 mm  slip   0.7 mm  CoT   0.68  pitch  -2.5 deg  
+wave_r15_pc_05: OK   [ramp 15 deg] v   25.1 mm/s  SSMmin   88.9 mm  slip   0.9 mm  CoT   0.65  pitch  -7.5 deg  
+wave_r20_pc_05: create reply lost (Service call timed out) but the piece is in the world - continuing
+wave_r20_pc_05: OK   [ramp 20 deg] v   25.0 mm/s  SSMmin   78.8 mm  slip   0.9 mm  CoT   0.67  pitch -12.5 deg  
+wave_r25_pc_05: OK   [ramp 25 deg] v   24.9 mm/s  SSMmin   68.1 mm  slip   0.9 mm  CoT   0.72  pitch -17.5 deg  
+# E4 - ramps, posture control off / on (chapter 4.1.4)
+
+- Generated 2026-09-26 14:06:57; seed 2; course 0.5 m, success = goal within 2.0 x nominal time without a fall (|roll|/|pitch| > 30.0°, z < 60 mm)
+- Mass 4.147 kg; cycle times {'tripod': 0.95, 'ripple': 1.3, 'wave': 2.4}; metrics exclude the warm-up (1 gait cycle); Mean ± SD (sample SD) over all trials of a condition
+- Ground truth only (OdometryPublisher, joint states, contact and joint F/T sensors); slip = sliding of the foot contact point per stance, centre slip = ball-centre displacement
+
+| Condition | Cmd (mm/s) | Success | Falls | Speed (mm/s) | Speed / cmd (%) | SSM min (mm) | SSM p5 (mm) | SSM mean (mm) | SSM min, contact only (mm) | Support feet | Feet in contact | Slip/stance (mm) | Centre slip (mm) | CoT | Roll RMS (°) | Pitch RMS (°) | Lateral drift (mm) |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| tripod_r00_nopc | 25 | 5/5 (100%) | 0 | 22.4 ± 0.0 | 90 ± 0 | 99.5 ± 0.1 | 100.1 ± 0.0 | 129.2 ± 0.8 | 98.5 ± 0.0 | 3.84 ± 0.02 | 3.15 ± 0.01 | 0.58 ± 0.00 | 0.35 ± 0.02 | 1.26 ± 0.01 | 0.00 ± 0.00 | 0.00 ± 0.00 | 0.8 ± 0.4 |
+| tripod_r05_nopc | 25 | 5/5 (100%) | 0 | 22.4 ± 0.0 | 90 ± 0 | 95.3 ± 0.1 | 95.8 ± 0.1 | 114.3 ± 0.8 | 94.9 ± 0.1 | 3.47 ± 0.03 | 3.15 ± 0.01 | 0.58 ± 0.00 | 0.36 ± 0.01 | 1.22 ± 0.01 | 0.18 ± 0.06 | 5.00 ± 0.00 | 0.7 ± 0.3 |
+| tripod_r10_nopc | 25 | 5/5 (100%) | 0 | 22.4 ± 0.0 | 90 ± 0 | 86.5 ± 0.2 | 87.2 ± 0.0 | 102.5 ± 0.2 | 86.2 ± 0.2 | 3.38 ± 0.01 | 3.15 ± 0.01 | 0.60 ± 0.00 | 0.37 ± 0.00 | 1.19 ± 0.01 | 0.20 ± 0.17 | 10.00 ± 0.00 | 0.8 ± 0.2 |
+| tripod_r15_nopc | 25 | 5/5 (100%) | 0 | 22.4 ± 0.0 | 90 ± 0 | 77.3 ± 0.1 | 78.0 ± 0.0 | 92.8 ± 0.2 | 77.1 ± 0.1 | 3.37 ± 0.01 | 3.15 ± 0.01 | 0.62 ± 0.01 | 0.37 ± 0.02 | 1.16 ± 0.01 | 0.22 ± 0.17 | 15.00 ± 0.00 | 0.9 ± 0.3 |
+| tripod_r20_nopc | 25 | 5/5 (100%) | 0 | 22.3 ± 0.0 | 89 ± 0 | 67.4 ± 0.3 | 68.0 ± 0.2 | 82.4 ± 0.4 | 67.1 ± 0.3 | 3.37 ± 0.01 | 3.15 ± 0.01 | 0.64 ± 0.00 | 0.34 ± 0.01 | 1.13 ± 0.01 | 0.41 ± 0.31 | 19.99 ± 0.01 | 0.8 ± 0.2 |
+| tripod_r25_nopc | 25 | 5/5 (100%) | 0 | 21.0 ± 0.0 | 84 ± 0 | 56.8 ± 0.4 | 57.4 ± 0.3 | 71.5 ± 0.2 | 56.6 ± 0.5 | 3.38 ± 0.01 | 3.16 ± 0.01 | 0.98 ± 0.01 | 0.50 ± 0.01 | 1.07 ± 0.01 | 0.57 ± 0.30 | 24.99 ± 0.01 | 1.6 ± 0.8 |
+| ripple_r00_nopc | 25 | 5/5 (100%) | 0 | 25.4 ± 0.0 | 102 ± 0 | 102.4 ± 0.1 | 103.2 ± 0.0 | 112.3 ± 0.2 | -4.4 ± 0.2 | 4.39 ± 0.01 | 2.74 ± 0.02 | 0.34 ± 0.01 | 0.60 ± 0.01 | 1.02 ± 0.01 | 0.07 ± 0.00 | 0.06 ± 0.00 | 0.3 ± 0.5 |
+| ripple_r05_nopc | 25 | 5/5 (100%) | 0 | 25.3 ± 0.0 | 101 ± 0 | 0.5 ± 0.1 | 1.2 ± 0.0 | 49.7 ± 0.8 | -5.4 ± 0.2 | 3.31 ± 0.01 | 2.97 ± 0.03 | 0.45 ± 0.02 | 0.75 ± 0.02 | 0.99 ± 0.01 | 0.13 ± 0.05 | 5.03 ± 0.00 | 0.7 ± 0.3 |
+| ripple_r10_nopc | 25 | 5/5 (100%) | 0 | 25.2 ± 0.0 | 101 ± 0 | 5.9 ± 0.2 | 6.6 ± 0.0 | 49.9 ± 0.5 | -4.2 ± 9.2 | 3.31 ± 0.01 | 3.10 ± 0.02 | 0.61 ± 0.03 | 1.02 ± 0.05 | 0.94 ± 0.01 | 0.29 ± 0.12 | 10.03 ± 0.00 | 0.3 ± 0.6 |
+| ripple_r15_nopc | 25 | 5/5 (100%) | 0 | 25.2 ± 0.0 | 101 ± 0 | 11.1 ± 0.6 | 12.0 ± 0.3 | 50.8 ± 0.6 | 11.1 ± 0.6 | 3.31 ± 0.01 | 3.11 ± 0.02 | 0.64 ± 0.01 | 1.06 ± 0.01 | 0.89 ± 0.01 | 0.38 ± 0.25 | 15.02 ± 0.01 | 0.6 ± 0.5 |
+| ripple_r20_nopc | 25 | 5/5 (100%) | 0 | 25.1 ± 0.0 | 101 ± 0 | 16.5 ± 0.4 | 17.5 ± 0.2 | 50.8 ± 0.6 | 16.5 ± 0.4 | 3.31 ± 0.01 | 3.12 ± 0.02 | 0.63 ± 0.02 | 1.03 ± 0.02 | 0.85 ± 0.01 | 0.49 ± 0.13 | 20.02 ± 0.00 | 0.9 ± 0.7 |
+| ripple_r25_nopc | 25 | 5/5 (100%) | 0 | 24.6 ± 0.0 | 98 ± 0 | 22.3 ± 0.6 | 23.3 ± 0.5 | 51.1 ± 0.7 | 22.3 ± 0.6 | 3.31 ± 0.02 | 3.12 ± 0.02 | 0.69 ± 0.01 | 0.96 ± 0.02 | 0.80 ± 0.01 | 0.55 ± 0.47 | 25.02 ± 0.01 | 0.8 ± 0.6 |
+| wave_r00_nopc | 24 | 5/5 (100%) | 0 | 25.2 ± 0.0 | 103 ± 0 | 99.7 ± 0.0 | 101.5 ± 0.1 | 137.5 ± 0.3 | -6.0 ± 0.1 | 5.20 ± 0.00 | 2.94 ± 0.02 | 0.38 ± 0.02 | 0.65 ± 0.03 | 0.75 ± 0.00 | 0.04 ± 0.00 | 0.05 ± 0.00 | 2.3 ± 0.6 |
+| wave_r05_nopc | 24 | 5/5 (100%) | 0 | 25.0 ± 0.0 | 102 ± 0 | -0.7 ± 0.2 | 0.4 ± 0.1 | 81.1 ± 2.1 | -5.9 ± 1.1 | 4.68 ± 0.02 | 3.08 ± 0.01 | 0.76 ± 0.05 | 1.08 ± 0.04 | 0.73 ± 0.01 | 0.20 ± 0.08 | 5.03 ± 0.00 | -1.3 ± 0.4 |
+| wave_r10_nopc | 24 | 5/5 (100%) | 0 | 25.0 ± 0.0 | 102 ± 0 | 4.3 ± 0.6 | 5.9 ± 0.3 | 78.9 ± 1.9 | 4.3 ± 0.5 | 4.67 ± 0.02 | 3.15 ± 0.01 | 0.89 ± 0.01 | 1.39 ± 0.02 | 0.71 ± 0.01 | 0.33 ± 0.17 | 10.03 ± 0.01 | -1.6 ± 0.4 |
+| wave_r15_nopc | 24 | 5/5 (100%) | 0 | 24.9 ± 0.0 | 102 ± 0 | 9.7 ± 0.6 | 11.4 ± 0.3 | 77.4 ± 1.6 | 9.6 ± 0.4 | 4.66 ± 0.01 | 3.16 ± 0.01 | 0.89 ± 0.02 | 1.36 ± 0.03 | 0.71 ± 0.01 | 0.33 ± 0.14 | 15.03 ± 0.00 | -1.3 ± 0.3 |
+| wave_r20_nopc | 24 | 5/5 (100%) | 0 | 24.9 ± 0.0 | 102 ± 0 | 14.3 ± 0.4 | 16.4 ± 0.4 | 74.7 ± 1.6 | 14.3 ± 0.4 | 4.66 ± 0.03 | 3.16 ± 0.01 | 0.89 ± 0.04 | 1.34 ± 0.06 | 0.72 ± 0.01 | 0.57 ± 0.29 | 20.03 ± 0.01 | -1.2 ± 0.6 |
+| wave_r25_nopc | 24 | 5/5 (100%) | 0 | 24.8 ± 0.0 | 101 ± 0 | 20.9 ± 1.1 | 22.6 ± 0.7 | 71.4 ± 1.0 | 20.2 ± 0.5 | 4.66 ± 0.01 | 3.17 ± 0.01 | 0.86 ± 0.01 | 1.26 ± 0.02 | 0.74 ± 0.00 | 0.75 ± 0.23 | 25.03 ± 0.01 | -0.9 ± 0.4 |
+| tripod_r00_pc | 25 | 5/5 (100%) | 0 | 22.4 ± 0.0 | 90 ± 0 | 99.4 ± 0.1 | 100.1 ± 0.0 | 128.8 ± 0.9 | 98.5 ± 0.0 | 3.82 ± 0.03 | 3.15 ± 0.01 | 0.58 ± 0.01 | 0.36 ± 0.01 | 1.25 ± 0.01 | 0.04 ± 0.04 | 0.04 ± 0.01 | 0.6 ± 0.3 |
+| tripod_r05_pc | 25 | 5/5 (100%) | 0 | 22.5 ± 0.0 | 90 ± 0 | 100.5 ± 0.1 | 101.1 ± 0.1 | 126.7 ± 0.3 | 99.7 ± 0.0 | 3.74 ± 0.01 | 3.15 ± 0.01 | 0.58 ± 0.01 | 0.36 ± 0.02 | 1.30 ± 0.01 | 0.03 ± 0.03 | 0.03 ± 0.02 | 0.7 ± 0.3 |
+| tripod_r10_pc | 25 | 5/5 (100%) | 0 | 22.6 ± 0.0 | 90 ± 0 | 97.1 ± 0.2 | 97.6 ± 0.1 | 123.9 ± 0.5 | 96.7 ± 0.2 | 3.74 ± 0.01 | 3.15 ± 0.01 | 0.60 ± 0.01 | 0.35 ± 0.01 | 1.31 ± 0.01 | 0.08 ± 0.02 | 2.55 ± 0.09 | 0.7 ± 0.4 |
+| tripod_r15_pc | 25 | 5/5 (100%) | 0 | 22.6 ± 0.0 | 90 ± 0 | 87.7 ± 0.3 | 88.2 ± 0.2 | 113.4 ± 0.5 | 87.3 ± 0.3 | 3.73 ± 0.01 | 3.15 ± 0.01 | 0.63 ± 0.00 | 0.34 ± 0.01 | 1.28 ± 0.00 | 0.15 ± 0.09 | 7.53 ± 0.09 | 0.8 ± 0.1 |
+| tripod_r20_pc | 25 | 5/5 (100%) | 0 | 22.5 ± 0.0 | 90 ± 0 | 77.4 ± 0.3 | 78.1 ± 0.2 | 102.2 ± 0.1 | 77.2 ± 0.3 | 3.72 ± 0.00 | 3.15 ± 0.01 | 0.63 ± 0.01 | 0.29 ± 0.01 | 1.25 ± 0.01 | 0.45 ± 0.09 | 12.58 ± 0.06 | 0.9 ± 0.9 |
+| tripod_r25_pc | 25 | 5/5 (100%) | 0 | 21.1 ± 0.0 | 85 ± 0 | 66.7 ± 0.6 | 67.3 ± 0.5 | 90.5 ± 0.2 | 66.5 ± 0.6 | 3.72 ± 0.01 | 3.15 ± 0.01 | 0.97 ± 0.02 | 0.52 ± 0.01 | 1.15 ± 0.00 | 0.48 ± 0.30 | 17.58 ± 0.10 | -0.4 ± 1.1 |
+| ripple_r00_pc | 25 | 5/5 (100%) | 0 | 25.4 ± 0.0 | 102 ± 0 | 102.3 ± 0.3 | 103.4 ± 0.3 | 112.4 ± 0.2 | -4.6 ± 0.4 | 4.38 ± 0.01 | 2.72 ± 0.01 | 0.34 ± 0.01 | 0.61 ± 0.01 | 1.04 ± 0.01 | 0.15 ± 0.03 | 0.25 ± 0.06 | 0.1 ± 0.6 |
+| ripple_r05_pc | 25 | 5/5 (100%) | 0 | 25.4 ± 0.0 | 102 ± 0 | 103.5 ± 0.3 | 104.5 ± 0.0 | 112.5 ± 0.3 | -3.5 ± 0.2 | 4.37 ± 0.00 | 2.69 ± 0.03 | 0.39 ± 0.01 | 0.58 ± 0.01 | 0.99 ± 0.01 | 0.15 ± 0.01 | 0.19 ± 0.03 | 0.2 ± 1.0 |
+| ripple_r10_pc | 25 | 5/5 (100%) | 0 | 25.4 ± 0.0 | 101 ± 0 | 99.4 ± 0.2 | 100.3 ± 0.2 | 111.2 ± 0.5 | -4.5 ± 0.2 | 4.37 ± 0.01 | 2.97 ± 0.01 | 0.43 ± 0.02 | 0.68 ± 0.01 | 0.94 ± 0.01 | 0.14 ± 0.03 | 2.58 ± 0.09 | 0.7 ± 0.3 |
+| ripple_r15_pc | 25 | 5/5 (100%) | 0 | 25.3 ± 0.0 | 101 ± 0 | 89.8 ± 0.3 | 90.8 ± 0.2 | 108.4 ± 0.2 | 1.5 ± 6.3 | 4.37 ± 0.00 | 3.09 ± 0.01 | 0.57 ± 0.02 | 0.92 ± 0.04 | 0.90 ± 0.01 | 0.28 ± 0.07 | 7.62 ± 0.09 | 0.5 ± 1.1 |
+| ripple_r20_pc | 25 | 5/5 (100%) | 0 | 25.2 ± 0.0 | 101 ± 0 | 79.8 ± 0.3 | 80.8 ± 0.1 | 105.0 ± 0.5 | 9.9 ± 0.2 | 4.38 ± 0.01 | 3.10 ± 0.01 | 0.58 ± 0.02 | 0.94 ± 0.03 | 0.84 ± 0.02 | 0.41 ± 0.12 | 12.57 ± 0.05 | 1.3 ± 0.8 |
+| ripple_r25_pc | 25 | 5/5 (100%) | 0 | 24.8 ± 0.0 | 99 ± 0 | 68.9 ± 0.4 | 70.1 ± 0.2 | 100.6 ± 0.5 | 15.4 ± 0.2 | 4.37 ± 0.01 | 3.11 ± 0.01 | 0.63 ± 0.03 | 0.89 ± 0.01 | 0.81 ± 0.01 | 0.50 ± 0.34 | 17.56 ± 0.07 | 1.4 ± 3.0 |
+| wave_r00_pc | 24 | 5/5 (100%) | 0 | 25.2 ± 0.0 | 103 ± 0 | 99.4 ± 0.1 | 101.5 ± 0.1 | 137.3 ± 0.6 | -6.1 ± 0.2 | 5.20 ± 0.00 | 2.92 ± 0.02 | 0.36 ± 0.02 | 0.64 ± 0.01 | 0.78 ± 0.01 | 0.12 ± 0.03 | 0.19 ± 0.08 | 2.3 ± 0.6 |
+| wave_r05_pc | 24 | 5/5 (100%) | 0 | 25.2 ± 0.0 | 103 ± 0 | 100.5 ± 0.3 | 102.5 ± 0.1 | 137.3 ± 0.3 | -5.8 ± 0.1 | 5.20 ± 0.00 | 2.86 ± 0.01 | 0.27 ± 0.01 | 0.50 ± 0.01 | 0.73 ± 0.01 | 0.12 ± 0.02 | 0.18 ± 0.03 | 1.0 ± 0.3 |
+| wave_r10_pc | 24 | 5/5 (100%) | 0 | 25.1 ± 0.0 | 103 ± 0 | 97.5 ± 0.3 | 99.1 ± 0.2 | 136.9 ± 0.6 | -4.5 ± 0.7 | 5.20 ± 0.01 | 3.01 ± 0.02 | 0.71 ± 0.05 | 0.86 ± 0.04 | 0.67 ± 0.01 | 0.13 ± 0.03 | 2.59 ± 0.10 | -0.7 ± 0.8 |
+| wave_r15_pc | 24 | 5/5 (100%) | 0 | 25.1 ± 0.0 | 102 ± 0 | 88.7 ± 0.2 | 89.8 ± 0.1 | 134.3 ± 0.5 | 3.1 ± 0.3 | 5.20 ± 0.01 | 3.14 ± 0.01 | 0.83 ± 0.04 | 1.27 ± 0.06 | 0.65 ± 0.00 | 0.16 ± 0.05 | 7.53 ± 0.03 | -0.8 ± 0.8 |
+| wave_r20_pc | 24 | 5/5 (100%) | 0 | 25.0 ± 0.0 | 102 ± 0 | 78.5 ± 0.4 | 79.7 ± 0.2 | 129.9 ± 0.7 | 8.2 ± 0.4 | 5.20 ± 0.00 | 3.16 ± 0.01 | 0.85 ± 0.01 | 1.27 ± 0.02 | 0.66 ± 0.01 | 0.42 ± 0.20 | 12.61 ± 0.11 | -1.4 ± 1.1 |
+| wave_r25_pc | 24 | 5/5 (100%) | 0 | 24.9 ± 0.0 | 102 ± 0 | 68.0 ± 0.1 | 69.2 ± 0.2 | 123.8 ± 0.7 | 13.6 ± 0.6 | 5.20 ± 0.01 | 3.17 ± 0.01 | 0.83 ± 0.04 | 1.21 ± 0.05 | 0.71 ± 0.01 | 0.47 ± 0.31 | 17.59 ± 0.10 | -1.5 ± 1.1 |
+
+Peak joint speed / torque in % of the servo limit (3.65 rad/s, 3.29 N·m at 6.0 V; max over the trials of the condition):
+
+| Condition | ω coxa | ω femur | ω tibia | τ coxa | τ femur | τ tibia |
+|---|---:|---:|---:|---:|---:|---:|
+| tripod_r00_nopc | 10% | 18% | 16% | 100% | 100% | 100% |
+| tripod_r05_nopc | 10% | 19% | 16% | 100% | 100% | 100% |
+| tripod_r10_nopc | 10% | 18% | 16% | 100% | 100% | 100% |
+| tripod_r15_nopc | 10% | 18% | 16% | 100% | 100% | 100% |
+| tripod_r20_nopc | 10% | 18% | 16% | 100% | 100% | 100% |
+| tripod_r25_nopc | 10% | 18% | 16% | 100% | 100% | 100% |
+| ripple_r00_nopc | 17% | 20% | 22% | 100% | 100% | 100% |
+| ripple_r05_nopc | 18% | 20% | 21% | 87% | 100% | 100% |
+| ripple_r10_nopc | 17% | 20% | 22% | 88% | 100% | 100% |
+| ripple_r15_nopc | 18% | 20% | 22% | 79% | 100% | 100% |
+| ripple_r20_nopc | 17% | 20% | 22% | 94% | 100% | 100% |
+| ripple_r25_nopc | 18% | 20% | 22% | 50% | 100% | 100% |
+| wave_r00_nopc | 38% | 24% | 39% | 100% | 100% | 100% |
+| wave_r05_nopc | 38% | 24% | 39% | 100% | 100% | 100% |
+| wave_r10_nopc | 38% | 24% | 39% | 78% | 100% | 100% |
+| wave_r15_nopc | 38% | 24% | 39% | 100% | 100% | 99% |
+| wave_r20_nopc | 38% | 24% | 39% | 100% | 100% | 100% |
+| wave_r25_nopc | 38% | 24% | 39% | 82% | 100% | 97% |
+| tripod_r00_pc | 10% | 18% | 16% | 42% | 100% | 96% |
+| tripod_r05_pc | 11% | 19% | 18% | 70% | 98% | 100% |
+| tripod_r10_pc | 10% | 20% | 19% | 54% | 100% | 100% |
+| tripod_r15_pc | 10% | 20% | 19% | 100% | 100% | 100% |
+| tripod_r20_pc | 10% | 20% | 19% | 53% | 100% | 100% |
+| tripod_r25_pc | 10% | 20% | 19% | 34% | 77% | 96% |
+| ripple_r00_pc | 18% | 20% | 22% | 100% | 100% | 100% |
+| ripple_r05_pc | 18% | 21% | 24% | 100% | 100% | 100% |
+| ripple_r10_pc | 17% | 21% | 26% | 87% | 100% | 100% |
+| ripple_r15_pc | 18% | 21% | 25% | 83% | 100% | 100% |
+| ripple_r20_pc | 18% | 21% | 25% | 80% | 100% | 100% |
+| ripple_r25_pc | 18% | 21% | 25% | 83% | 100% | 100% |
+| wave_r00_pc | 38% | 24% | 39% | 100% | 100% | 100% |
+| wave_r05_pc | 38% | 24% | 41% | 89% | 100% | 100% |
+| wave_r10_pc | 38% | 25% | 44% | 100% | 100% | 100% |
+| wave_r15_pc | 38% | 25% | 44% | 100% | 100% | 100% |
+| wave_r20_pc | 38% | 25% | 44% | 100% | 100% | 100% |
+| wave_r25_pc | 38% | 25% | 44% | 100% | 100% | 100% |
+
+Joint torque p95 in % of the limit (mean over trials) and fraction of samples at the limit (>= 98 %) - the peak above is often a single touch-down sample:
+
+| Condition | τ p95 coxa | τ p95 femur | τ p95 tibia | femur at limit | tibia at limit |
+|---|---:|---:|---:|---:|---:|
+| tripod_r00_nopc | 42% | 68% | 65% | 0.1% | 0.0% |
+| tripod_r05_nopc | 37% | 66% | 64% | 0.1% | 0.0% |
+| tripod_r10_nopc | 31% | 62% | 64% | 0.1% | 0.0% |
+| tripod_r15_nopc | 26% | 59% | 62% | 0.1% | 0.0% |
+| tripod_r20_nopc | 20% | 55% | 60% | 0.1% | 0.0% |
+| tripod_r25_nopc | 12% | 50% | 57% | 0.1% | 0.0% |
+| ripple_r00_nopc | 40% | 67% | 83% | 1.4% | 0.1% |
+| ripple_r05_nopc | 35% | 65% | 78% | 1.2% | 0.0% |
+| ripple_r10_nopc | 30% | 61% | 72% | 0.2% | 0.1% |
+| ripple_r15_nopc | 24% | 58% | 65% | 0.0% | 0.0% |
+| ripple_r20_nopc | 23% | 54% | 60% | 0.1% | 0.0% |
+| ripple_r25_nopc | 26% | 49% | 55% | 0.1% | 0.0% |
+| wave_r00_nopc | 13% | 100% | 89% | 10.8% | 0.0% |
+| wave_r05_nopc | 15% | 98% | 86% | 4.5% | 0.0% |
+| wave_r10_nopc | 17% | 89% | 78% | 0.4% | 0.0% |
+| wave_r15_nopc | 21% | 82% | 75% | 0.1% | 0.0% |
+| wave_r20_nopc | 26% | 74% | 68% | 0.1% | 0.0% |
+| wave_r25_nopc | 31% | 66% | 64% | 0.1% | 0.0% |
+| tripod_r00_pc | 42% | 68% | 65% | 0.0% | 0.0% |
+| tripod_r05_pc | 42% | 63% | 70% | 0.0% | 0.0% |
+| tripod_r10_pc | 39% | 59% | 71% | 0.0% | 0.0% |
+| tripod_r15_pc | 33% | 56% | 69% | 0.0% | 0.0% |
+| tripod_r20_pc | 27% | 52% | 67% | 0.0% | 0.0% |
+| tripod_r25_pc | 14% | 47% | 62% | 0.0% | 0.0% |
+| ripple_r00_pc | 40% | 67% | 83% | 1.3% | 0.1% |
+| ripple_r05_pc | 39% | 62% | 75% | 1.0% | 0.2% |
+| ripple_r10_pc | 37% | 58% | 71% | 1.1% | 0.0% |
+| ripple_r15_pc | 31% | 56% | 69% | 0.1% | 0.1% |
+| ripple_r20_pc | 26% | 52% | 67% | 0.1% | 0.1% |
+| ripple_r25_pc | 19% | 43% | 54% | 0.1% | 0.0% |
+| wave_r00_pc | 13% | 100% | 89% | 10.6% | 0.1% |
+| wave_r05_pc | 12% | 94% | 81% | 4.5% | 0.2% |
+| wave_r10_pc | 11% | 72% | 71% | 1.3% | 0.1% |
+| wave_r15_pc | 14% | 59% | 65% | 0.0% | 0.1% |
+| wave_r20_pc | 20% | 45% | 63% | 0.0% | 0.1% |
+| wave_r25_pc | 25% | 45% | 62% | 0.0% | 0.0% |
+
+| Condition | Body pitch mean (°) | |pitch| max (°) | Roll RMS (°) | Tilt vs slope max (°) | Correction pitch (°) | IMU est. err pitch RMS (°) | IMU est. err roll RMS (°) |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| tripod_r00_nopc | 0.0 ± 0.0 | 0.0 ± 0.0 | 0.00 ± 0.00 | 0.0 ± 0.0 | -0.0 ± 0.0 | 0.03 ± 0.03 | 0.07 ± 0.06 |
+| tripod_r05_nopc | -5.0 ± 0.0 | 5.0 ± 0.0 | 0.18 ± 0.06 | 0.2 ± 0.1 | 0.0 ± 0.0 | 0.03 ± 0.01 | 0.06 ± 0.05 |
+| tripod_r10_nopc | -10.0 ± 0.0 | 10.0 ± 0.0 | 0.20 ± 0.17 | 0.2 ± 0.2 | -0.0 ± 0.0 | 0.04 ± 0.03 | 0.06 ± 0.06 |
+| tripod_r15_nopc | -15.0 ± 0.0 | 15.0 ± 0.0 | 0.22 ± 0.17 | 0.2 ± 0.2 | -0.0 ± 0.0 | 0.07 ± 0.05 | 0.08 ± 0.05 |
+| tripod_r20_nopc | -20.0 ± 0.0 | 20.0 ± 0.0 | 0.41 ± 0.31 | 0.4 ± 0.3 | -0.0 ± 0.0 | 0.08 ± 0.04 | 0.06 ± 0.04 |
+| tripod_r25_nopc | -25.0 ± 0.0 | 25.0 ± 0.0 | 0.57 ± 0.30 | 0.6 ± 0.3 | -0.0 ± 0.0 | 0.09 ± 0.08 | 0.05 ± 0.04 |
+| ripple_r00_nopc | 0.0 ± 0.0 | 0.2 ± 0.0 | 0.07 ± 0.00 | 0.2 ± 0.0 | -0.0 ± 0.0 | 0.35 ± 0.10 | 0.21 ± 0.06 |
+| ripple_r05_nopc | -5.0 ± 0.0 | 5.2 ± 0.0 | 0.13 ± 0.05 | 0.3 ± 0.1 | -0.0 ± 0.0 | 0.25 ± 0.07 | 0.20 ± 0.05 |
+| ripple_r10_nopc | -10.0 ± 0.0 | 10.2 ± 0.0 | 0.29 ± 0.12 | 0.5 ± 0.1 | -0.0 ± 0.0 | 0.21 ± 0.06 | 0.22 ± 0.06 |
+| ripple_r15_nopc | -15.0 ± 0.0 | 15.2 ± 0.0 | 0.38 ± 0.25 | 0.6 ± 0.3 | -0.0 ± 0.0 | 0.23 ± 0.11 | 0.24 ± 0.08 |
+| ripple_r20_nopc | -20.0 ± 0.0 | 20.2 ± 0.0 | 0.49 ± 0.13 | 0.7 ± 0.1 | -0.0 ± 0.0 | 0.16 ± 0.08 | 0.24 ± 0.07 |
+| ripple_r25_nopc | -25.0 ± 0.0 | 25.2 ± 0.0 | 0.55 ± 0.47 | 0.7 ± 0.5 | -0.0 ± 0.0 | 0.16 ± 0.06 | 0.24 ± 0.04 |
+| wave_r00_nopc | 0.0 ± 0.0 | 0.2 ± 0.0 | 0.04 ± 0.00 | 0.2 ± 0.0 | -0.0 ± 0.0 | 0.21 ± 0.02 | 0.19 ± 0.03 |
+| wave_r05_nopc | -5.0 ± 0.0 | 5.3 ± 0.0 | 0.20 ± 0.08 | 0.5 ± 0.1 | -0.0 ± 0.0 | 0.18 ± 0.07 | 0.15 ± 0.03 |
+| wave_r10_nopc | -10.0 ± 0.0 | 10.3 ± 0.0 | 0.33 ± 0.17 | 0.6 ± 0.2 | -0.0 ± 0.0 | 0.28 ± 0.07 | 0.18 ± 0.05 |
+| wave_r15_nopc | -15.0 ± 0.0 | 15.3 ± 0.0 | 0.33 ± 0.14 | 0.6 ± 0.2 | -0.0 ± 0.0 | 0.26 ± 0.04 | 0.19 ± 0.07 |
+| wave_r20_nopc | -20.0 ± 0.0 | 20.3 ± 0.0 | 0.57 ± 0.29 | 0.9 ± 0.3 | -0.0 ± 0.0 | 0.20 ± 0.05 | 0.17 ± 0.07 |
+| wave_r25_nopc | -25.0 ± 0.0 | 25.3 ± 0.0 | 0.75 ± 0.23 | 1.0 ± 0.2 | -0.0 ± 0.0 | 0.25 ± 0.13 | 0.21 ± 0.10 |
+| tripod_r00_pc | -0.0 ± 0.0 | 0.1 ± 0.1 | 0.04 ± 0.04 | 0.1 ± 0.1 | 0.0 ± 0.0 | 0.05 ± 0.02 | 0.05 ± 0.06 |
+| tripod_r05_pc | -0.0 ± 0.0 | 0.1 ± 0.0 | 0.03 ± 0.03 | 5.0 ± 0.0 | -5.0 ± 0.0 | 0.03 ± 0.03 | 0.04 ± 0.05 |
+| tripod_r10_pc | -2.6 ± 0.1 | 2.6 ± 0.1 | 0.08 ± 0.02 | 7.5 ± 0.1 | -7.4 ± 0.1 | 0.04 ± 0.03 | 0.06 ± 0.06 |
+| tripod_r15_pc | -7.5 ± 0.1 | 7.6 ± 0.1 | 0.15 ± 0.09 | 7.5 ± 0.1 | -7.5 ± 0.1 | 0.05 ± 0.03 | 0.06 ± 0.05 |
+| tripod_r20_pc | -12.6 ± 0.1 | 12.6 ± 0.1 | 0.45 ± 0.09 | 7.5 ± 0.1 | -7.4 ± 0.1 | 0.07 ± 0.01 | 0.06 ± 0.05 |
+| tripod_r25_pc | -17.6 ± 0.1 | 17.6 ± 0.1 | 0.48 ± 0.30 | 7.5 ± 0.1 | -7.4 ± 0.1 | 0.06 ± 0.05 | 0.05 ± 0.05 |
+| ripple_r00_pc | -0.0 ± 0.2 | 0.6 ± 0.1 | 0.15 ± 0.03 | 0.6 ± 0.1 | 0.0 ± 0.2 | 0.33 ± 0.04 | 0.19 ± 0.03 |
+| ripple_r05_pc | -0.1 ± 0.1 | 0.5 ± 0.1 | 0.15 ± 0.01 | 5.4 ± 0.1 | -4.9 ± 0.1 | 0.29 ± 0.05 | 0.20 ± 0.02 |
+| ripple_r10_pc | -2.6 ± 0.1 | 2.9 ± 0.1 | 0.14 ± 0.03 | 7.6 ± 0.0 | -7.4 ± 0.1 | 0.19 ± 0.07 | 0.21 ± 0.08 |
+| ripple_r15_pc | -7.6 ± 0.1 | 7.9 ± 0.1 | 0.28 ± 0.07 | 7.5 ± 0.1 | -7.4 ± 0.1 | 0.22 ± 0.07 | 0.24 ± 0.09 |
+| ripple_r20_pc | -12.6 ± 0.0 | 12.8 ± 0.1 | 0.41 ± 0.12 | 7.6 ± 0.0 | -7.4 ± 0.0 | 0.23 ± 0.12 | 0.23 ± 0.09 |
+| ripple_r25_pc | -17.6 ± 0.1 | 17.8 ± 0.1 | 0.50 ± 0.34 | 7.6 ± 0.1 | -7.4 ± 0.1 | 0.16 ± 0.07 | 0.22 ± 0.06 |
+| wave_r00_pc | 0.0 ± 0.0 | 0.6 ± 0.2 | 0.12 ± 0.03 | 0.6 ± 0.2 | -0.0 ± 0.0 | 0.25 ± 0.09 | 0.17 ± 0.04 |
+| wave_r05_pc | 0.0 ± 0.1 | 0.5 ± 0.1 | 0.12 ± 0.02 | 5.4 ± 0.2 | -5.0 ± 0.1 | 0.25 ± 0.04 | 0.15 ± 0.02 |
+| wave_r10_pc | -2.6 ± 0.1 | 2.9 ± 0.1 | 0.13 ± 0.03 | 7.5 ± 0.1 | -7.4 ± 0.1 | 0.21 ± 0.04 | 0.15 ± 0.04 |
+| wave_r15_pc | -7.5 ± 0.0 | 7.9 ± 0.1 | 0.16 ± 0.05 | 7.6 ± 0.0 | -7.5 ± 0.0 | 0.26 ± 0.08 | 0.17 ± 0.03 |
+| wave_r20_pc | -12.6 ± 0.1 | 13.0 ± 0.1 | 0.42 ± 0.20 | 7.5 ± 0.1 | -7.4 ± 0.1 | 0.19 ± 0.04 | 0.20 ± 0.02 |
+| wave_r25_pc | -17.6 ± 0.1 | 17.9 ± 0.1 | 0.47 ± 0.31 | 7.5 ± 0.1 | -7.4 ± 0.1 | 0.26 ± 0.02 | 0.18 ± 0.03 |
+
+
+--- launch log: errors / warnings (last 40 lines) ---
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+
+results: /home/t/49x_Hexapod/ros2_ws/results/e4 (exit 0)

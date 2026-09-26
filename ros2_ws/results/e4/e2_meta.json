@@ -1,0 +1,541 @@
+{
+  "generated": "2026-09-26 14:06:57",
+  "seed": 2,
+  "n": 5,
+  "distance_m": 0.5,
+  "plan": {
+    "n": 5,
+    "distance_m": 0.5,
+    "time_factor": 2.0,
+    "warmup_cycles": 1.0,
+    "gaits": [
+      "tripod",
+      "ripple",
+      "wave"
+    ],
+    "speeds": {
+      "common": 0.025
+    },
+    "nominal_posture": [
+      0.1,
+      0.02
+    ],
+    "ramps": {
+      "angles_deg": [
+        0,
+        5,
+        10,
+        15,
+        20,
+        25
+      ],
+      "posture_control": [
+        false,
+        true
+      ]
+    },
+    "record_camera": true,
+    "world": "flat_world",
+    "model": "hexapod",
+    "start": {
+      "x": -5.45,
+      "y": -1.4,
+      "yaw_deg": 0.0
+    },
+    "park": {
+      "x": -8.0,
+      "y": 1.0
+    },
+    "jitter": {
+      "xy_m": 0.02,
+      "yaw_deg": 3.0
+    },
+    "fall": {
+      "tilt_deg": 30.0,
+      "min_z_m": 0.06
+    },
+    "settle_s": 3.0,
+    "name": "e4"
+  },
+  "cycle_times_s": {
+    "tripod": 0.95,
+    "ripple": 1.3,
+    "wave": 2.4
+  },
+  "conditions": [
+    {
+      "gait": "tripod",
+      "speed": 0.025,
+      "label": "common",
+      "stance": 0.1,
+      "step": 0.02,
+      "posture_control": false,
+      "scenario": {
+        "type": "ramp",
+        "angle_deg": 0.0
+      },
+      "name": "tripod_r00_nopc"
+    },
+    {
+      "gait": "tripod",
+      "speed": 0.025,
+      "label": "common",
+      "stance": 0.1,
+      "step": 0.02,
+      "posture_control": true,
+      "scenario": {
+        "type": "ramp",
+        "angle_deg": 0.0
+      },
+      "name": "tripod_r00_pc"
+    },
+    {
+      "gait": "tripod",
+      "speed": 0.025,
+      "label": "common",
+      "stance": 0.1,
+      "step": 0.02,
+      "posture_control": false,
+      "scenario": {
+        "type": "ramp",
+        "angle_deg": 5.0
+      },
+      "name": "tripod_r05_nopc"
+    },
+    {
+      "gait": "tripod",
+      "speed": 0.025,
+      "label": "common",
+      "stance": 0.1,
+      "step": 0.02,
+      "posture_control": true,
+      "scenario": {
+        "type": "ramp",
+        "angle_deg": 5.0
+      },
+      "name": "tripod_r05_pc"
+    },
+    {
+      "gait": "tripod",
+      "speed": 0.025,
+      "label": "common",
+      "stance": 0.1,
+      "step": 0.02,
+      "posture_control": false,
+      "scenario": {
+        "type": "ramp",
+        "angle_deg": 10.0
+      },
+      "name": "tripod_r10_nopc"
+    },
+    {
+      "gait": "tripod",
+      "speed": 0.025,
+      "label": "common",
+      "stance": 0.1,
+      "step": 0.02,
+      "posture_control": true,
+      "scenario": {
+        "type": "ramp",
+        "angle_deg": 10.0
+      },
+      "name": "tripod_r10_pc"
+    },
+    {
+      "gait": "tripod",
+      "speed": 0.025,
+      "label": "common",
+      "stance": 0.1,
+      "step": 0.02,
+      "posture_control": false,
+      "scenario": {
+        "type": "ramp",
+        "angle_deg": 15.0
+      },
+      "name": "tripod_r15_nopc"
+    },
+    {
+      "gait": "tripod",
+      "speed": 0.025,
+      "label": "common",
+      "stance": 0.1,
+      "step": 0.02,
+      "posture_control": true,
+      "scenario": {
+        "type": "ramp",
+        "angle_deg": 15.0
+      },
+      "name": "tripod_r15_pc"
+    },
+    {
+      "gait": "tripod",
+      "speed": 0.025,
+      "label": "common",
+      "stance": 0.1,
+      "step": 0.02,
+      "posture_control": false,
+      "scenario": {
+        "type": "ramp",
+        "angle_deg": 20.0
+      },
+      "name": "tripod_r20_nopc"
+    },
+    {
+      "gait": "tripod",
+      "speed": 0.025,
+      "label": "common",
+      "stance": 0.1,
+      "step": 0.02,
+      "posture_control": true,
+      "scenario": {
+        "type": "ramp",
+        "angle_deg": 20.0
+      },
+      "name": "tripod_r20_pc"
+    },
+    {
+      "gait": "tripod",
+      "speed": 0.025,
+      "label": "common",
+      "stance": 0.1,
+      "step": 0.02,
+      "posture_control": false,
+      "scenario": {
+        "type": "ramp",
+        "angle_deg": 25.0
+      },
+      "name": "tripod_r25_nopc"
+    },
+    {
+      "gait": "tripod",
+      "speed": 0.025,
+      "label": "common",
+      "stance": 0.1,
+      "step": 0.02,
+      "posture_control": true,
+      "scenario": {
+        "type": "ramp",
+        "angle_deg": 25.0
+      },
+      "name": "tripod_r25_pc"
+    },
+    {
+      "gait": "ripple",
+      "speed": 0.025,
+      "label": "common",
+      "stance": 0.1,
+      "step": 0.02,
+      "posture_control": false,
+      "scenario": {
+        "type": "ramp",
+        "angle_deg": 0.0
+      },
+      "name": "ripple_r00_nopc"
+    },
+    {
+      "gait": "ripple",
+      "speed": 0.025,
+      "label": "common",
+      "stance": 0.1,
+      "step": 0.02,
+      "posture_control": true,
+      "scenario": {
+        "type": "ramp",
+        "angle_deg": 0.0
+      },
+      "name": "ripple_r00_pc"
+    },
+    {
+      "gait": "ripple",
+      "speed": 0.025,
+      "label": "common",
+      "stance": 0.1,
+      "step": 0.02,
+      "posture_control": false,
+      "scenario": {
+        "type": "ramp",
+        "angle_deg": 5.0
+      },
+      "name": "ripple_r05_nopc"
+    },
+    {
+      "gait": "ripple",
+      "speed": 0.025,
+      "label": "common",
+      "stance": 0.1,
+      "step": 0.02,
+      "posture_control": true,
+      "scenario": {
+        "type": "ramp",
+        "angle_deg": 5.0
+      },
+      "name": "ripple_r05_pc"
+    },
+    {
+      "gait": "ripple",
+      "speed": 0.025,
+      "label": "common",
+      "stance": 0.1,
+      "step": 0.02,
+      "posture_control": false,
+      "scenario": {
+        "type": "ramp",
+        "angle_deg": 10.0
+      },
+      "name": "ripple_r10_nopc"
+    },
+    {
+      "gait": "ripple",
+      "speed": 0.025,
+      "label": "common",
+      "stance": 0.1,
+      "step": 0.02,
+      "posture_control": true,
+      "scenario": {
+        "type": "ramp",
+        "angle_deg": 10.0
+      },
+      "name": "ripple_r10_pc"
+    },
+    {
+      "gait": "ripple",
+      "speed": 0.025,
+      "label": "common",
+      "stance": 0.1,
+      "step": 0.02,
+      "posture_control": false,
+      "scenario": {
+        "type": "ramp",
+        "angle_deg": 15.0
+      },
+      "name": "ripple_r15_nopc"
+    },
+    {
+      "gait": "ripple",
+      "speed": 0.025,
+      "label": "common",
+      "stance": 0.1,
+      "step": 0.02,
+      "posture_control": true,
+      "scenario": {
+        "type": "ramp",
+        "angle_deg": 15.0
+      },
+      "name": "ripple_r15_pc"
+    },
+    {
+      "gait": "ripple",
+      "speed": 0.025,
+      "label": "common",
+      "stance": 0.1,
+      "step": 0.02,
+      "posture_control": false,
+      "scenario": {
+        "type": "ramp",
+        "angle_deg": 20.0
+      },
+      "name": "ripple_r20_nopc"
+    },
+    {
+      "gait": "ripple",
+      "speed": 0.025,
+      "label": "common",
+      "stance": 0.1,
+      "step": 0.02,
+      "posture_control": true,
+      "scenario": {
+        "type": "ramp",
+        "angle_deg": 20.0
+      },
+      "name": "ripple_r20_pc"
+    },
+    {
+      "gait": "ripple",
+      "speed": 0.025,
+      "label": "common",
+      "stance": 0.1,
+      "step": 0.02,
+      "posture_control": false,
+      "scenario": {
+        "type": "ramp",
+        "angle_deg": 25.0
+      },
+      "name": "ripple_r25_nopc"
+    },
+    {
+      "gait": "ripple",
+      "speed": 0.025,
+      "label": "common",
+      "stance": 0.1,
+      "step": 0.02,
+      "posture_control": true,
+      "scenario": {
+        "type": "ramp",
+        "angle_deg": 25.0
+      },
+      "name": "ripple_r25_pc"
+    },
+    {
+      "gait": "wave",
+      "speed": 0.0245,
+      "label": "capped",
+      "stance": 0.1,
+      "step": 0.02,
+      "posture_control": false,
+      "scenario": {
+        "type": "ramp",
+        "angle_deg": 0.0
+      },
+      "name": "wave_r00_nopc"
+    },
+    {
+      "gait": "wave",
+      "speed": 0.0245,
+      "label": "capped",
+      "stance": 0.1,
+      "step": 0.02,
+      "posture_control": true,
+      "scenario": {
+        "type": "ramp",
+        "angle_deg": 0.0
+      },
+      "name": "wave_r00_pc"
+    },
+    {
+      "gait": "wave",
+      "speed": 0.0245,
+      "label": "capped",
+      "stance": 0.1,
+      "step": 0.02,
+      "posture_control": false,
+      "scenario": {
+        "type": "ramp",
+        "angle_deg": 5.0
+      },
+      "name": "wave_r05_nopc"
+    },
+    {
+      "gait": "wave",
+      "speed": 0.0245,
+      "label": "capped",
+      "stance": 0.1,
+      "step": 0.02,
+      "posture_control": true,
+      "scenario": {
+        "type": "ramp",
+        "angle_deg": 5.0
+      },
+      "name": "wave_r05_pc"
+    },
+    {
+      "gait": "wave",
+      "speed": 0.0245,
+      "label": "capped",
+      "stance": 0.1,
+      "step": 0.02,
+      "posture_control": false,
+      "scenario": {
+        "type": "ramp",
+        "angle_deg": 10.0
+      },
+      "name": "wave_r10_nopc"
+    },
+    {
+      "gait": "wave",
+      "speed": 0.0245,
+      "label": "capped",
+      "stance": 0.1,
+      "step": 0.02,
+      "posture_control": true,
+      "scenario": {
+        "type": "ramp",
+        "angle_deg": 10.0
+      },
+      "name": "wave_r10_pc"
+    },
+    {
+      "gait": "wave",
+      "speed": 0.0245,
+      "label": "capped",
+      "stance": 0.1,
+      "step": 0.02,
+      "posture_control": false,
+      "scenario": {
+        "type": "ramp",
+        "angle_deg": 15.0
+      },
+      "name": "wave_r15_nopc"
+    },
+    {
+      "gait": "wave",
+      "speed": 0.0245,
+      "label": "capped",
+      "stance": 0.1,
+      "step": 0.02,
+      "posture_control": true,
+      "scenario": {
+        "type": "ramp",
+        "angle_deg": 15.0
+      },
+      "name": "wave_r15_pc"
+    },
+    {
+      "gait": "wave",
+      "speed": 0.0245,
+      "label": "capped",
+      "stance": 0.1,
+      "step": 0.02,
+      "posture_control": false,
+      "scenario": {
+        "type": "ramp",
+        "angle_deg": 20.0
+      },
+      "name": "wave_r20_nopc"
+    },
+    {
+      "gait": "wave",
+      "speed": 0.0245,
+      "label": "capped",
+      "stance": 0.1,
+      "step": 0.02,
+      "posture_control": true,
+      "scenario": {
+        "type": "ramp",
+        "angle_deg": 20.0
+      },
+      "name": "wave_r20_pc"
+    },
+    {
+      "gait": "wave",
+      "speed": 0.0245,
+      "label": "capped",
+      "stance": 0.1,
+      "step": 0.02,
+      "posture_control": false,
+      "scenario": {
+        "type": "ramp",
+        "angle_deg": 25.0
+      },
+      "name": "wave_r25_nopc"
+    },
+    {
+      "gait": "wave",
+      "speed": 0.0245,
+      "label": "capped",
+      "stance": 0.1,
+      "step": 0.02,
+      "posture_control": true,
+      "scenario": {
+        "type": "ramp",
+        "angle_deg": 25.0
+      },
+      "name": "wave_r25_pc"
+    }
+  ],
+  "mass_kg": 4.1472494,
+  "foot_radius_m": 0.0163182,
+  "effort_limit_nm": 3.29,
+  "velocity_limit_rad_s": 3.65,
+  "gz_partition": "hexapod_78220_e2",
+  "mode": "full"
+}
