@@ -1,0 +1,82 @@
+{
+  "friction": [
+    {
+      "mu": 1.0,
+      "angle_deg": 41.0,
+      "expected": "stick",
+      "moved_m": 4.01279290926434e-06,
+      "result": "stick",
+      "ok": true
+    },
+    {
+      "mu": 1.0,
+      "angle_deg": 49.0,
+      "expected": "slide",
+      "moved_m": 0.3763737512787248,
+      "result": "slide",
+      "ok": true
+    },
+    {
+      "mu": 0.6,
+      "angle_deg": 26.96375653207352,
+      "expected": "stick",
+      "moved_m": 2.2642965642073523e-06,
+      "result": "stick",
+      "ok": true
+    },
+    {
+      "mu": 0.6,
+      "angle_deg": 34.96375653207352,
+      "expected": "slide",
+      "moved_m": 0.5550199085612918,
+      "result": "slide",
+      "ok": true
+    },
+    {
+      "mu": 0.3,
+      "angle_deg": 12.699244233993621,
+      "expected": "stick",
+      "moved_m": 1.030551472304997e-06,
+      "result": "stick",
+      "ok": true
+    },
+    {
+      "mu": 0.3,
+      "angle_deg": 20.69924423399362,
+      "expected": "slide",
+      "moved_m": 0.708837002023441,
+      "result": "slide",
+      "ok": true
+    },
+    {
+      "mu": 0.15,
+      "angle_deg": 4.5307656099481335,
+      "expected": "stick",
+      "moved_m": 6.09547808324066e-06,
+      "result": "stick",
+      "ok": true
+    },
+    {
+      "mu": 0.15,
+      "angle_deg": 12.530765609948133,
+      "expected": "slide",
+      "moved_m": 0.7933093285032286,
+      "result": "slide",
+      "ok": true
+    }
+  ],
+  "drop": [
+    {
+      "soft": false,
+      "kp": null,
+      "kd": null,
+      "penetration_mm": 0.00012113192845997212
+    },
+    {
+      "soft": true,
+      "kp": 2000.0,
+      "kd": 50.0,
+      "penetration_mm": 0.00012113192845997212
+    }
+  ]
+}

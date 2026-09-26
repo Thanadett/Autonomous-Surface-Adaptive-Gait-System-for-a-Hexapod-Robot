@@ -1,0 +1,38 @@
+=== run_e2 2026-09-25T23:12:36+07:00  plan=e3_calib camera=false mode=--resume build=build_final1 install=install_final1 quick=0 args= ===
+GZ_PARTITION=hexapod_38908_e2
+--- e2_runner --config /home/t/49x_Hexapod/ros2_ws/install_final1/hexapod_evaluation/share/hexapod_evaluation/config/e3_calib.yaml --resume  ---
+waiting for the simulation clock ...
+friction mu=1 at  41.0 deg (critical 45.0): stick (expected stick, moved 0 mm)
+friction mu=1 at  49.0 deg (critical 45.0): slide (expected slide, moved 376 mm)
+friction mu=0.6 at  27.0 deg (critical 31.0): stick (expected stick, moved 0 mm)
+friction mu=0.6 at  35.0 deg (critical 31.0): slide (expected slide, moved 555 mm)
+friction mu=0.3 at  12.7 deg (critical 16.7): stick (expected stick, moved 0 mm)
+friction mu=0.3 at  20.7 deg (critical 16.7): slide (expected slide, moved 709 mm)
+friction mu=0.15 at   4.5 deg (critical  8.5): stick (expected stick, moved 0 mm)
+friction mu=0.15 at  12.5 deg (critical  8.5): slide (expected slide, moved 793 mm)
+drop test rigid mat: resting penetration 0.00 mm
+drop test soft mat: resting penetration 0.00 mm (expected ~4.9 mm if kp is honoured)
+# E3 calibration - friction and soft-floor checks
+
+| mu | angle (°) | critical atan(mu) (°) | expected | result | moved (mm) |
+|---:|---:|---:|---|---|---:|
+| 1 | 41.0 | 45.0 | stick | stick | 0 |
+| 1 | 49.0 | 45.0 | slide | slide | 376 |
+| 0.6 | 27.0 | 31.0 | stick | stick | 0 |
+| 0.6 | 35.0 | 31.0 | slide | slide | 555 |
+| 0.3 | 12.7 | 16.7 | stick | stick | 0 |
+| 0.3 | 20.7 | 16.7 | slide | slide | 709 |
+| 0.15 | 4.5 | 8.5 | stick | stick | 0 |
+| 0.15 | 12.5 | 8.5 | slide | slide | 793 |
+
+| mat | kp (N/m) | kd (N s/m) | resting penetration (mm) |
+|---|---:|---:|---:|
+| rigid | - | - | 0.00 |
+| soft | 2000.0 | 50.0 | 0.00 |
+
+Friction model as specified: YES.
+Soft floor honoured: NO (soft and rigid mats behave alike - report E3 'soft' as rigid-contact limitation)
+
+--- launch log: errors / warnings (last 40 lines) ---
+
+results: /home/t/49x_Hexapod/ros2_ws/results/e3_calib (exit 0)

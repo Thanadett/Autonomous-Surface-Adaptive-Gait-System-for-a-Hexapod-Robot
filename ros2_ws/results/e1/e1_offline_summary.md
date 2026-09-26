@@ -1,0 +1,24 @@
+# E1 (offline) - IK accuracy, convergence and timing
+
+- Generated: 2026-09-25 16:38:28  |  host: myMind (x86_64, x86_64)  |  Python 3.12.3
+- Solvers: dls = LegKinematics.inverse (damped least squares, tol 1e-7 m, max 40 iterations, step <= 0.15 rad, used by locomotion_node); analytic = LegKinematics.inverse_analytic (closed form, 0 iterations)
+- Foot-tip error = |FK(IK(target)) - target|, targets in body_link frame; seeds: cold = 0 rad, warm = nominal stance (100 mm)
+
+| Target set / solver / seed | n | Converged | Error mean ± SD (mm) | Error p95 / max (mm) | Iterations mean (max) | Time/solve mean ± SD (µs) | p95 (µs) | At joint limit |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| walking_grid/dls/cold | 600 | 600 (100.0%) | 0.0000 ± 0.0000 | 0.0001 / 0.0001 | 7.1 (13) | 684 ± 206 | 1074 | 0 |
+| walking_grid/dls/warm | 600 | 600 (100.0%) | 0.0000 ± 0.0000 | 0.0001 / 0.0001 | 4.9 (8) | 490 ± 98 | 664 | 0 |
+| walking_grid/analytic/cold | 600 | 600 (100.0%) | 0.0000 ± 0.0000 | 0.0000 / 0.0000 | 0.0 (0) | 73 ± 6 | 81 | 0 |
+| walking_grid/analytic/warm | 600 | 600 (100.0%) | 0.0000 ± 0.0000 | 0.0000 / 0.0000 | 0.0 (0) | 69 ± 4 | 75 | 0 |
+| joint_space/dls/cold | 1200 | 911 (75.9%) | 16.1602 ± 51.7869 | 66.0874 / 259.8702 | 21.3 (40) | 1853 ± 1002 | 3457 | 280 |
+| joint_space/dls/warm | 1200 | 892 (74.3%) | 17.1026 ± 53.5775 | 177.2607 / 259.8603 | 21.6 (40) | 1874 ± 1022 | 3451 | 298 |
+| joint_space/analytic/cold | 1200 | 1200 (100.0%) | 0.0000 ± 0.0000 | 0.0000 / 0.0000 | 0.0 (0) | 78 ± 14 | 88 | 0 |
+| joint_space/analytic/warm | 1200 | 1200 (100.0%) | 0.0000 ± 0.0000 | 0.0000 / 0.0000 | 0.0 (0) | 72 ± 22 | 77 | 0 |
+
+Real-time budget, dls (this host): 6 legs x p95 664 µs = **3.98 ms per tick** vs 20 ms period at 50 Hz (19.9% of the period).
+
+Real-time budget, analytic (this host): 6 legs x p95 75 µs = **0.45 ms per tick** vs 20 ms period at 50 Hz (2.2% of the period).
+
+joint_space: same solution as the sampled angles (within 1e-3 rad): dls/cold 75.2%, dls/warm 73.7%, analytic/cold 98.2%, analytic/warm 98.4% - a different solution is not an error when the foot-tip error is ~0 (the leg has more than one IK branch).
+
+Per-leg worst-case error (mm): walking_grid/dls/cold: front_left 0.0001, middle_left 0.0001, rear_left 0.0001, front_right 0.0001, middle_right 0.0001, rear_right 0.0001; walking_grid/dls/warm: front_left 0.0001, middle_left 0.0001, rear_left 0.0001, front_right 0.0001, middle_right 0.0001, rear_right 0.0001; walking_grid/analytic/cold: front_left 0.0000, middle_left 0.0000, rear_left 0.0000, front_right 0.0000, middle_right 0.0000, rear_right 0.0000; walking_grid/analytic/warm: front_left 0.0000, middle_left 0.0000, rear_left 0.0000, front_right 0.0000, middle_right 0.0000, rear_right 0.0000; joint_space/dls/cold: front_left 258.5362, middle_left 258.0742, rear_left 253.9754, front_right 256.7716, middle_right 259.8702, rear_right 259.0681; joint_space/dls/warm: front_left 257.4623, middle_left 257.4728, rear_left 254.0453, front_right 258.1071, middle_right 259.8603, rear_right 258.9079; joint_space/analytic/cold: front_left 0.0000, middle_left 0.0000, rear_left 0.0000, front_right 0.0000, middle_right 0.0000, rear_right 0.0000; joint_space/analytic/warm: front_left 0.0000, middle_left 0.0000, rear_left 0.0000, front_right 0.0000, middle_right 0.0000, rear_right 0.0000

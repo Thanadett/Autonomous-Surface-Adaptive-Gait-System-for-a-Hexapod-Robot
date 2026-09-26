@@ -1,0 +1,43 @@
+=== run_e2 2026-09-26T10:24:51+07:00  plan=e4 camera=true mode=--check build=build_final1 install=install_final1 quick=0 args= ===
+GZ_PARTITION=hexapod_58278_e2
+--- e2_runner --config /home/t/49x_Hexapod/ros2_ws/install_final1/hexapod_evaluation/share/hexapod_evaluation/config/e4.yaml --check  ---
+waiting for locomotion_node and ground-truth pose ...
+standing base_link z = 116.3 mm; mass 4.147 kg; 2 conditions x 1 trials, 0.3 m; camera snapshots on
+world state readable via pose/info; no terrain left over
+tripod_r00_nopc_01: OK   [ramp 0 deg] v   22.4 mm/s  SSMmin   99.6 mm  slip   0.6 mm  CoT   1.25  pitch   0.0 deg  
+wave_r25_pc_01: OK   [ramp 25 deg] v   13.1 mm/s  SSMmin   67.3 mm  slip   2.6 mm  CoT   1.73  pitch -16.8 deg  
+# E4 - ramps, posture control off / on (chapter 4.1.4)
+
+- Generated 2026-09-26 10:24:53; seed 2; course 0.3 m, success = goal within 2.0 x nominal time without a fall (|roll|/|pitch| > 30.0°, z < 60 mm)
+- Mass 4.147 kg; cycle times {'tripod': 0.95, 'ripple': 1.3, 'wave': 2.4}; metrics exclude the warm-up (1 gait cycle); Mean ± SD (sample SD) over all trials of a condition
+- Ground truth only (OdometryPublisher, joint states, contact and joint F/T sensors); slip = sliding of the foot contact point per stance, centre slip = ball-centre displacement
+
+| Condition | Cmd (mm/s) | Success | Falls | Speed (mm/s) | Speed / cmd (%) | SSM min (mm) | SSM p5 (mm) | SSM mean (mm) | SSM min, contact only (mm) | Support feet | Feet in contact | Slip/stance (mm) | Centre slip (mm) | CoT | Roll RMS (°) | Pitch RMS (°) | Lateral drift (mm) |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| tripod_r00_nopc | 25 | 1/1 (100%) | 0 | 22.4 ± 0.0 | 90 ± 0 | 99.6 ± 0.0 | 100.2 ± 0.0 | 130.2 ± 0.0 | 98.5 ± 0.0 | 3.86 ± 0.00 | 3.16 ± 0.00 | 0.58 ± 0.00 | 0.35 ± 0.00 | 1.25 ± 0.00 | 0.00 ± 0.00 | 0.00 ± 0.00 | 0.3 ± 0.0 |
+| wave_r25_pc | 24 | 1/1 (100%) | 0 | 13.1 ± 0.0 | 54 ± 0 | 67.3 ± 0.0 | 69.0 ± 0.0 | 122.6 ± 0.0 | -24.1 ± 0.0 | 5.20 ± 0.00 | 3.14 ± 0.00 | 2.58 ± 0.00 | 2.24 ± 0.00 | 1.73 ± 0.00 | 1.07 ± 0.00 | 16.81 ± 0.00 | 22.6 ± 0.0 |
+
+Peak joint speed / torque in % of the servo limit (3.65 rad/s, 3.29 N·m at 6.0 V; max over the trials of the condition):
+
+| Condition | ω coxa | ω femur | ω tibia | τ coxa | τ femur | τ tibia |
+|---|---:|---:|---:|---:|---:|---:|
+| tripod_r00_nopc | 10% | 18% | 16% | 100% | 92% | 67% |
+| wave_r25_pc | 38% | 32% | 42% | 100% | 100% | 100% |
+
+Joint torque p95 in % of the limit (mean over trials) and fraction of samples at the limit (>= 98 %) - the peak above is often a single touch-down sample:
+
+| Condition | τ p95 coxa | τ p95 femur | τ p95 tibia | femur at limit | tibia at limit |
+|---|---:|---:|---:|---:|---:|
+| tripod_r00_nopc | 42% | 68% | 65% | 0.0% | 0.0% |
+| wave_r25_pc | 26% | 80% | 95% | 0.7% | 5.0% |
+
+| Condition | Body pitch mean (°) | |pitch| max (°) | Roll RMS (°) | Tilt vs slope max (°) | Correction pitch (°) | IMU est. err pitch RMS (°) | IMU est. err roll RMS (°) |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| tripod_r00_nopc | 0.0 ± 0.0 | 0.0 ± 0.0 | 0.00 ± 0.00 | 0.0 ± 0.0 | 0.0 ± 0.0 | 0.05 ± 0.00 | 0.05 ± 0.00 |
+| wave_r25_pc | -16.8 ± 0.0 | 17.5 ± 0.0 | 1.07 ± 0.00 | 9.2 ± 0.0 | -8.2 ± 0.0 | 0.78 ± 0.00 | 0.32 ± 0.00 |
+
+CHECK PASSED: 2 trial(s) ran, 0 skipped
+
+--- launch log: errors / warnings (last 40 lines) ---
+
+results: /home/t/49x_Hexapod/ros2_ws/results/e4_check (exit 0)

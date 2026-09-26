@@ -1,0 +1,31 @@
+# E5 - obstacle height ladder (chapter 4.1.5)
+
+- Generated 2026-09-26 10:26:14; seed 2; course 0.3 m, success = goal within 2.0 x nominal time without a fall (|roll|/|pitch| > 30.0°, z < 60 mm)
+- Mass 4.147 kg; cycle times {'tripod': 0.95, 'ripple': 1.3, 'wave': 2.4}; metrics exclude the warm-up (1 gait cycle); Mean ± SD (sample SD) over all trials of a condition
+- Ground truth only (OdometryPublisher, joint states, contact and joint F/T sensors); slip = sliding of the foot contact point per stance, centre slip = ball-centre displacement
+
+| Condition | Cmd (mm/s) | Success | Falls | Speed (mm/s) | Speed / cmd (%) | SSM min (mm) | SSM p5 (mm) | SSM mean (mm) | SSM min, contact only (mm) | Support feet | Feet in contact | Slip/stance (mm) | Centre slip (mm) | CoT | Roll RMS (°) | Pitch RMS (°) | Lateral drift (mm) | Cadence k |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| tripod_nominal_h010 | 25 | 1/1 (100%) | 0 | 18.5 ± 0.0 | 74 ± 0 | -0.7 ± 0.0 | 100.3 ± 0.0 | 129.0 ± 0.0 | -2.6 ± 0.0 | 4.00 ± 0.00 | 3.28 ± 0.00 | 0.79 ± 0.00 | 0.48 ± 0.00 | 1.84 ± 0.00 | 0.52 ± 0.00 | 1.24 ± 0.00 | 1.0 ± 0.0 | 1.00 ± 0.00 |
+| wave_high_h010 | 13 | 1/1 (100%) | 0 | 11.7 ± 0.0 | 88 ± 0 | -8.8 ± 0.0 | -1.5 ± 0.0 | 69.2 ± 0.0 | -94.9 ± 0.0 | 3.81 ± 0.00 | 2.84 ± 0.00 | 1.87 ± 0.00 | 2.09 ± 0.00 | 1.21 ± 0.00 | 0.43 ± 0.00 | 1.62 ± 0.00 | 1.9 ± 0.0 | 1.82 ± 0.00 |
+
+Peak joint speed / torque in % of the servo limit (3.65 rad/s, 3.29 N·m at 6.0 V; max over the trials of the condition):
+
+| Condition | ω coxa | ω femur | ω tibia | τ coxa | τ femur | τ tibia |
+|---|---:|---:|---:|---:|---:|---:|
+| tripod_nominal_h010 | 10% | 18% | 16% | 100% | 101% | 100% |
+| wave_high_h010 | 25% | 18% | 29% | 92% | 101% | 100% |
+
+Joint torque p95 in % of the limit (mean over trials) and fraction of samples at the limit (>= 98 %) - the peak above is often a single touch-down sample:
+
+| Condition | τ p95 coxa | τ p95 femur | τ p95 tibia | femur at limit | tibia at limit |
+|---|---:|---:|---:|---:|---:|
+| tripod_nominal_h010 | 40% | 69% | 85% | 2.1% | 1.6% |
+| wave_high_h010 | 14% | 100% | 79% | 13.4% | 0.4% |
+
+## Obstacle ladder: successes / trials per height (pass = at least 4/5; a failing height stops early)
+
+| Group | 10 mm | Highest passed |
+|---|---:|---:|
+| tripod_nominal | 1/1 | 0 mm |
+| wave_high | 1/1 | 0 mm |
