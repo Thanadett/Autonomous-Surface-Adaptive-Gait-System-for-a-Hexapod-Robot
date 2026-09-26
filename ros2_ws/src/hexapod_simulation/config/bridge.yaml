@@ -1,0 +1,176 @@
+# ros_gz_bridge topic map. Keep this in sync with hexapod_description's
+# sensors.xacro/feet.xacro (topic names + types) -- a mismatch here just
+# silently drops messages, so if a sensor sub in hexapod_perception or
+# hexapod_state_estimation "just doesn't get anything," check this file
+# first.
+- ros_topic_name: /clock
+  gz_topic_name: /clock
+  ros_type_name: rosgraph_msgs/msg/Clock
+  gz_type_name: gz.msgs.Clock
+  direction: GZ_TO_ROS
+
+# Ground-truth odom -> base_link (OdometryPublisher plugin in hexapod.urdf.xacro).
+- ros_topic_name: /tf
+  gz_topic_name: /odom_tf
+  ros_type_name: tf2_msgs/msg/TFMessage
+  gz_type_name: gz.msgs.Pose_V
+  direction: GZ_TO_ROS
+
+- ros_topic_name: /imu/data
+  gz_topic_name: /imu/data
+  ros_type_name: sensor_msgs/msg/Imu
+  gz_type_name: gz.msgs.IMU
+  direction: GZ_TO_ROS
+
+# RGB image of the same rgbd sensor (E6 dataset snapshots: friction mats differ only in colour)
+- ros_topic_name: /camera/image
+  gz_topic_name: /camera/image
+  ros_type_name: sensor_msgs/msg/Image
+  gz_type_name: gz.msgs.Image
+  direction: GZ_TO_ROS
+
+- ros_topic_name: /camera/depth_image
+  gz_topic_name: /camera/depth_image
+  ros_type_name: sensor_msgs/msg/Image
+  gz_type_name: gz.msgs.Image
+  direction: GZ_TO_ROS
+
+# Raw Gazebo cloud (x-forward axes). points_frame_relabel republishes it as
+# /camera/points with the matching camera_link frame_id.
+- ros_topic_name: /camera/points_gz
+  gz_topic_name: /camera/points
+  ros_type_name: sensor_msgs/msg/PointCloud2
+  gz_type_name: gz.msgs.PointCloudPacked
+  direction: GZ_TO_ROS
+
+- ros_topic_name: /camera/camera_info
+  gz_topic_name: /camera/camera_info
+  ros_type_name: sensor_msgs/msg/CameraInfo
+  gz_type_name: gz.msgs.CameraInfo
+  direction: GZ_TO_ROS
+
+# Six per-leg contact topics -- names must match feet.xacro's
+# <topic>foot_contacts/${prefix}</topic> exactly.
+- ros_topic_name: /foot_contacts/front_left
+  gz_topic_name: /foot_contacts/front_left
+  ros_type_name: ros_gz_interfaces/msg/Contacts
+  gz_type_name: gz.msgs.Contacts
+  direction: GZ_TO_ROS
+- ros_topic_name: /foot_contacts/middle_left
+  gz_topic_name: /foot_contacts/middle_left
+  ros_type_name: ros_gz_interfaces/msg/Contacts
+  gz_type_name: gz.msgs.Contacts
+  direction: GZ_TO_ROS
+- ros_topic_name: /foot_contacts/rear_left
+  gz_topic_name: /foot_contacts/rear_left
+  ros_type_name: ros_gz_interfaces/msg/Contacts
+  gz_type_name: gz.msgs.Contacts
+  direction: GZ_TO_ROS
+- ros_topic_name: /foot_contacts/front_right
+  gz_topic_name: /foot_contacts/front_right
+  ros_type_name: ros_gz_interfaces/msg/Contacts
+  gz_type_name: gz.msgs.Contacts
+  direction: GZ_TO_ROS
+- ros_topic_name: /foot_contacts/middle_right
+  gz_topic_name: /foot_contacts/middle_right
+  ros_type_name: ros_gz_interfaces/msg/Contacts
+  gz_type_name: gz.msgs.Contacts
+  direction: GZ_TO_ROS
+- ros_topic_name: /foot_contacts/rear_right
+  gz_topic_name: /foot_contacts/rear_right
+  ros_type_name: ros_gz_interfaces/msg/Contacts
+  gz_type_name: gz.msgs.Contacts
+  direction: GZ_TO_ROS
+
+# 18 joint force/torque sensors (hexapod.gazebo.xacro, use_joint_ft). The torque about the
+# joint axis is extracted in hexapod_evaluation (CoT, peak torque).
+- ros_topic_name: /joint_wrench/front_left_coxa
+  gz_topic_name: /joint_wrench/front_left_coxa
+  ros_type_name: geometry_msgs/msg/WrenchStamped
+  gz_type_name: gz.msgs.Wrench
+  direction: GZ_TO_ROS
+- ros_topic_name: /joint_wrench/front_left_femur
+  gz_topic_name: /joint_wrench/front_left_femur
+  ros_type_name: geometry_msgs/msg/WrenchStamped
+  gz_type_name: gz.msgs.Wrench
+  direction: GZ_TO_ROS
+- ros_topic_name: /joint_wrench/front_left_tibia
+  gz_topic_name: /joint_wrench/front_left_tibia
+  ros_type_name: geometry_msgs/msg/WrenchStamped
+  gz_type_name: gz.msgs.Wrench
+  direction: GZ_TO_ROS
+- ros_topic_name: /joint_wrench/middle_left_coxa
+  gz_topic_name: /joint_wrench/middle_left_coxa
+  ros_type_name: geometry_msgs/msg/WrenchStamped
+  gz_type_name: gz.msgs.Wrench
+  direction: GZ_TO_ROS
+- ros_topic_name: /joint_wrench/middle_left_femur
+  gz_topic_name: /joint_wrench/middle_left_femur
+  ros_type_name: geometry_msgs/msg/WrenchStamped
+  gz_type_name: gz.msgs.Wrench
+  direction: GZ_TO_ROS
+- ros_topic_name: /joint_wrench/middle_left_tibia
+  gz_topic_name: /joint_wrench/middle_left_tibia
+  ros_type_name: geometry_msgs/msg/WrenchStamped
+  gz_type_name: gz.msgs.Wrench
+  direction: GZ_TO_ROS
+- ros_topic_name: /joint_wrench/rear_left_coxa
+  gz_topic_name: /joint_wrench/rear_left_coxa
+  ros_type_name: geometry_msgs/msg/WrenchStamped
+  gz_type_name: gz.msgs.Wrench
+  direction: GZ_TO_ROS
+- ros_topic_name: /joint_wrench/rear_left_femur
+  gz_topic_name: /joint_wrench/rear_left_femur
+  ros_type_name: geometry_msgs/msg/WrenchStamped
+  gz_type_name: gz.msgs.Wrench
+  direction: GZ_TO_ROS
+- ros_topic_name: /joint_wrench/rear_left_tibia
+  gz_topic_name: /joint_wrench/rear_left_tibia
+  ros_type_name: geometry_msgs/msg/WrenchStamped
+  gz_type_name: gz.msgs.Wrench
+  direction: GZ_TO_ROS
+- ros_topic_name: /joint_wrench/front_right_coxa
+  gz_topic_name: /joint_wrench/front_right_coxa
+  ros_type_name: geometry_msgs/msg/WrenchStamped
+  gz_type_name: gz.msgs.Wrench
+  direction: GZ_TO_ROS
+- ros_topic_name: /joint_wrench/front_right_femur
+  gz_topic_name: /joint_wrench/front_right_femur
+  ros_type_name: geometry_msgs/msg/WrenchStamped
+  gz_type_name: gz.msgs.Wrench
+  direction: GZ_TO_ROS
+- ros_topic_name: /joint_wrench/front_right_tibia
+  gz_topic_name: /joint_wrench/front_right_tibia
+  ros_type_name: geometry_msgs/msg/WrenchStamped
+  gz_type_name: gz.msgs.Wrench
+  direction: GZ_TO_ROS
+- ros_topic_name: /joint_wrench/middle_right_coxa
+  gz_topic_name: /joint_wrench/middle_right_coxa
+  ros_type_name: geometry_msgs/msg/WrenchStamped
+  gz_type_name: gz.msgs.Wrench
+  direction: GZ_TO_ROS
+- ros_topic_name: /joint_wrench/middle_right_femur
+  gz_topic_name: /joint_wrench/middle_right_femur
+  ros_type_name: geometry_msgs/msg/WrenchStamped
+  gz_type_name: gz.msgs.Wrench
+  direction: GZ_TO_ROS
+- ros_topic_name: /joint_wrench/middle_right_tibia
+  gz_topic_name: /joint_wrench/middle_right_tibia
+  ros_type_name: geometry_msgs/msg/WrenchStamped
+  gz_type_name: gz.msgs.Wrench
+  direction: GZ_TO_ROS
+- ros_topic_name: /joint_wrench/rear_right_coxa
+  gz_topic_name: /joint_wrench/rear_right_coxa
+  ros_type_name: geometry_msgs/msg/WrenchStamped
+  gz_type_name: gz.msgs.Wrench
+  direction: GZ_TO_ROS
+- ros_topic_name: /joint_wrench/rear_right_femur
+  gz_topic_name: /joint_wrench/rear_right_femur
+  ros_type_name: geometry_msgs/msg/WrenchStamped
+  gz_type_name: gz.msgs.Wrench
+  direction: GZ_TO_ROS
+- ros_topic_name: /joint_wrench/rear_right_tibia
+  gz_topic_name: /joint_wrench/rear_right_tibia
+  ros_type_name: geometry_msgs/msg/WrenchStamped
+  gz_type_name: gz.msgs.Wrench
+  direction: GZ_TO_ROS

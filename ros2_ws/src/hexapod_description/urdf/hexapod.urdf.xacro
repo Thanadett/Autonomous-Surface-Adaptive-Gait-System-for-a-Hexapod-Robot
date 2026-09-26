@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<!--
+  Hexapod robot description (6 legs x 3 DOF: coxa-femur-tibia, 18 x TD-8135MG servo)
+  Source CAD : final1.SLDASM  -> exported STEP AP214 -> tools/gen.py
+  Frames     : REP-103 (x forward, y left, z up). base_link = geometric centre of the body plate.
+               base_link is a massless root; body_link (mesh + inertia) is fixed to it with an
+               identity transform, so both frames coincide (avoids the KDL "root link has an
+               inertia" warning and keeps the body_link name used by hexapod_kinematics).
+  Names      : legs front_left, middle_left, rear_left, front_right, middle_right, rear_right;
+               joints <leg>_{coxa,femur,tibia}_joint; links <leg>_{coxa,femur,tibia,foot}_link.
+               These are the ros2_ws interface (hexapod_kinematics.LEGS, controllers, bridge) -
+               do not rename without updating those packages.
+  Zero pose  : coxa pointing radially outward along its mounting direction,
+               femur horizontal, tibia (knee -> foot-sphere centre) pointing straight down.
+  Positive joint direction:
+               coxa  : counter-clockwise seen from above (+z of base_link)
+               femur : lifts the knee (foot goes up)
+               tibia : swings the foot outward/upward
+-->
+<robot name="hexapod" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- ===================== Arguments ===================== -->
+  <xacro:arg name="use_sim"      default="false"/> <!-- true: Gazebo Sim (gz_ros2_control); false: mock hardware -->
+  <xacro:arg name="use_sensors"  default="true"/>  <!-- IMU + depth camera + foot contact sensors -->
+  <xacro:arg name="use_ros2_control" default="true"/>
+  <!-- Gazebo only, both need use_sensors:=true. use_camera:=false drops the depth camera
+       rendering (the camera link and its mass stay) - E2/E3 do not use it and it is the
+       main real-time-factor cost. use_joint_ft adds a force/torque sensor to every
+       revolute joint (joint torque for CoT / peak torque, hexapod_evaluation). -->
+  <xacro:arg name="use_camera"   default="true"/>
+  <xacro:arg name="use_joint_ft" default="true"/>
+  <!-- Battery + boards inside the body (masses from tools/mass_budget.yaml). false = bare CAD robot -->
+  <xacro:arg name="use_electronics" default="true"/>
+  <!-- Draw the (invisible, mass-only) electronics boxes inside the body - placement check only -->
+  <xacro:arg name="show_electronics" default="false"/>
+  <!-- ros2_control controller parameters loaded by gz_ros2_control (use_sim:=true only).
+       hexapod_bringup/sim.launch.py passes its own controllers.yaml (hexapod_controller). -->
+  <xacro:arg name="controllers_file" default="$(find hexapod_description)/config/controllers.yaml"/>
+  <!-- E1 (IK/FK check, hexapod_evaluation): bolt base_link to the world at fixed_base_z so the
+       legs move in the air without the body falling. Off for every walking experiment. -->
+  <xacro:arg name="fixed_base" default="false"/>
+  <xacro:arg name="fixed_base_z" default="0.30"/>
+  <!-- Electronics/battery that are not in the CAD yet (PLACEHOLDER). Box inertia, fixed to base_link -->
+  <xacro:arg name="payload_mass" default="0.0"/>
+  <xacro:arg name="payload_xyz"  default="0 0 0.01"/>
+  <xacro:arg name="payload_size" default="0.12 0.08 0.03"/>
+
+  <xacro:property name="pkg" value="package://hexapod_description"/>
+  <xacro:include filename="$(find hexapod_description)/urdf/hexapod_properties.xacro"/>
+  <xacro:include filename="$(find hexapod_description)/urdf/hexapod_params.xacro"/>
+  <xacro:include filename="$(find hexapod_description)/urdf/materials.xacro"/>
+  <xacro:include filename="$(find hexapod_description)/urdf/leg.xacro"/>
+
+  <!-- ===================== Body ===================== -->
+  <link name="base_link"/>
+  <joint name="base_to_body_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="body_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+
+  <link name="body_link">
+    <visual>
+      <geometry><mesh filename="${pkg}/meshes/visual/base_link_grey.stl"/></geometry>
+      <material name="petg_grey"/>
+    </visual>
+    <visual>
+      <geometry><mesh filename="${pkg}/meshes/visual/base_link_dark.stl"/></geometry>
+      <material name="servo_black"/>
+    </visual>
+    <collision>
+      <geometry><mesh filename="${pkg}/meshes/collision/base_link.stl"/></geometry>
+    </collision>
+    <xacro:base_inertial/>
+  </link>
+
+  <xacro:property name="payload_mass" value="$(arg payload_mass)"/>
+  <xacro:if value="${payload_mass > 0.0}">
+    <xacro:property name="ps" value="${xacro.tokenize('$(arg payload_size)')}"/>
+    <xacro:property name="psx" value="${float(ps[0])}"/>
+    <xacro:property name="psy" value="${float(ps[1])}"/>
+    <xacro:property name="psz" value="${float(ps[2])}"/>
+    <link name="payload_link">
+      <inertial>
+        <mass value="${payload_mass}"/>
+        <inertia ixx="${payload_mass*(psy*psy+psz*psz)/12}" ixy="0" ixz="0"
+                 iyy="${payload_mass*(psx*psx+psz*psz)/12}" iyz="0"
+                 izz="${payload_mass*(psx*psx+psy*psy)/12}"/>
+      </inertial>
+    </link>
+    <joint name="payload_joint" type="fixed">
+      <parent link="body_link"/><child link="payload_link"/>
+      <origin xyz="$(arg payload_xyz)" rpy="0 0 0"/>
+    </joint>
+  </xacro:if>
+
+  <xacro:if value="$(arg fixed_base)">
+    <link name="world"/>
+    <joint name="world_to_base_joint" type="fixed">
+      <parent link="world"/>
+      <child link="base_link"/>
+      <origin xyz="0 0 $(arg fixed_base_z)" rpy="0 0 0"/>
+    </joint>
+  </xacro:if>
+
+  <!-- ===================== Legs ===================== -->
+  <!-- Generator short name (LF..RR, used only for the mount properties) -> workspace leg name -->
+  <xacro:hexapod_leg prefix="front_left"   mount_xyz="${LF_mount_xyz}" mount_rpy="${LF_mount_rpy}"/>
+  <xacro:hexapod_leg prefix="middle_left"  mount_xyz="${LM_mount_xyz}" mount_rpy="${LM_mount_rpy}"/>
+  <xacro:hexapod_leg prefix="rear_left"    mount_xyz="${LR_mount_xyz}" mount_rpy="${LR_mount_rpy}"/>
+  <xacro:hexapod_leg prefix="front_right"  mount_xyz="${RF_mount_xyz}" mount_rpy="${RF_mount_rpy}"/>
+  <xacro:hexapod_leg prefix="middle_right" mount_xyz="${RM_mount_xyz}" mount_rpy="${RM_mount_rpy}"/>
+  <xacro:hexapod_leg prefix="rear_right"   mount_xyz="${RR_mount_xyz}" mount_rpy="${RR_mount_rpy}"/>
+
+  <!-- ===================== Electronics ===================== -->
+  <xacro:if value="$(arg use_electronics)">
+    <xacro:include filename="$(find hexapod_description)/urdf/electronics.xacro"/>
+  </xacro:if>
+
+  <!-- ===================== Sensors ===================== -->
+  <xacro:if value="$(arg use_sensors)">
+    <xacro:include filename="$(find hexapod_description)/urdf/sensors.xacro"/>
+  </xacro:if>
+
+  <!-- ===================== ros2_control + Gazebo ===================== -->
+  <xacro:if value="$(arg use_ros2_control)">
+    <xacro:include filename="$(find hexapod_description)/urdf/hexapod.ros2_control.xacro"/>
+    <xacro:hexapod_ros2_control use_sim="$(arg use_sim)"/>
+  </xacro:if>
+  <xacro:if value="$(arg use_sim)">
+    <xacro:include filename="$(find hexapod_description)/urdf/hexapod.gazebo.xacro"/>
+    <xacro:hexapod_gazebo use_sensors="$(arg use_sensors)" controllers_file="$(arg controllers_file)"
+                          use_camera="$(arg use_camera)" use_joint_ft="$(arg use_joint_ft)"/>
+  </xacro:if>
+
+</robot>

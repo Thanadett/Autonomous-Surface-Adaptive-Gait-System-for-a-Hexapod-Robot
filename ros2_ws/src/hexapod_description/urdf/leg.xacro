@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<!--
+  One 3-DOF leg. All six legs are geometrically identical in the CAD (checked: < 0.1 mm
+  difference between legs), so a single macro + one mesh set is used.
+
+  prefix = workspace leg name (front_left, middle_left, rear_left, front_right, middle_right,
+  rear_right) - must match hexapod_kinematics.LEGS; the CAD/generator short names LF..RR are only
+  used for the mount properties in hexapod_properties.xacro.
+
+  Chain: body_link -(coxa_joint, z)-> <p>_coxa_link -(femur_joint, -y)-> <p>_femur_link
+                   -(tibia_joint, -y)-> <p>_tibia_link -(foot_joint, fixed)-> <p>_foot_link
+
+  Link frames:
+    <p>_coxa_link  : origin on the coxa servo axis, x = leg direction, z = up
+    <p>_femur_link : origin on the femur servo axis (in the leg plane), x = femur -> knee
+    <p>_tibia_link : origin on the tibia servo axis (knee), x = knee -> foot-sphere centre
+    <p>_foot_link  : origin at the centre of the foot_tip sphere (radius = foot_radius);
+                     the ground contact point is foot_radius below this frame.
+  Femur/tibia axis is -y of the link frame, so a positive angle lifts the distal end.
+-->
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:macro name="mesh_visual" params="file material">
+    <visual>
+      <geometry><mesh filename="${pkg}/meshes/visual/${file}"/></geometry>
+      <material name="${material}"/>
+    </visual>
+  </xacro:macro>
+
+  <xacro:macro name="hexapod_leg" params="prefix mount_xyz mount_rpy">
+
+    <!-- ================= Coxa ================= -->
+    <joint name="${prefix}_coxa_joint" type="revolute">
+      <parent link="body_link"/>
+      <child link="${prefix}_coxa_link"/>
+      <origin xyz="${mount_xyz}" rpy="${mount_rpy}"/>
+      <axis xyz="0 0 1"/>
+      <limit lower="${coxa_lower}" upper="${coxa_upper}" effort="${servo_effort}" velocity="${servo_velocity}"/>
+      <dynamics damping="${joint_damping}" friction="${joint_friction}"/>
+    </joint>
+    <link name="${prefix}_coxa_link">
+      <xacro:mesh_visual file="coxa_grey.stl"   material="petg_grey"/>
+      <xacro:mesh_visual file="coxa_orange.stl" material="petg_orange"/>
+      <xacro:mesh_visual file="coxa_dark.stl"   material="servo_black"/>
+      <collision><geometry><mesh filename="${pkg}/meshes/collision/coxa.stl"/></geometry></collision>
+      <xacro:coxa_inertial/>
+    </link>
+
+    <!-- ================= Femur ================= -->
+    <joint name="${prefix}_femur_joint" type="revolute">
+      <parent link="${prefix}_coxa_link"/>
+      <child link="${prefix}_femur_link"/>
+      <origin xyz="${femur_joint_xyz}" rpy="${femur_joint_rpy}"/>
+      <axis xyz="0 -1 0"/>
+      <limit lower="${femur_lower}" upper="${femur_upper}" effort="${servo_effort}" velocity="${servo_velocity}"/>
+      <dynamics damping="${joint_damping}" friction="${joint_friction}"/>
+    </joint>
+    <link name="${prefix}_femur_link">
+      <xacro:mesh_visual file="femur_grey.stl"   material="petg_grey"/>
+      <xacro:mesh_visual file="femur_orange.stl" material="petg_orange"/>
+      <xacro:mesh_visual file="femur_dark.stl"   material="servo_black"/>
+      <collision><geometry><mesh filename="${pkg}/meshes/collision/femur.stl"/></geometry></collision>
+      <xacro:femur_inertial/>
+    </link>
+
+    <!-- ================= Tibia ================= -->
+    <joint name="${prefix}_tibia_joint" type="revolute">
+      <parent link="${prefix}_femur_link"/>
+      <child link="${prefix}_tibia_link"/>
+      <origin xyz="${tibia_joint_xyz}" rpy="${tibia_joint_rpy}"/>
+      <axis xyz="0 -1 0"/>
+      <limit lower="${tibia_lower}" upper="${tibia_upper}" effort="${servo_effort}" velocity="${servo_velocity}"/>
+      <dynamics damping="${joint_damping}" friction="${joint_friction}"/>
+    </joint>
+    <link name="${prefix}_tibia_link">
+      <xacro:mesh_visual file="tibia_grey.stl" material="petg_grey"/>
+      <xacro:mesh_visual file="tibia_dark.stl" material="servo_black"/>
+      <collision><geometry><mesh filename="${pkg}/meshes/collision/tibia.stl"/></geometry></collision>
+      <xacro:tibia_inertial/>
+    </link>
+
+    <!-- ================= Foot (limit-switch / contact link) ================= -->
+    <joint name="${prefix}_foot_joint" type="fixed">
+      <parent link="${prefix}_tibia_link"/>
+      <child link="${prefix}_foot_link"/>
+      <origin xyz="${foot_joint_xyz}" rpy="${foot_joint_rpy}"/>
+    </joint>
+    <link name="${prefix}_foot_link">
+      <xacro:mesh_visual file="foot_orange.stl" material="petg_orange"/>
+      <xacro:mesh_visual file="foot_dark.stl"   material="servo_black"/>
+      <!-- Single sphere collision: stable ground contact and a clean contact sensor.
+           Keep it the ONLY collision of this link (Gazebo names it <prefix>_foot_link_collision). -->
+      <collision><geometry><sphere radius="${foot_radius}"/></geometry></collision>
+      <xacro:foot_inertial/>
+    </link>
+
+  </xacro:macro>
+</robot>

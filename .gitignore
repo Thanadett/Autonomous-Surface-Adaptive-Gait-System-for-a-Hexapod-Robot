@@ -1,0 +1,28 @@
+# OS/editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# ROS / build artifacts
+ros2_ws/build/
+ros2_ws/install/
+ros2_ws/log/
+ros2_ws/build_final1/
+ros2_ws/install_final1/
+ros2_ws/sim_smoke_test_result.txt
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+.pytest_cache/
+*.egg-info/
+*.egg
+
+# generated CAD outputs if not desired in repo
+*.bak
+*.orig
+
+# local backups
+backup/

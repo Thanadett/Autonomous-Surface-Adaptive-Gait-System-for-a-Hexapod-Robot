@@ -1,0 +1,27 @@
+# E4 - ramps with and without IMU posture control (chapter 4.1.4). Read by e2_runner
+# (scripts/run_e2.sh --plan e4 --camera). The robot starts standing on a 4 m ramp
+# (scenario.py: plane rising along +x, low end 5 cm above the floor) and walks uphill.
+# Progress/success along the slope, fall tilt relative to the slope (a 25 deg ramp is not
+# a fall), body attitude reported gravity-referenced (what posture control levels).
+# Posture control: locomotion_node's integral loop on /state/attitude (complementary
+# filter, hexapod_state_estimation); correction limited by the legs' reach (~8 deg of
+# pitch at body height 100 mm). n = 5 (the plan allows >= 5) to fit one night.
+e4:
+  n: 5
+  distance_m: 0.5           # 26 Sep 2026: 0.8 -> 0.5 m (run time; >= 4 Wave cycles after warm-up)
+  time_factor: 2.0
+  warmup_cycles: 1.0
+  gaits: [tripod, ripple, wave]
+  speeds: {common: 0.025}
+  nominal_posture: [0.100, 0.020]
+  ramps:
+    angles_deg: [0, 5, 10, 15, 20, 25]
+    posture_control: [false, true]
+  record_camera: true
+  world: flat_world
+  model: hexapod
+  start: {x: -5.45, y: -1.4, yaw_deg: 0.0}
+  park: {x: -8.0, y: 1.0}
+  jitter: {xy_m: 0.02, yaw_deg: 3.0}
+  fall: {tilt_deg: 30.0, min_z_m: 0.060}
+  settle_s: 3.0              # includes levelling time when posture control is on

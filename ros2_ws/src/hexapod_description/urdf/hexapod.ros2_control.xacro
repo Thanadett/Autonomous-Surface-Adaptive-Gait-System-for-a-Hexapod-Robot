@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!--
+  ros2_control interface for the 18 leg joints (position-controlled hobby servos).
+  use_sim=true  -> gz_ros2_control/GazeboSimSystem (Gazebo Sim / Harmonic)
+  use_sim=false -> mock_components/GenericSystem (RViz / controller testing without hardware)
+  Replace the mock plugin with the real servo-driver hardware interface
+  (e.g. PCA9685 / serial bus) when the hardware is ready.
+-->
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:macro name="servo_joint_interface" params="name lower upper">
+    <joint name="${name}">
+      <command_interface name="position">
+        <param name="min">${lower}</param>
+        <param name="max">${upper}</param>
+      </command_interface>
+      <state_interface name="position"><param name="initial_value">0.0</param></state_interface>
+      <state_interface name="velocity"/>
+    </joint>
+  </xacro:macro>
+
+  <xacro:macro name="leg_interfaces" params="prefix">
+    <xacro:servo_joint_interface name="${prefix}_coxa_joint"  lower="${coxa_lower}"  upper="${coxa_upper}"/>
+    <xacro:servo_joint_interface name="${prefix}_femur_joint" lower="${femur_lower}" upper="${femur_upper}"/>
+    <xacro:servo_joint_interface name="${prefix}_tibia_joint" lower="${tibia_lower}" upper="${tibia_upper}"/>
+  </xacro:macro>
+
+  <xacro:macro name="hexapod_ros2_control" params="use_sim">
+    <ros2_control name="HexapodSystem" type="system">
+      <hardware>
+        <xacro:if value="${use_sim}">
+          <plugin>gz_ros2_control/GazeboSimSystem</plugin>
+        </xacro:if>
+        <xacro:unless value="${use_sim}">
+          <plugin>mock_components/GenericSystem</plugin>
+          <param name="calculate_dynamics">true</param>
+        </xacro:unless>
+      </hardware>
+      <!-- Order = hexapod_kinematics.LEGS (same order as the controllers' joint lists) -->
+      <xacro:leg_interfaces prefix="front_left"/>
+      <xacro:leg_interfaces prefix="middle_left"/>
+      <xacro:leg_interfaces prefix="rear_left"/>
+      <xacro:leg_interfaces prefix="front_right"/>
+      <xacro:leg_interfaces prefix="middle_right"/>
+      <xacro:leg_interfaces prefix="rear_right"/>
+    </ros2_control>
+  </xacro:macro>
+</robot>

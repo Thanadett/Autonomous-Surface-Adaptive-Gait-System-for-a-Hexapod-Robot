@@ -1,0 +1,29 @@
+# Placeholder sensor parameters -- replace with datasheet values once the
+# Depth Camera, IMU, and servo/limit-switch hardware are chosen (see the
+# open-questions table in the project plan). Keep in sync with the noise
+# values baked into urdf/sensors.xacro and urdf/feet.xacro.
+
+imu:
+  enabled: true
+  update_rate_hz: 200.0
+  angular_velocity_noise_stddev: 0.002
+  linear_acceleration_noise_stddev: 0.02
+
+camera:
+  enabled: true
+  parent_link: body_link
+  frame_id: camera_optical_frame  # depth image/camera_info; /camera/points is relabeled to camera_link
+  width: 424
+  height: 240
+  update_rate_hz: 15.0
+  horizontal_fov_rad: 1.047
+  min_range_m: 0.2
+  max_range_m: 2.0
+  depth_noise_stddev_m: 0.005
+
+contacts:
+  enabled: true
+  update_rate_hz: 100.0
+  debounce_ms: 10.0
+  force_threshold_n: 2.0
+  foot_radius_m: 0.010

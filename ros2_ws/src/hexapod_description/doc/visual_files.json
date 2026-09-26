@@ -1,0 +1,1 @@
+{"base_link": ["base_link_grey.stl", "base_link_dark.stl"], "coxa": ["coxa_grey.stl", "coxa_orange.stl", "coxa_dark.stl"], "femur": ["femur_grey.stl", "femur_orange.stl", "femur_dark.stl"], "tibia": ["tibia_grey.stl", "tibia_dark.stl"], "foot": ["foot_orange.stl", "foot_dark.stl"]}

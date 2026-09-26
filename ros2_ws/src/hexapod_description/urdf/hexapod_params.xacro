@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<!-- Hand-editable parameters (NOT generated). -->
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- ===== Actuator: TD-8135MG (180 deg, 500-2500 us, neutral 1500 us) =====
+       Datasheet (Bot'n Roll): 32.7 kg.cm / 0.32 s/60deg @4.8 V ; 35.2 kg.cm / 0.22 s/60deg @8.4 V;
+       stall 2.8 A @4.8 V, 3.8 A @8.4 V. Supply decided 25 Sep 2026: 6.0 V from the own power PCB
+       (3S LiPo -> two 6.0 V regulators). No 6.0 V point is published, so both values are
+       LINEAR INTERPOLATIONS between 4.8 V and 8.4 V - TODO(verify) with a bench test:
+         torque 32.7 + (35.2 - 32.7) * 1.2/3.6 = 33.5 kg.cm = 3.29 N.m
+         speed  0.32 + (0.22 - 0.32) * 1.2/3.6 = 0.287 s/60deg = 3.65 rad/s              -->
+  <xacro:property name="servo_effort"   value="3.29"/>  <!-- N.m  (33.5 kg.cm @6.0 V, interpolated) -->
+  <xacro:property name="servo_velocity" value="3.65"/>  <!-- rad/s (0.287 s / 60 deg @6.0 V, interpolated) -->
+  <xacro:property name="joint_damping"  value="0.05"/>
+  <xacro:property name="joint_friction" value="0.0"/>
+
+  <!-- ===== Joint limits (rad), relative to the URDF zero pose =====
+       TODO(calibrate): the servo neutral (1500 us) has not been measured against the
+       URDF zero pose. The +/-90 deg below is the servo's travel assuming neutral == zero.
+       After calibration, shift these to [neutral_offset - pi/2, neutral_offset + pi/2]
+       and tighten them to the collision-free range of the real robot. -->
+  <xacro:property name="coxa_lower"  value="${-pi/2}"/> <xacro:property name="coxa_upper"  value="${pi/2}"/>
+  <xacro:property name="femur_lower" value="${-pi/2}"/> <xacro:property name="femur_upper" value="${pi/2}"/>
+  <xacro:property name="tibia_lower" value="${-pi/2}"/> <xacro:property name="tibia_upper" value="${pi/2}"/>
+
+  <!-- ===== Foot contact (Gazebo) =====
+       Foot tip is printed in TPU (decided 25 Sep 2026). foot_mu stays 1.0 on purpose: in E3 the
+       ground friction is the controlled variable, so the foot must never be the limiting surface
+       (mu of the foot >= highest ground mu tested). Real TPU-on-floor friction is a Sim-to-Real item
+       (4.1.8) - measure it with the tilted-plate test. -->
+  <xacro:property name="foot_mu"  value="1.0"/>
+  <xacro:property name="foot_kp"  value="1.0e5"/>
+  <xacro:property name="foot_kd"  value="10.0"/>
+
+  <!-- ===== IMU: BNO055 (separate board, decided 25 Sep 2026) =====
+       Mounted at the body centre (base_link origin) - TODO(mount): replace with the real bracket pose.
+       Fusion (IMU/NDOF mode) output is 100 Hz. Noise from the Bosch BNO055 datasheet
+       (accel 150 ug/sqrt(Hz), gyro 0.014 deg/s/sqrt(Hz)) at a 50 Hz noise bandwidth:
+         accel  150e-6 * 9.81 * sqrt(50) = 0.0104 m/s^2 ;  gyro  radians(0.014) * sqrt(50) = 0.0017 rad/s -->
+  <xacro:property name="imu_xyz" value="0 0 0"/>
+  <xacro:property name="imu_rpy" value="0 0 0"/>
+  <xacro:property name="imu_rate" value="100"/>
+  <xacro:property name="imu_accel_noise" value="0.0104"/>  <!-- m/s^2, 1 sigma per sample -->
+  <xacro:property name="imu_gyro_noise"  value="0.0017"/>  <!-- rad/s, 1 sigma per sample -->
+
+  <!-- ===== Depth camera: Intel RealSense D435i (decided) =====
+       Depth FOV 87 x 58 deg, range ~0.3-3 m, Min-Z ~28 cm at 1280x720 and ~0.105 m at the lowest
+       resolution. 424 x 240 @ 30 fps is used (same 87 deg HFOV -> 56.5 deg VFOV, Min-Z below the
+       nearest ground point, and a point cloud the RPi 5 can process in real time).
+       Pose: front edge on top of the cover, pitched 28 deg down (hexapod_evaluation camera coverage
+       calculation, 25 Sep 2026): the view then spans from 0.21-0.25 m ahead of base_link (just in
+       front of the front feet, for all stance heights 70-135 mm) up to the horizon, which covers the
+       0.3-1.0 m look-ahead band of the terrain estimator with ~8 deg margin for body pitch.
+       Nearest ground range 0.17-0.25 m > Min-Z at 424 x 240. TODO(mount): check the bracket keeps
+       this pose and that the front coxae do not enter the image. -->
+  <xacro:property name="camera_xyz" value="${body_front_x - 0.01} 0 ${body_top_z + 0.0125}"/>
+  <xacro:property name="camera_rpy" value="0 ${radians(28)} 0"/>
+  <xacro:property name="camera_size" value="0.025 0.09 0.025"/>  <!-- depth(x) width(y) height(z), 90 x 25 x 25 mm -->
+  <!-- camera_mass and imu_mass come from tools/mass_budget.yaml (hexapod_properties.xacro) -->
+  <xacro:property name="camera_hfov" value="${radians(87)}"/>
+  <xacro:property name="camera_width" value="424"/>
+  <xacro:property name="camera_height" value="240"/>
+  <xacro:property name="camera_near" value="0.105"/>
+  <xacro:property name="camera_far" value="3.0"/>
+  <xacro:property name="camera_rate" value="30"/>
+
+  <!-- ===== Electronics inside the body shell (25 Sep 2026: battery + boards sit inside the body,
+       not under it). Masses: tools/mass_budget.yaml -> hexapod_properties.xacro.
+       Mass-only links: no collision (the body's own collision covers them) and no visual unless
+       show_electronics:=true (for checking the placement in RViz/Gazebo).
+       Cavity measured from meshes/visual/base_link_*.stl (vertical ray casts): a central trough
+       |y| < ~22 mm, x within +-60 mm, floor z = -17 mm; side shelves 22 < |y| < ~52 mm with floor
+       z = -1 mm; ceiling (underside of the top plate) z = +36..38 mm.
+       TODO(mount): replace sizes/positions with the real internal layout (a +-10 mm error moves
+       the whole-body CoM by < 1 mm per axis for the boards, ~1 mm for the battery). -->
+  <xacro:property name="cavity_floor_z" value="-0.017"/>   <!-- central trough -->
+  <xacro:property name="shelf_floor_z" value="-0.001"/>    <!-- side shelves -->
+  <!-- BT LiPo 3S 7200 mAh: 138 x 45 x 32 mm, long side along x, lying in the central trough -->
+  <xacro:property name="battery_size" value="0.138 0.045 0.032"/>
+  <xacro:property name="battery_xyz" value="0 0 ${cavity_floor_z + 0.016}"/>
+  <!-- Raspberry Pi 5 + cooler (left shelf) and power PCB + 2 x PCA9685 (right shelf) -->
+  <xacro:property name="compute_size" value="0.085 0.056 0.025"/>
+  <xacro:property name="compute_xyz" value="0 0.045 ${shelf_floor_z + 0.0125}"/>
+  <xacro:property name="power_size" value="0.085 0.056 0.025"/>
+  <xacro:property name="power_xyz" value="0 -0.045 ${shelf_floor_z + 0.0125}"/>
+
+</robot>

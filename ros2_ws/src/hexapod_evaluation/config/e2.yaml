@@ -1,0 +1,19 @@
+# E2 - basic gaits on flat ground (simulation plan, chapter 4.1.2). Read by e2_runner.
+# Definitions agreed 25 Sep 2026: success = 2 m within 2 x nominal time without a fall;
+# fall = |roll| or |pitch| > 30 deg or base_link z < 60 mm; n = 10 per condition;
+# start offset +-2 cm / +-3 deg. Cycle times come from hexapod_locomotion/config/gait.yaml.
+e2:
+  n: 10
+  distance_m: 2.0
+  time_factor: 2.0
+  warmup_cycles: 1.0          # first gait cycle after the command is excluded from the metrics
+  gaits: [tripod, ripple, wave]
+  speeds:                     # m/s
+    common: 0.025             # every gait at the same speed (= Wave's top speed) -> fair comparison
+    max: {tripod: 0.100, ripple: 0.057, wave: 0.025}   # each gait's top speed (stride 50 mm, gait.yaml)
+  world: flat_world           # Gazebo world name (hexapod_simulation/worlds/flat_world.sdf)
+  model: hexapod              # model name given to ros_gz_sim create
+  start: {x: -5.45, y: -1.4, yaw_deg: 0.0}   # = sim.launch.py spawn point; 2 m of free floor ahead
+  jitter: {xy_m: 0.02, yaw_deg: 3.0}
+  fall: {tilt_deg: 30.0, min_z_m: 0.060}
+  settle_s: 2.0               # after the teleport, before the walk command

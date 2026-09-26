@@ -1,0 +1,48 @@
+locomotion_node:
+  ros__parameters:
+    update_rate_hz: 50.0
+    cycle_time_s: 0.95          # default for any gait without its own value below
+    # Per-gait cycle times (25 Sep 2026, re-checked after the velocity-matched swing of
+    # trajectory.py). Peak commanded joint speed over every command up to max_linear 0.10 m/s /
+    # max_angular 0.4 rad/s and stance 70-135 mm (offline sweep), vs the servo limit 3.65 rad/s
+    # (6.0 V, interpolated): tripod 3.29 rad/s (90 %), ripple 3.23 (89 %; was 1.20 s -> 96 %),
+    # wave 3.31 (91 %, kept at 2.40 s so Wave still reaches the common E2 speed of 25 mm/s).
+    # Top forward speeds with max_stride 50 mm: tripod 100 mm/s, ripple 57 mm/s, wave 25 mm/s.
+    cycle_time_tripod_s: 0.95
+    cycle_time_ripple_s: 1.30
+    cycle_time_wave_s: 2.40
+    stance_height_m: 0.100
+    step_height_m: 0.020        # default swing apex; /step_height_command changes it at run time
+    # Step height limits (E2b, 25 Sep 2026): reach limit per body height in cadence.py
+    # (20 mm at 70 mm, 40 mm at 85 mm, 50 mm from 100 mm); the cycle stretches with the step
+    # (cadence.py table) so the joint speed stays <= 90 % of the servo limit.
+    max_step_height_m: 0.050
+    step_height_rate_m_s: 0.040
+    # IMU posture control (E4): integral loop on /state/attitude -> per-foot height offsets,
+    # limited by the legs' reach (~8 deg pitch at body height 100 mm). Off by default;
+    # /posture_control/enable (std_msgs/Bool) switches it at run time.
+    posture_control: false
+    posture_ki: 1.5
+    posture_max_deg: 20.0
+    max_stride_m: 0.050
+    max_linear_x_m_s: 0.10
+    max_linear_y_m_s: 0.10
+    max_angular_z_rad_s: 0.400
+    command_smoothing_s: 0.18
+    command_timeout_s: 0.8
+    standup_duration_s: 1.5
+    gesture_duration_s: 3.0
+    # 0.070 (was 0.060): with the final1.SLDASM geometry, sideways walking at 0.060 m
+    # runs the middle legs out of IK reach; >= 0.065 m passes every gait/command test.
+    min_stance_height_m: 0.070
+    max_stance_height_m: 0.135
+    stance_height_rate_m_s: 0.020
+    trajectory_horizon_s: 0.04
+    # How many gait cycles a switch takes to blend fully -- see
+    # gait_transition.py. 1.0 matches the plan's "sub-1-cycle" target.
+    blend_cycles: 1.0
+    initial_gait: tripod
+    # IK solver: analytic (closed form, default since E1) | dls (original damped
+    # least squares). See hexapod_locomotion/planner.py WalkingSettings.
+    ik_solver: analytic
+    trajectory_topic: /hexapod_controller/joint_trajectory

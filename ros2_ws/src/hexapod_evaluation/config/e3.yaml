@@ -1,0 +1,29 @@
+# E3 - gait x surface (chapter 4.1.3, Gait Performance Map). Read by e2_runner
+# (scripts/run_e2.sh --plan e3 --camera). Every surface is a 3.0 x 1.2 m mat, 2 cm thick,
+# spawned under the start (hexapod_evaluation/scenario.py); robot starts 0.4 m inside it.
+# Friction: the mat's mu (foot mu = 1.0, so min and product combination rules agree -
+# checked by e3_calib). Soft: kp/kd contact - whether the physics engine honours it is
+# measured by e3_calib's drop test and by the foot sinkage recorded here.
+e3:
+  n: 5                      # 26 Sep 2026: 10 -> 5 (sim ~deterministic: E2 SD of speed ~0)
+  distance_m: 1.0
+  time_factor: 2.0
+  warmup_cycles: 1.0
+  gaits: [tripod, ripple, wave]
+  speeds: {common: 0.025}
+  nominal_posture: [0.100, 0.020]
+  surfaces:
+    - {name: mu100, mu: 1.00}
+    - {name: mu060, mu: 0.60}
+    - {name: mu030, mu: 0.30}
+    - {name: mu015, mu: 0.15}
+    # soft mat removed 26 Sep 2026: e3_calib showed DART ignores kp/kd (0.00 mm penetration),
+    # so "soft" = rigid mu 0.8. Re-add: - {name: soft, mu: 0.80, soft: true}
+  record_camera: true        # RGB + depth snapshots at 2 Hz for the E6 dataset (needs --camera)
+  world: flat_world
+  model: hexapod
+  start: {x: -5.45, y: -1.4, yaw_deg: 0.0}
+  park: {x: -8.0, y: 1.0}    # robot waits here while the terrain piece is created / removed
+  jitter: {xy_m: 0.02, yaw_deg: 3.0}
+  fall: {tilt_deg: 30.0, min_z_m: 0.060}
+  settle_s: 2.0

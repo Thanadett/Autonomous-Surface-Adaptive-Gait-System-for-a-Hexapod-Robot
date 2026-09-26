@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!-- Electronics that are not in the CAD, fixed inside the body shell (body_link).
+     Masses: tools/mass_budget.yaml -> hexapod_properties.xacro; boxes/poses: hexapod_params.xacro.
+     Mass-only links: they add mass/inertia at the right place but have no collision (they are
+     inside the body, whose collision mesh already covers them) and are drawn only with
+     show_electronics:=true. Gazebo lumps them into body_link (fixed joints), so they cost nothing. -->
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:macro name="electronics_box" params="name size xyz mass material">
+    <xacro:property name="s" value="${xacro.tokenize(size)}"/>
+    <xacro:property name="sx" value="${float(s[0])}"/>
+    <xacro:property name="sy" value="${float(s[1])}"/>
+    <xacro:property name="sz" value="${float(s[2])}"/>
+    <link name="${name}_link">
+      <xacro:if value="$(arg show_electronics)">
+        <visual>
+          <geometry><box size="${size}"/></geometry>
+          <material name="${material}"/>
+        </visual>
+      </xacro:if>
+      <inertial>
+        <mass value="${mass}"/>
+        <inertia ixx="${mass*(sy*sy+sz*sz)/12}" ixy="0" ixz="0"
+                 iyy="${mass*(sx*sx+sz*sz)/12}" iyz="0"
+                 izz="${mass*(sx*sx+sy*sy)/12}"/>
+      </inertial>
+    </link>
+    <joint name="${name}_joint" type="fixed">
+      <parent link="body_link"/><child link="${name}_link"/>
+      <origin xyz="${xyz}" rpy="0 0 0"/>
+    </joint>
+  </xacro:macro>
+
+  <xacro:electronics_box name="battery" size="${battery_size}" xyz="${battery_xyz}" mass="${battery_mass}" material="servo_black"/>
+  <xacro:electronics_box name="compute" size="${compute_size}" xyz="${compute_xyz}" mass="${compute_mass}" material="sensor_blue"/>
+  <xacro:electronics_box name="power"   size="${power_size}"   xyz="${power_xyz}"   mass="${power_mass}"   material="sensor_blue"/>
+
+</robot>

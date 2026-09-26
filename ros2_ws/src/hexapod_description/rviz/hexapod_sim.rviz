@@ -1,0 +1,17 @@
+Panels: [{Class: rviz_common/Displays, Name: Displays}]
+Visualization Manager:
+  # odom is the world-fixed frame from Gazebo's ground-truth pose, so the
+  # accumulated map stays put while the robot walks through it.
+  Global Options: {Fixed Frame: odom}
+  Displays:
+    - {Class: rviz_default_plugins/RobotModel, Name: RobotModel, Description Topic: {Value: /robot_description}}
+    - {Class: rviz_default_plugins/TF, Name: TF}
+    - {Class: rviz_default_plugins/MarkerArray, Name: Foot Targets, Topic: {Value: /foot_target_markers}}
+    - Class: rviz_default_plugins/PointCloud2
+      Name: Map
+      Topic: {Value: /map_cloud, Durability Policy: Transient Local, Reliability Policy: Reliable}
+      Style: Boxes
+      Size (m): 0.05
+      Color Transformer: AxisColor
+      Axis: Z
+      Use Fixed Frame: true

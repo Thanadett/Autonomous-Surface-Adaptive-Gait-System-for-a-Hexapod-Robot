@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <!--
+    The SolidWorks export ends each kinematic chain at the tibia link. This
+    macro adds a small foot frame + sphere at each sole-centre point (from
+    the draft-1 mesh surfaces) so the rest of the workspace has a stable
+    *_foot_link API, and gives each foot real collision geometry so a
+    Gazebo contact sensor - standing in for the physical limit switch -
+    has something to trigger on. See hexapod_description/meshes/README.md
+    for why front_right's offset sign is flipped relative to the other five.
+  -->
+  <xacro:property name="foot_radius" value="0.010"/>
+  <xacro:property name="foot_mass" value="0.005"/>
+
+  <xacro:macro name="cad_foot_frame" params="prefix parent xyz">
+    <joint name="${prefix}_foot_joint" type="fixed">
+      <parent link="${parent}"/>
+      <child link="${prefix}_foot_link"/>
+      <origin xyz="${xyz}" rpy="0 0 0"/>
+    </joint>
+    <link name="${prefix}_foot_link">
+      <inertial>
+        <mass value="${foot_mass}"/>
+        <inertia ixx="1e-7" ixy="0" ixz="0" iyy="1e-7" iyz="0" izz="1e-7"/>
+      </inertial>
+      <visual>
+        <geometry>
+          <sphere radius="${foot_radius}"/>
+        </geometry>
+        <material name="foot_black"/>
+      </visual>
+      <collision name="${prefix}_foot_collision">
+        <geometry>
+          <sphere radius="${foot_radius}"/>
+        </geometry>
+      </collision>
+    </link>
+    <gazebo reference="${prefix}_foot_link">
+      <mu1>0.9</mu1>
+      <mu2>0.9</mu2>
+      <sensor name="${prefix}_contact" type="contact">
+        <contact>
+          <collision>${prefix}_foot_collision</collision>
+        </contact>
+        <topic>foot_contacts/${prefix}</topic>
+        <update_rate>100</update_rate>
+        <always_on>true</always_on>
+      </sensor>
+    </gazebo>
+  </xacro:macro>
+
+  <xacro:macro name="cad_feet">
+    <xacro:cad_foot_frame prefix="front_left" parent="front_left_tibia_link" xyz="-0.031425 -0.17263085 -0.12302295"/>
+    <xacro:cad_foot_frame prefix="middle_left" parent="middle_left_tibia_link" xyz="-0.031425 -0.17263085 -0.12302295"/>
+    <xacro:cad_foot_frame prefix="rear_left" parent="rear_left_tibia_link" xyz="-0.031425 -0.17263085 -0.12302295"/>
+    <!-- front_right_tibia_link's frame is rotated 180 deg about X relative to
+         the other five tibia links (an artifact of the CAD export, verified
+         from hexapod.canonical.urdf) - flip y and z here to land on the
+         same physical sole point instead of 246 mm away from it. -->
+    <xacro:cad_foot_frame prefix="front_right" parent="front_right_tibia_link" xyz="-0.031425 0.17263085 0.12302295"/>
+    <xacro:cad_foot_frame prefix="middle_right" parent="middle_right_tibia_link" xyz="-0.031425 -0.17263085 -0.12302295"/>
+    <xacro:cad_foot_frame prefix="rear_right" parent="rear_right_tibia_link" xyz="-0.031425 -0.17263085 -0.12302295"/>
+  </xacro:macro>
+</robot>

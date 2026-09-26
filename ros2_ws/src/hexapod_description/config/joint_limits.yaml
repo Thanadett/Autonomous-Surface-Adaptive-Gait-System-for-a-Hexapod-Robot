@@ -1,0 +1,24 @@
+joint_limits:
+  coxa:
+    min_deg: -90.0
+    max_deg: 90.0
+  femur:
+    min_deg: -90.0
+    max_deg: 90.0
+  tibia:
+    min_deg: -90.0
+    max_deg: 90.0
+
+# These are the CAD exporter's default limits (+-90 deg, effort 3.5), not a
+# measured mechanical constraint -- servo.maximum_torque_nm in
+# physical_properties.yaml (1.961 N*m) is the real ceiling and is
+# considerably tighter. hexapod_hardware must clamp to whichever is
+# smaller once real servos are wired up.
+servo_mapping:
+  defaults:
+    center_deg: 90.0
+    command_min_deg: 0.0
+    command_max_deg: 180.0
+    direction: 1
+    trim_deg: 0.0
+  joints: {}

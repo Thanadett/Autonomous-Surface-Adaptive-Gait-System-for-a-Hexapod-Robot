@@ -1,0 +1,29 @@
+# E5 - obstacle height ladder (chapter 4.1.5). Read by e2_runner (scripts/run_e2.sh
+# --plan e5 --camera). A 0.20 m deep, 1.2 m wide box lies across the path 0.30 m ahead of
+# the start; success = base_link 0.8 m past the start (all feet beyond the box) in time,
+# without a fall. Heights from 1 cm in 1 cm steps; a height passes with >= 4/5 (was 8/10), the
+# ladder stops at the first failing height (early stop after 2 failures with n = 5). Two postures:
+# nominal (body 100, step 20 mm) and high (body 135, step 50 mm; cycle stretched, slower).
+# The crossing decision (cross / avoid) needs the height map (Step 5): the depth
+# snapshots recorded here are the data for evaluating the height estimate offline.
+e5:
+  n: 5                      # 26 Sep 2026: 10 -> 5 (sim ~deterministic: E2 SD of speed ~0)
+  distance_m: 0.8
+  time_factor: 2.0
+  warmup_cycles: 1.0
+  gaits: [tripod, ripple, wave]
+  speeds: {common: 0.025}
+  obstacles:
+    heights_m: [0.01, 0.02, 0.03, 0.04, 0.05, 0.06, 0.07, 0.08, 0.09, 0.10]
+    postures:
+      nominal: [0.100, 0.020]
+      high: [0.135, 0.050]
+    min_success: 4           # >= 4/5 = 80 %, the same ratio as the planned 8/10
+  record_camera: true
+  world: flat_world
+  model: hexapod
+  start: {x: -5.45, y: -1.4, yaw_deg: 0.0}
+  park: {x: -8.0, y: 1.0}
+  jitter: {xy_m: 0.02, yaw_deg: 3.0}
+  fall: {tilt_deg: 30.0, min_z_m: 0.060}
+  settle_s: 2.0

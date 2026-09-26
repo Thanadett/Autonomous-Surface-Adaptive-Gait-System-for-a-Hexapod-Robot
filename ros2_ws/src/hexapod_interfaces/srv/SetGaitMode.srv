@@ -1,0 +1,7 @@
+# mode: "AUTO" (gait_selector's model + safety filter decide) or
+# "MANUAL:<gait>" e.g. "MANUAL:tripod" (force one gait, for baseline
+# comparisons and A/B evaluation runs).
+string mode
+---
+bool accepted
+string message

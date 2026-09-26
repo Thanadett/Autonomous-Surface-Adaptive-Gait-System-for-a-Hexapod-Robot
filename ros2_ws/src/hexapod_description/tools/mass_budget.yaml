@@ -1,0 +1,79 @@
+# Mass budget of the robot (hand-edited). tools/mass_budget.py turns it into
+# urdf/hexapod_properties.xacro (link masses/inertias) and doc/mass_budget.md.
+#
+#   python3 tools/mass_budget.py            # from the package root
+#
+# Printed parts: mass = CAD volume x material density x fill factor.
+# Part volumes are the CAD volumes of final1.SLDASM (doc/mass_report.md, from
+# tools/gen.py). Fill factors come from a shell model of the real print
+# settings (Bambu Lab A1, 0.4 mm nozzle, 4 walls, 40 % honeycomb infill):
+#   fill = (min(V, A * t_shell) + 0.40 * (V - min(V, A * t_shell))) / V
+# with t_shell = 1.5 mm (4 x 0.42 mm walls on the sides, thinner top/bottom
+# shells) and V, A from the watertight part meshes. Thin parts (< ~3 mm) come
+# out solid. TODO(calibrate): weigh the printed parts and replace the fill
+# factors (or the whole link mass) with the measured values.
+#
+# Every link inertia is scaled with its mass (tools/gen.py's CoM is kept);
+# re-running tools/gen.py with the STEP file gives the exact per-part CoM and
+# inertia - then run this script again on the new hexapod_properties.gen.xacro.
+
+safety_factor: 1.15          # fasteners, wiring, connectors, glue, limit switches (not in the CAD)
+safety_factor_applies_to: [links, electronics]   # battery is a measured mass -> no factor
+
+materials:                   # bulk density, kg/m^3
+  petg: 1270
+  tpu: 1210                  # foot_tip printed in TPU
+  aluminium: 2700
+
+fixed_mass_kg:
+  servo: 0.056               # TD-8135MG datasheet 56 g +/-5 %
+  horn: 0.0023               # aluminium disc horn (CAD volume x 2700 kg/m^3)
+
+# Parts per link: [name, CAD volume cm^3, material, fill factor, count]
+# "fixed" parts use fixed_mass_kg instead of volume/density.
+links:
+  base:        # body plates + the 6 coxa servos and their brackets
+    printed:
+      - [base,               275.92, petg, 0.75, 1]
+      - [top,                 69.65, petg, 1.00, 1]
+      - [coxa_servo_bottom,   15.14, petg, 0.82, 6]
+      - [coxa_servo_top,       9.04, petg, 0.89, 6]
+    fixed:
+      - [servo, 6]
+  coxa:        # femur servo + its bracket
+    printed:
+      - [coxa_top,             5.99, petg, 0.93, 1]
+      - [coxa_bottom,          6.87, petg, 0.85, 1]
+      - [femur_servo_bottom,  18.84, petg, 0.82, 1]
+      - [femur_servo_top,     14.37, petg, 0.86, 1]
+      - [femur_servo_mid,     21.11, petg, 0.78, 1]
+    fixed:
+      - [servo, 1]
+      - [horn, 1]
+  femur:
+    printed:
+      - [femur_L,             33.10, petg, 0.69, 1]
+      - [femur_R,             30.47, petg, 0.72, 1]
+      - [connecting_femur,     6.32, petg, 1.00, 1]
+    fixed:
+      - [horn, 2]
+  tibia:       # tibia servo + tibia plates
+    printed:
+      - [tibia_leg_L,         38.34, petg, 0.75, 1]
+      - [tibia_leg_R,         32.77, petg, 0.76, 1]
+      - [femur_servo_mid,     21.11, petg, 0.78, 1]
+    fixed:
+      - [servo, 1]
+  foot:
+    printed:
+      - [foot,                13.36, petg, 0.70, 1]
+      - [foot_tip,            12.24, tpu,  0.64, 1]
+
+# Electronics not in the CAD (urdf/electronics.xacro places them inside the body shell).
+# Masses are datasheet / estimates unless marked measured.
+electronics:
+  battery:         {mass_kg: 0.402, source: "measured (BT LiPo 3S 11.1 V 7200 mAh 80C, 45 x 138 x 32 mm)"}
+  compute:         {mass_kg: 0.066, source: "estimate: Raspberry Pi 5 ~46 g + active cooler ~20 g"}
+  power:           {mass_kg: 0.083, source: "estimate: 2 x PCA9685 ~18 g + own power PCB (2 x 6.0 V regulators + 5 V BEC) ~65 g"}
+  camera:          {mass_kg: 0.072, source: "estimate: Intel RealSense D435i ~72 g (weight not in the spec pages checked)"}
+  imu:             {mass_kg: 0.003, source: "estimate: BNO055 breakout"}

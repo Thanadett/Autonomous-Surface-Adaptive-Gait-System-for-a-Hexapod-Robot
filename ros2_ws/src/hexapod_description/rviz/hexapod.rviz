@@ -1,0 +1,7 @@
+Panels: [{Class: rviz_common/Displays, Name: Displays}]
+Visualization Manager:
+  Global Options: {Fixed Frame: body_link}
+  Displays:
+    - {Class: rviz_default_plugins/RobotModel, Name: RobotModel, Description Topic: {Value: /robot_description}}
+    - {Class: rviz_default_plugins/TF, Name: TF}
+    - {Class: rviz_default_plugins/MarkerArray, Name: Foot Targets, Topic: {Value: /foot_target_markers}}

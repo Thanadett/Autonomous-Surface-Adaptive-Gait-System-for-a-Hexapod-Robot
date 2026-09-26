@@ -1,0 +1,41 @@
+# Carried over unchanged from 49x_Hexapod_test -- these are read directly
+# off the SolidWorks draft-1 export and off the servo datasheet, not
+# something this workspace's software derives.
+physical_properties:
+  source: SolidWorks draft-1 export
+  cad_links_total_mass_kg: 2.831833373424905
+  body_link_mass_kg: 0.706946452547994
+  links:
+    front_left:
+      coxa_mass_kg: 0.110741314452076
+      femur_mass_kg: 0.0729433877408503
+      tibia_mass_kg: 0.170603103587985
+    middle_left:
+      coxa_mass_kg: 0.110740951117063
+      femur_mass_kg: 0.0729433877336692
+      tibia_mass_kg: 0.170603110209987
+    rear_left:
+      coxa_mass_kg: 0.109902462382352
+      femur_mass_kg: 0.0729433877408514
+      tibia_mass_kg: 0.170603100671333
+    front_right:
+      coxa_mass_kg: 0.110740946642426
+      femur_mass_kg: 0.0729433877408507
+      tibia_mass_kg: 0.1706030993055
+    middle_right:
+      coxa_mass_kg: 0.110740952017709
+      femur_mass_kg: 0.0729433877391094
+      tibia_mass_kg: 0.170603108487823
+    rear_right:
+      coxa_mass_kg: 0.11074131439829
+      femur_mass_kg: 0.0729433877408506
+      tibia_mass_kg: 0.170603131168185
+  auxiliary_imu_mass_kg: 0.01
+  auxiliary_camera_mass_kg: 0.05
+
+servo:
+  rated_voltage: 6.0
+  stall_torque_kg_cm: 20.0
+  maximum_torque_nm: 1.961
+  speed_sec_per_60deg: 0.16
+  maximum_velocity_rad_s: 6.545

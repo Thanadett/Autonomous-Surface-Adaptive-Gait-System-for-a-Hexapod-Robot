@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>hexapod_bringup</name>
+  <version>0.1.0</version>
+  <description>Top-level launch composition (Gazebo + robot + controllers + locomotion) and the controller_manager config.</description>
+  <maintainer email="n.thanadett@gmail.com">T</maintainer>
+  <license>Apache-2.0</license>
+
+  <exec_depend>hexapod_description</exec_depend>
+  <exec_depend>hexapod_simulation</exec_depend>
+  <exec_depend>hexapod_locomotion</exec_depend>
+  <exec_depend>hexapod_perception</exec_depend>
+  <exec_depend>hexapod_state_estimation</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>controller_manager</exec_depend>
+  <exec_depend>joint_trajectory_controller</exec_depend>
+  <exec_depend>joint_state_broadcaster</exec_depend>
+  <exec_depend>gz_ros2_control</exec_depend>
+  <exec_depend>ros_gz_sim</exec_depend>
+  <exec_depend>ros_gz_bridge</exec_depend>
+  <exec_depend>xacro</exec_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+</package>

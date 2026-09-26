@@ -1,0 +1,30 @@
+# E2b - cost of the posture parameters on flat ground (body height x step height), read by
+# e2_runner (scripts/run_e2.sh --plan e2b). Decided 25 Sep 2026 after E2: E2 stays the
+# nominal-posture baseline; E2b measures what raising the step / changing the body height
+# costs (speed, CoT, torque, SSM) so E4/E5 and the gait selector can justify using them.
+# Same definitions as E2 (success/fall/metrics); 1 m course and n = 5 because E2 showed
+# trial-to-trial SD ~0 on flat ground.
+e2b:
+  n: 5
+  distance_m: 1.0
+  time_factor: 2.0
+  warmup_cycles: 1.0          # one (stretched) gait cycle excluded from the metrics
+  gaits: [tripod, ripple, wave]
+  speeds:
+    common: 0.025             # capped per condition at 98 % of that posture's top speed
+  # [body height m, step height m]; only reachable pairs (cadence.max_step_height_for:
+  # 20 mm at a 70 mm body, 50 mm from 100 mm up). (0.10, 0.02) = the E2 nominal posture.
+  postures:
+    - [0.070, 0.020]
+    - [0.100, 0.020]
+    - [0.100, 0.035]
+    - [0.100, 0.050]
+    - [0.135, 0.020]
+    - [0.135, 0.035]
+    - [0.135, 0.050]
+  world: flat_world
+  model: hexapod
+  start: {x: -5.45, y: -1.4, yaw_deg: 0.0}
+  jitter: {xy_m: 0.02, yaw_deg: 3.0}
+  fall: {tilt_deg: 30.0, min_z_m: 0.060}
+  settle_s: 2.0

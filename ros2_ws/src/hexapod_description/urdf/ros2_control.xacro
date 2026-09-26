@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:macro name="control_joint" params="name">
+    <joint name="${name}">
+      <command_interface name="position">
+        <param name="min">-1.5708</param>
+        <param name="max">1.5708</param>
+      </command_interface>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+  </xacro:macro>
+
+  <!--
+    Sim uses gz_ros2_control's GazeboSimSystem plugin. The hardware build
+    swaps this whole block for hexapod_hardware's HexapodSystem plugin via
+    the use_hardware launch argument - both expose the same 18 joints so
+    hexapod_locomotion never has to know which one is loaded.
+  -->
+  <xacro:macro name="hexapod_ros2_control">
+    <ros2_control name="GazeboSimSystem" type="system">
+      <hardware>
+        <plugin>gz_ros2_control/GazeboSimSystem</plugin>
+      </hardware>
+      <xacro:control_joint name="front_left_coxa_joint"/>
+      <xacro:control_joint name="front_left_femur_joint"/>
+      <xacro:control_joint name="front_left_tibia_joint"/>
+      <xacro:control_joint name="middle_left_coxa_joint"/>
+      <xacro:control_joint name="middle_left_femur_joint"/>
+      <xacro:control_joint name="middle_left_tibia_joint"/>
+      <xacro:control_joint name="rear_left_coxa_joint"/>
+      <xacro:control_joint name="rear_left_femur_joint"/>
+      <xacro:control_joint name="rear_left_tibia_joint"/>
+      <xacro:control_joint name="front_right_coxa_joint"/>
+      <xacro:control_joint name="front_right_femur_joint"/>
+      <xacro:control_joint name="front_right_tibia_joint"/>
+      <xacro:control_joint name="middle_right_coxa_joint"/>
+      <xacro:control_joint name="middle_right_femur_joint"/>
+      <xacro:control_joint name="middle_right_tibia_joint"/>
+      <xacro:control_joint name="rear_right_coxa_joint"/>
+      <xacro:control_joint name="rear_right_femur_joint"/>
+      <xacro:control_joint name="rear_right_tibia_joint"/>
+    </ros2_control>
+    <gazebo>
+      <plugin
+        filename="libgz_ros2_control-system.so"
+        name="gz_ros2_control::GazeboSimROS2ControlPlugin">
+        <parameters>$(find hexapod_bringup)/config/controllers.yaml</parameters>
+      </plugin>
+    </gazebo>
+  </xacro:macro>
+</robot>

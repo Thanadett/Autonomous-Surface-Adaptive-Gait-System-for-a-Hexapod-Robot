@@ -1,0 +1,160 @@
+<?xml version="1.0"?>
+<!--
+  Gazebo Sim (Harmonic, ROS 2 Jazzy) extensions.
+  The world must load these system plugins (see worlds/*.sdf):
+    gz-sim-physics-system, gz-sim-sensors-system (ogre2), gz-sim-imu-system,
+    gz-sim-contact-system, gz-sim-user-commands-system, gz-sim-scene-broadcaster-system
+-->
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- Foot: keep the fixed joint so the foot stays a separate link with its own
+       contact sensor (emulates the limit switch at each foot tip). -->
+  <xacro:macro name="foot_gazebo" params="prefix use_sensors">
+    <gazebo reference="${prefix}_foot_joint">
+      <preserveFixedJoint>true</preserveFixedJoint>
+    </gazebo>
+    <gazebo reference="${prefix}_foot_link">
+      <mu1>${foot_mu}</mu1>
+      <mu2>${foot_mu}</mu2>
+      <kp>${foot_kp}</kp>
+      <kd>${foot_kd}</kd>
+      <xacro:if value="${use_sensors}">
+        <sensor name="${prefix}_foot_contact" type="contact">
+          <always_on>true</always_on>
+          <update_rate>200</update_rate>
+          <!-- topic must match hexapod_simulation/config/bridge.yaml (/foot_contacts/<leg>) -->
+          <topic>foot_contacts/${prefix}</topic>
+          <contact>
+            <!-- sdformat names the (single, unnamed) URDF collision "<link>_collision" -->
+            <collision>${prefix}_foot_link_collision</collision>
+            <topic>foot_contacts/${prefix}</topic>
+          </contact>
+        </sensor>
+      </xacro:if>
+    </gazebo>
+  </xacro:macro>
+
+  <!-- Joint force/torque sensor (world plugin gz-sim-forcetorque-system). Measures the wrench
+       the joint transmits, in the child link frame at the joint origin. The component along
+       the joint axis (URDF <axis>, also a child-frame vector) is the actuator torque - used
+       by hexapod_evaluation for CoT = sum |tau*omega| dt / (m g d) and peak torque vs the
+       servo limit. gz_ros2_control's own "effort" state is not used for this: it reports the
+       torque about the joint frame's z axis, which is wrong for the femur/tibia joints
+       (axis 0 -1 0). Topic joint_wrench/<joint without _joint>, bridged in bridge.yaml. -->
+  <xacro:macro name="joint_ft" params="joint">
+    <gazebo reference="${joint}_joint">
+      <sensor name="${joint}_ft" type="force_torque">
+        <always_on>true</always_on>
+        <update_rate>50</update_rate>
+        <topic>joint_wrench/${joint}</topic>
+        <force_torque>
+          <frame>child</frame>
+          <measure_direction>child_to_parent</measure_direction>
+        </force_torque>
+      </sensor>
+    </gazebo>
+  </xacro:macro>
+
+  <xacro:macro name="leg_ft" params="prefix">
+    <xacro:joint_ft joint="${prefix}_coxa"/>
+    <xacro:joint_ft joint="${prefix}_femur"/>
+    <xacro:joint_ft joint="${prefix}_tibia"/>
+  </xacro:macro>
+
+  <xacro:macro name="hexapod_gazebo" params="use_sensors controllers_file use_camera:=true use_joint_ft:=true">
+
+    <!-- ros2_control -->
+    <gazebo>
+      <plugin filename="gz_ros2_control-system" name="gz_ros2_control::GazeboSimROS2ControlPlugin">
+        <parameters>${controllers_file}</parameters>
+      </plugin>
+    </gazebo>
+
+    <!-- Ground-truth odom -> base_link pose (simulation only), bridged to /tf by
+         hexapod_simulation/config/bridge.yaml (/odom_tf). hexapod_perception's voxel_map_node
+         uses it to keep its map fixed in the world. For evaluation only - never feed it
+         to the gait-selection model. Replace with hexapod_state_estimation's odometry later. -->
+    <gazebo>
+      <plugin filename="gz-sim-odometry-publisher-system" name="gz::sim::systems::OdometryPublisher">
+        <odom_frame>odom</odom_frame>
+        <robot_base_frame>base_link</robot_base_frame>
+        <odom_publish_frequency>50</odom_publish_frequency>
+        <dimensions>3</dimensions>
+        <odom_topic>odom</odom_topic>
+        <tf_topic>odom_tf</tf_topic>
+      </plugin>
+    </gazebo>
+
+    <xacro:foot_gazebo prefix="front_left"   use_sensors="${use_sensors}"/>
+    <xacro:foot_gazebo prefix="middle_left"  use_sensors="${use_sensors}"/>
+    <xacro:foot_gazebo prefix="rear_left"    use_sensors="${use_sensors}"/>
+    <xacro:foot_gazebo prefix="front_right"  use_sensors="${use_sensors}"/>
+    <xacro:foot_gazebo prefix="middle_right" use_sensors="${use_sensors}"/>
+    <xacro:foot_gazebo prefix="rear_right"   use_sensors="${use_sensors}"/>
+
+    <xacro:if value="${use_sensors}">
+      <!-- IMU: BNO055, 100 Hz fusion output, noise from the datasheet (see hexapod_params.xacro) -->
+      <gazebo reference="imu_link">
+        <sensor name="imu" type="imu">
+          <always_on>true</always_on>
+          <update_rate>${imu_rate}</update_rate>
+          <visualize>false</visualize>
+          <topic>imu/data</topic>  <!-- matches hexapod_simulation/config/bridge.yaml -->
+          <gz_frame_id>imu_link</gz_frame_id>
+          <imu>
+            <angular_velocity>
+              <x><noise type="gaussian"><mean>0</mean><stddev>${imu_gyro_noise}</stddev></noise></x>
+              <y><noise type="gaussian"><mean>0</mean><stddev>${imu_gyro_noise}</stddev></noise></y>
+              <z><noise type="gaussian"><mean>0</mean><stddev>${imu_gyro_noise}</stddev></noise></z>
+            </angular_velocity>
+            <linear_acceleration>
+              <x><noise type="gaussian"><mean>0</mean><stddev>${imu_accel_noise}</stddev></noise></x>
+              <y><noise type="gaussian"><mean>0</mean><stddev>${imu_accel_noise}</stddev></noise></y>
+              <z><noise type="gaussian"><mean>0</mean><stddev>${imu_accel_noise}</stddev></noise></z>
+            </linear_acceleration>
+          </imu>
+        </sensor>
+      </gazebo>
+
+      <xacro:if value="${use_joint_ft}">
+        <xacro:leg_ft prefix="front_left"/>
+        <xacro:leg_ft prefix="middle_left"/>
+        <xacro:leg_ft prefix="rear_left"/>
+        <xacro:leg_ft prefix="front_right"/>
+        <xacro:leg_ft prefix="middle_right"/>
+        <xacro:leg_ft prefix="rear_right"/>
+      </xacro:if>
+    </xacro:if>
+
+    <xacro:if value="${use_sensors and use_camera}">
+      <!-- Depth camera (RGB-D), Intel RealSense D435i at 424 x 240 @ 30 fps. Publishes camera/image,
+           camera/depth_image, camera/points, camera/camera_info. -->
+      <gazebo reference="camera_link">
+        <sensor name="depth_camera" type="rgbd_camera">
+          <always_on>true</always_on>
+          <update_rate>${camera_rate}</update_rate>
+          <visualize>true</visualize>
+          <topic>camera</topic>
+          <gz_frame_id>camera_optical_frame</gz_frame_id>
+          <camera>
+            <horizontal_fov>${camera_hfov}</horizontal_fov>
+            <image>
+              <width>${camera_width}</width>
+              <height>${camera_height}</height>
+              <format>R8G8B8</format>
+            </image>
+            <clip>
+              <near>${camera_near}</near>
+              <far>${camera_far}</far>
+            </clip>
+            <depth_camera>
+              <clip><near>${camera_near}</near><far>${camera_far}</far></clip>
+            </depth_camera>
+            <noise><type>gaussian</type><mean>0</mean><stddev>0.005</stddev></noise>
+          </camera>
+        </sensor>
+      </gazebo>
+    </xacro:if>
+
+  </xacro:macro>
+</robot>

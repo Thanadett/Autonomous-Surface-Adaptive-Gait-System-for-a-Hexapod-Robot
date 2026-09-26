@@ -1,0 +1,6 @@
+# P6 stub. Real per-joint servo trim/direction values go here once
+# hardware exists -- schema mirrors hexapod_description/config/
+# joint_limits.yaml's servo_mapping block (center_deg, direction,
+# trim_deg per joint). Leave empty until a calibration tool (also not
+# yet written) measures real values; do not guess numbers into this file.
+joints: {}

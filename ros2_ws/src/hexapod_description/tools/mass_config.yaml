@@ -1,0 +1,26 @@
+# Mass model used by gen.py
+# ---------------------------------------------------------------
+# NOTE (25 Sep 2026): gen.py now writes urdf/hexapod_properties.gen.xacro. The masses the
+# simulation uses come from tools/mass_budget.yaml (real print settings, TPU foot tip,
+# electronics, safety factor) applied by tools/mass_budget.py on top of that file, so the
+# fill factor below only sets gen.py's baseline (CoM/inertia shape) and can stay as is.
+# TODO(calibrate): replace placeholders with measured values (weigh each printed part),
+#                  then re-run:  python3 tools/gen.py <path-to-package>
+materials:
+  petg:
+    density_kg_m3: 1270          # PETG bulk density (1.27 g/cm3)
+    fill_factor: 0.70            # PLACEHOLDER: effective solid fraction of the 3D print (walls + infill)
+  aluminium:
+    density_kg_m3: 2700
+    fill_factor: 1.0
+
+default_material: petg           # every printed part not listed below
+
+part_material:
+  attachmentCircular: aluminium  # servo horn (assumed metal disc horn)
+  foot_tip: petg                 # printed in TPU (decided 25 Sep 2026) - handled in mass_budget.yaml
+
+fixed_mass_kg:
+  "TD-8135MG Servo motor": 0.056 # datasheet 56 g +/-5% (some sellers list 66 g) -> weigh one to confirm
+
+visual_decimation_ratio: 0.6     # keep 60 % of the triangles for visual meshes

@@ -1,0 +1,23 @@
+# E3 calibration (run before E3; scripts/run_e2.sh --plan e3_calib). Two checks of the
+# physics engine, done with plain boxes away from the robot (area x, y):
+#   friction: a 0.1 m, 1 kg box with mu = 1.0 (as the robot's feet) on a mat of mu tilted
+#             at atan(mu) - margin (must stick) and atan(mu) + margin (must slide);
+#   soft floor: the same box dropped 0.1 m onto a rigid mat and onto the E3 soft mat
+#             (kp/kd); the resting penetration shows whether kp/kd is honoured.
+e3_calib:
+  calibration: true
+  mu_values: [1.0, 0.6, 0.3, 0.15]
+  margin_deg: 4.0
+  soft: {kp: 2000.0, kd: 50.0}
+  world: flat_world
+  model: hexapod
+  area: {x: 3.0, y: 3.0}
+  start: {x: -5.45, y: -1.4, yaw_deg: 0.0}
+  jitter: {xy_m: 0.0, yaw_deg: 0.0}
+  fall: {tilt_deg: 30.0, min_z_m: 0.060}
+  n: 1
+  distance_m: 0.0
+  time_factor: 2.0
+  warmup_cycles: 1.0
+  gaits: [tripod]
+  speeds: {common: 0.025, max: {tripod: 0.025}}
