@@ -26,3 +26,4 @@ ros2_ws/sim_smoke_test_result.txt
 
 # local backups
 backup/
+backup_*/
