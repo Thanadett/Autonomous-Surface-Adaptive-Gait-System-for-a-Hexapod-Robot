@@ -405,3 +405,110 @@ Joint torque p95 in % of the limit (mean over trials) and fraction of samples at
 --- launch log: errors / warnings (last 40 lines) ---
 
 results: /home/t/49x_Hexapod/ros2_ws/results/e3 (exit 0)
+=== run_e2 2026-09-29T00:44:22+07:00  plan=e3 camera=true mode=--resume build=build_final1 install=install_final1 quick=0 args=--redo ^wave ===
+GZ_PARTITION=hexapod_6055_e2
+--- e2_runner --config /home/t/49x_Hexapod/ros2_ws/install_final1/hexapod_evaluation/share/hexapod_evaluation/config/e3.yaml --resume --redo ^wave ---
+waiting for locomotion_node and ground-truth pose ...
+standing base_link z = 116.3 mm; mass 4.147 kg; 12 conditions x 5 trials, 1.0 m; camera snapshots on
+resume: 60 trial(s) already in /home/t/49x_Hexapod/ros2_ws/results/e3/e2_trials.csv
+resume: dropped 20 of 60 trial(s) (condition not in the plan or distance != 1.0 m); previous csv -> /home/t/49x_Hexapod/ros2_ws/results/e3/e2_trials.pruned_20260929_004436.csv
+world state readable via pose/info; no terrain left over
+wave_mu100_01: OK   [patch mu=1] v   25.8 mm/s  SSMmin  109.2 mm  slip   1.0 mm  CoT   1.11  pitch   0.0 deg  
+wave_mu060_01: OK   [patch mu=0.6] v   25.7 mm/s  SSMmin  109.2 mm  slip   0.8 mm  CoT   0.80  pitch   0.0 deg  
+wave_mu030_01: OK   [patch mu=0.3] v   25.8 mm/s  SSMmin  109.2 mm  slip   0.7 mm  CoT   0.47  pitch   0.0 deg  
+wave_mu015_01: OK   [patch mu=0.15] v   25.8 mm/s  SSMmin  109.2 mm  slip   0.7 mm  CoT   0.31  pitch   0.0 deg  
+wave_mu100_02: OK   [patch mu=1] v   25.8 mm/s  SSMmin  109.2 mm  slip   0.9 mm  CoT   1.11  pitch   0.0 deg  
+wave_mu060_02: OK   [patch mu=0.6] v   25.7 mm/s  SSMmin  109.3 mm  slip   0.8 mm  CoT   0.81  pitch   0.0 deg  
+wave_mu030_02: OK   [patch mu=0.3] v   25.8 mm/s  SSMmin  109.2 mm  slip   0.8 mm  CoT   0.47  pitch   0.0 deg  
+wave_mu015_02: OK   [patch mu=0.15] v   25.8 mm/s  SSMmin  109.2 mm  slip   0.8 mm  CoT   0.31  pitch   0.0 deg  
+wave_mu100_03: OK   [patch mu=1] v   25.8 mm/s  SSMmin  109.2 mm  slip   1.0 mm  CoT   1.11  pitch   0.0 deg  
+wave_mu060_03: OK   [patch mu=0.6] v   25.7 mm/s  SSMmin  109.3 mm  slip   0.7 mm  CoT   0.80  pitch   0.0 deg  
+wave_mu030_03: create reply lost (Service call timed out) but the piece is in the world - continuing
+wave_mu030_03: OK   [patch mu=0.3] v   25.8 mm/s  SSMmin  109.1 mm  slip   0.7 mm  CoT   0.47  pitch   0.0 deg  
+wave_mu015_03: OK   [patch mu=0.15] v   25.8 mm/s  SSMmin  109.1 mm  slip   0.7 mm  CoT   0.31  pitch   0.0 deg  
+wave_mu100_04: OK   [patch mu=1] v   25.8 mm/s  SSMmin  109.2 mm  slip   1.0 mm  CoT   1.11  pitch   0.0 deg  
+wave_mu100_04: remove reply: Service call timed out - checking the world
+wave_mu060_04: OK   [patch mu=0.6] v   25.7 mm/s  SSMmin  109.1 mm  slip   0.7 mm  CoT   0.80  pitch   0.0 deg  
+wave_mu030_04: OK   [patch mu=0.3] v   25.8 mm/s  SSMmin  109.1 mm  slip   0.7 mm  CoT   0.47  pitch   0.0 deg  
+wave_mu015_04: OK   [patch mu=0.15] v   25.8 mm/s  SSMmin  109.1 mm  slip   0.8 mm  CoT   0.31  pitch   0.0 deg  
+wave_mu100_05: OK   [patch mu=1] v   25.8 mm/s  SSMmin  109.3 mm  slip   1.0 mm  CoT   1.11  pitch   0.0 deg  
+wave_mu060_05: OK   [patch mu=0.6] v   25.7 mm/s  SSMmin  109.1 mm  slip   0.7 mm  CoT   0.80  pitch   0.0 deg  
+wave_mu030_05: OK   [patch mu=0.3] v   25.8 mm/s  SSMmin  109.1 mm  slip   0.7 mm  CoT   0.47  pitch   0.0 deg  
+wave_mu015_05: OK   [patch mu=0.15] v   25.8 mm/s  SSMmin  109.1 mm  slip   0.7 mm  CoT   0.31  pitch   0.0 deg  
+# E3 - gait x surface (chapter 4.1.3, Gait Performance Map)
+
+- Generated 2026-09-29 00:44:25; seed 2; course 1.0 m, success = goal within 2.0 x nominal time without a fall (|roll|/|pitch| > 30.0°, z < 60 mm)
+- Mass 4.147 kg; cycle times {'tripod': 0.95, 'ripple': 1.3, 'wave': 2.4}; metrics exclude the warm-up (1 gait cycle); Mean ± SD (sample SD) over all trials of a condition
+- Ground truth only (OdometryPublisher, joint states, contact and joint F/T sensors); slip = sliding of the foot contact point per stance, centre slip = ball-centre displacement
+
+| Condition | Cmd (mm/s) | Success | Falls | Speed (mm/s) | Speed / cmd (%) | SSM min (mm) | SSM p5 (mm) | SSM mean (mm) | SSM min, contact only (mm) | Support feet | Feet in contact | Slip/stance (mm) | Centre slip (mm) | CoT | Roll RMS (°) | Pitch RMS (°) | Lateral drift (mm) |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| tripod_mu100 | 25 | 5/5 (100%) | 0 | 22.4 ± 0.0 | 90 ± 0 | 99.4 ± 0.1 | 100.2 ± 0.1 | 129.4 ± 0.8 | 98.5 ± 0.0 | 3.84 ± 0.02 | 3.16 ± 0.00 | 0.58 ± 0.01 | 0.36 ± 0.01 | 1.50 ± 0.01 | 0.00 ± 0.00 | 0.00 ± 0.00 | 2.2 ± 1.1 |
+| tripod_mu060 | 25 | 5/5 (100%) | 0 | 22.4 ± 0.0 | 90 ± 0 | 99.4 ± 0.1 | 100.2 ± 0.1 | 129.2 ± 1.1 | 98.5 ± 0.0 | 3.84 ± 0.03 | 3.16 ± 0.00 | 0.58 ± 0.00 | 0.36 ± 0.01 | 1.02 ± 0.00 | 0.00 ± 0.00 | 0.00 ± 0.00 | 1.4 ± 0.6 |
+| tripod_mu030 | 25 | 5/5 (100%) | 0 | 22.5 ± 0.0 | 90 ± 0 | 99.4 ± 0.1 | 100.2 ± 0.1 | 129.4 ± 0.8 | 98.5 ± 0.0 | 3.84 ± 0.02 | 3.16 ± 0.00 | 0.58 ± 0.00 | 0.37 ± 0.01 | 0.73 ± 0.00 | 0.00 ± 0.00 | 0.00 ± 0.00 | 1.6 ± 1.3 |
+| tripod_mu015 | 25 | 5/5 (100%) | 0 | 22.5 ± 0.0 | 90 ± 0 | 99.4 ± 0.1 | 100.1 ± 0.1 | 129.3 ± 0.6 | 98.5 ± 0.0 | 3.84 ± 0.02 | 3.15 ± 0.00 | 0.58 ± 0.00 | 0.37 ± 0.01 | 0.59 ± 0.00 | 0.00 ± 0.00 | 0.00 ± 0.00 | 2.2 ± 0.4 |
+| ripple_mu100 | 25 | 5/5 (100%) | 0 | 25.5 ± 0.0 | 102 ± 0 | 102.4 ± 0.0 | 103.3 ± 0.1 | 112.4 ± 0.2 | -4.6 ± 0.0 | 4.39 ± 0.01 | 2.69 ± 0.02 | 0.31 ± 0.01 | 0.64 ± 0.00 | 1.22 ± 0.01 | 0.07 ± 0.00 | 0.06 ± 0.00 | 0.4 ± 1.8 |
+| ripple_mu060 | 25 | 5/5 (100%) | 0 | 25.5 ± 0.0 | 102 ± 0 | 102.4 ± 0.0 | 103.3 ± 0.1 | 112.4 ± 0.2 | -4.0 ± 0.3 | 4.37 ± 0.00 | 2.73 ± 0.02 | 0.35 ± 0.01 | 0.64 ± 0.01 | 0.80 ± 0.01 | 0.06 ± 0.00 | 0.05 ± 0.00 | 1.3 ± 0.4 |
+| ripple_mu030 | 25 | 5/5 (100%) | 0 | 25.6 ± 0.0 | 102 ± 0 | 102.4 ± 0.0 | 103.3 ± 0.0 | 112.3 ± 0.1 | -4.1 ± 0.2 | 4.38 ± 0.01 | 2.69 ± 0.02 | 0.34 ± 0.01 | 0.65 ± 0.01 | 0.49 ± 0.00 | 0.06 ± 0.00 | 0.05 ± 0.00 | 0.7 ± 0.6 |
+| ripple_mu015 | 25 | 5/5 (100%) | 0 | 25.6 ± 0.0 | 102 ± 0 | 102.4 ± 0.1 | 103.3 ± 0.1 | 112.5 ± 0.2 | -4.0 ± 0.1 | 4.38 ± 0.01 | 2.68 ± 0.02 | 0.34 ± 0.01 | 0.64 ± 0.02 | 0.34 ± 0.00 | 0.07 ± 0.00 | 0.06 ± 0.00 | 1.3 ± 0.9 |
+| wave_mu100 | 24 | 5/5 (100%) | 0 | 25.8 ± 0.0 | 105 ± 0 | 109.2 ± 0.1 | 110.4 ± 0.0 | 139.5 ± 0.4 | -5.7 ± 0.2 | 5.17 ± 0.00 | 3.58 ± 0.01 | 0.95 ± 0.01 | 1.90 ± 0.03 | 1.11 ± 0.00 | 0.01 ± 0.00 | 0.01 ± 0.00 | 0.1 ± 0.1 |
+| wave_mu060 | 24 | 5/5 (100%) | 0 | 25.7 ± 0.0 | 105 ± 0 | 109.2 ± 0.1 | 110.4 ± 0.0 | 139.3 ± 0.2 | -4.5 ± 0.0 | 5.17 ± 0.00 | 3.03 ± 0.00 | 0.74 ± 0.03 | 1.57 ± 0.05 | 0.80 ± 0.00 | 0.00 ± 0.00 | 0.00 ± 0.00 | 1.1 ± 0.6 |
+| wave_mu030 | 24 | 5/5 (100%) | 0 | 25.8 ± 0.0 | 105 ± 0 | 109.1 ± 0.0 | 110.4 ± 0.0 | 138.8 ± 0.3 | -4.7 ± 0.5 | 5.16 ± 0.00 | 3.02 ± 0.00 | 0.73 ± 0.03 | 1.60 ± 0.06 | 0.47 ± 0.00 | 0.00 ± 0.00 | 0.00 ± 0.00 | 1.8 ± 0.1 |
+| wave_mu015 | 24 | 5/5 (100%) | 0 | 25.8 ± 0.0 | 105 ± 0 | 109.1 ± 0.0 | 110.4 ± 0.0 | 138.8 ± 0.2 | -4.9 ± 0.9 | 5.16 ± 0.00 | 3.02 ± 0.01 | 0.75 ± 0.04 | 1.64 ± 0.08 | 0.31 ± 0.00 | 0.00 ± 0.00 | 0.00 ± 0.00 | 1.1 ± 0.6 |
+
+Peak joint speed / torque in % of the servo limit (3.65 rad/s, 3.29 N·m at 6.0 V; max over the trials of the condition):
+
+| Condition | ω coxa | ω femur | ω tibia | τ coxa | τ femur | τ tibia |
+|---|---:|---:|---:|---:|---:|---:|
+| tripod_mu100 | 10% | 18% | 16% | 78% | 100% | 100% |
+| tripod_mu060 | 10% | 18% | 16% | 48% | 100% | 84% |
+| tripod_mu030 | 10% | 18% | 16% | 82% | 100% | 38% |
+| tripod_mu015 | 10% | 18% | 16% | 41% | 100% | 29% |
+| ripple_mu100 | 18% | 20% | 22% | 100% | 100% | 100% |
+| ripple_mu060 | 18% | 20% | 22% | 83% | 100% | 100% |
+| ripple_mu030 | 18% | 20% | 22% | 40% | 74% | 55% |
+| ripple_mu015 | 18% | 20% | 22% | 20% | 65% | 27% |
+| wave_mu100 | 38% | 24% | 39% | 67% | 100% | 100% |
+| wave_mu060 | 38% | 24% | 39% | 31% | 100% | 100% |
+| wave_mu030 | 38% | 24% | 39% | 22% | 100% | 61% |
+| wave_mu015 | 38% | 24% | 39% | 13% | 100% | 41% |
+
+Joint torque p95 in % of the limit (mean over trials) and fraction of samples at the limit (>= 98 %) - the peak above is often a single touch-down sample:
+
+| Condition | τ p95 coxa | τ p95 femur | τ p95 tibia | femur at limit | tibia at limit |
+|---|---:|---:|---:|---:|---:|
+| tripod_mu100 | 53% | 79% | 80% | 0.0% | 0.0% |
+| tripod_mu060 | 31% | 58% | 50% | 0.0% | 0.0% |
+| tripod_mu030 | 16% | 41% | 27% | 0.0% | 0.0% |
+| tripod_mu015 | 8% | 36% | 16% | 0.0% | 0.0% |
+| ripple_mu100 | 50% | 73% | 100% | 0.5% | 15.3% |
+| ripple_mu060 | 30% | 56% | 61% | 0.0% | 0.0% |
+| ripple_mu030 | 15% | 40% | 26% | 0.0% | 0.0% |
+| ripple_mu015 | 8% | 35% | 14% | 0.0% | 0.0% |
+| wave_mu100 | 13% | 100% | 100% | 22.4% | 11.2% |
+| wave_mu060 | 12% | 91% | 75% | 0.0% | 0.0% |
+| wave_mu030 | 6% | 67% | 41% | 0.1% | 0.0% |
+| wave_mu015 | 3% | 56% | 24% | 0.0% | 0.0% |
+
+| Condition | Foot sink max (mm) | Foot sink mean (mm) | Slip max (mm) |
+|---|---:|---:|---:|
+| tripod_mu100 | 0.3 ± 0.0 | -0.0 ± 0.0 | 1.0 ± 0.0 |
+| tripod_mu060 | 0.3 ± 0.0 | -0.0 ± 0.0 | 1.0 ± 0.0 |
+| tripod_mu030 | 0.3 ± 0.0 | -0.0 ± 0.0 | 1.0 ± 0.0 |
+| tripod_mu015 | 0.3 ± 0.0 | -0.0 ± 0.0 | 1.0 ± 0.0 |
+| ripple_mu100 | 0.1 ± 0.0 | -0.0 ± 0.0 | 0.6 ± 0.0 |
+| ripple_mu060 | 0.1 ± 0.0 | -0.0 ± 0.0 | 0.6 ± 0.0 |
+| ripple_mu030 | 0.1 ± 0.0 | -0.0 ± 0.0 | 0.6 ± 0.0 |
+| ripple_mu015 | 0.1 ± 0.0 | -0.0 ± 0.0 | 0.6 ± 0.0 |
+| wave_mu100 | 0.0 ± 0.0 | 0.0 ± 0.0 | 2.6 ± 0.1 |
+| wave_mu060 | 0.0 ± 0.0 | 0.0 ± 0.0 | 1.3 ± 0.0 |
+| wave_mu030 | 0.0 ± 0.0 | 0.0 ± 0.0 | 1.4 ± 0.1 |
+| wave_mu015 | 0.0 ± 0.0 | 0.0 ± 0.0 | 1.4 ± 0.1 |
+
+
+--- launch log: errors / warnings (last 40 lines) ---
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+[gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
+
+results: /home/t/49x_Hexapod/ros2_ws/results/e3 (exit 0)

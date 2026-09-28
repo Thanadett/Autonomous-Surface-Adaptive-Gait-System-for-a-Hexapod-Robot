@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-26 14:06:57",
+  "generated": "2026-09-29 01:02:43",
   "seed": 2,
   "n": 5,
   "distance_m": 0.5,
@@ -536,6 +536,6 @@
   "foot_radius_m": 0.0163182,
   "effort_limit_nm": 3.29,
   "velocity_limit_rad_s": 3.65,
-  "gz_partition": "hexapod_78220_e2",
+  "gz_partition": "hexapod_7959_e2",
   "mode": "full"
 }

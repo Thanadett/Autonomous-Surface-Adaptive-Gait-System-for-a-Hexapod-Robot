@@ -1,0 +1,83 @@
+{
+  "generated": "2026-09-25 18:00:19",
+  "seed": 2,
+  "n": 10,
+  "distance_m": 2.0,
+  "plan": {
+    "n": 10,
+    "distance_m": 2.0,
+    "time_factor": 2.0,
+    "warmup_cycles": 1.0,
+    "gaits": [
+      "tripod",
+      "ripple",
+      "wave"
+    ],
+    "speeds": {
+      "common": 0.025,
+      "max": {
+        "tripod": 0.1,
+        "ripple": 0.057,
+        "wave": 0.025
+      }
+    },
+    "world": "flat_world",
+    "model": "hexapod",
+    "start": {
+      "x": -5.45,
+      "y": -1.4,
+      "yaw_deg": 0.0
+    },
+    "jitter": {
+      "xy_m": 0.02,
+      "yaw_deg": 3.0
+    },
+    "fall": {
+      "tilt_deg": 30.0,
+      "min_z_m": 0.06
+    },
+    "settle_s": 2.0
+  },
+  "cycle_times_s": {
+    "tripod": 0.95,
+    "ripple": 1.3,
+    "wave": 2.4
+  },
+  "conditions": [
+    {
+      "gait": "tripod",
+      "speed": 0.025,
+      "label": "common",
+      "name": "tripod_common"
+    },
+    {
+      "gait": "tripod",
+      "speed": 0.1,
+      "label": "max",
+      "name": "tripod_max"
+    },
+    {
+      "gait": "ripple",
+      "speed": 0.025,
+      "label": "common",
+      "name": "ripple_common"
+    },
+    {
+      "gait": "ripple",
+      "speed": 0.057,
+      "label": "max",
+      "name": "ripple_max"
+    },
+    {
+      "gait": "wave",
+      "speed": 0.025,
+      "label": "common+max",
+      "name": "wave_common_max"
+    }
+  ],
+  "mass_kg": 4.1472494,
+  "foot_radius_m": 0.0163182,
+  "effort_limit_nm": 3.29,
+  "velocity_limit_rad_s": 3.65,
+  "gz_partition": "hexapod_27459_e2"
+}

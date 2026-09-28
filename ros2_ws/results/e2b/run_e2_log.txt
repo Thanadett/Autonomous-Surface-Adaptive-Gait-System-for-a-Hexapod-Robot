@@ -235,3 +235,131 @@ Joint torque p95 in % of the limit (mean over trials) and fraction of samples at
 [gazebo-1] NodeShared::RecvSrvRequest() error sending response: Host unreachable
 
 results: /home/t/49x_Hexapod/ros2_ws/results/e2b (exit 0)
+=== run_e2 2026-09-29T00:05:04+07:00  plan=e2b camera=false mode=--resume build=build_final1 install=install_final1 quick=0 args=--redo ^wave ===
+GZ_PARTITION=hexapod_5179_e2
+--- e2_runner --config /home/t/49x_Hexapod/ros2_ws/install_final1/hexapod_evaluation/share/hexapod_evaluation/config/e2b.yaml --resume --redo ^wave ---
+waiting for locomotion_node and ground-truth pose ...
+standing base_link z = 116.3 mm; mass 4.147 kg; 21 conditions x 5 trials, 1.0 m; camera snapshots off
+resume: 105 trial(s) already in /home/t/49x_Hexapod/ros2_ws/results/e2b/e2_trials.csv
+resume: dropped 35 of 105 trial(s) (condition not in the plan or distance != 1.0 m); previous csv -> /home/t/49x_Hexapod/ros2_ws/results/e2b/e2_trials.pruned_20260929_000515.csv
+wave_h70_s20_01: OK   [flat] v   24.9 mm/s  SSMmin  109.1 mm  slip   0.5 mm  CoT   1.43  pitch   0.0 deg  
+wave_h100_s20_01: OK   [flat] v   25.8 mm/s  SSMmin  109.3 mm  slip   0.8 mm  CoT   1.04  pitch   0.0 deg  
+wave_h100_s35_01: OK   [flat] v   17.2 mm/s  SSMmin  108.9 mm  slip   0.9 mm  CoT   1.07  pitch   0.0 deg  
+wave_h100_s50_01: OK   [flat] v   11.4 mm/s  SSMmin  109.1 mm  slip   0.8 mm  CoT   1.05  pitch   0.0 deg  
+wave_h135_s20_01: OK   [flat] v   25.9 mm/s  SSMmin  109.3 mm  slip   0.8 mm  CoT   0.81  pitch   0.0 deg  
+wave_h135_s35_01: OK   [flat] v   20.0 mm/s  SSMmin  108.8 mm  slip   0.9 mm  CoT   0.86  pitch   0.0 deg  
+wave_h135_s50_01: OK   [flat] v   14.2 mm/s  SSMmin  108.8 mm  slip   0.9 mm  CoT   0.91  pitch   0.0 deg  
+wave_h70_s20_02: OK   [flat] v   24.9 mm/s  SSMmin  109.1 mm  slip   0.5 mm  CoT   1.43  pitch   0.0 deg  
+wave_h100_s20_02: OK   [flat] v   25.8 mm/s  SSMmin  109.3 mm  slip   0.8 mm  CoT   1.05  pitch   0.0 deg  
+wave_h100_s35_02: OK   [flat] v   17.2 mm/s  SSMmin  109.0 mm  slip   0.8 mm  CoT   1.05  pitch   0.0 deg  
+wave_h100_s50_02: OK   [flat] v   11.4 mm/s  SSMmin  109.1 mm  slip   0.8 mm  CoT   1.06  pitch   0.0 deg  
+wave_h135_s20_02: OK   [flat] v   25.9 mm/s  SSMmin  109.2 mm  slip   0.8 mm  CoT   0.82  pitch   0.0 deg  
+wave_h135_s35_02: OK   [flat] v   20.0 mm/s  SSMmin  108.8 mm  slip   0.9 mm  CoT   0.86  pitch   0.0 deg  
+wave_h135_s50_02: OK   [flat] v   14.2 mm/s  SSMmin  108.8 mm  slip   0.9 mm  CoT   0.90  pitch   0.0 deg  
+wave_h70_s20_03: OK   [flat] v   24.9 mm/s  SSMmin  109.1 mm  slip   0.5 mm  CoT   1.43  pitch   0.0 deg  
+wave_h100_s20_03: OK   [flat] v   25.8 mm/s  SSMmin  109.2 mm  slip   0.9 mm  CoT   1.04  pitch   0.0 deg  
+wave_h100_s35_03: OK   [flat] v   17.2 mm/s  SSMmin  108.9 mm  slip   0.8 mm  CoT   1.05  pitch   0.0 deg  
+wave_h100_s50_03: OK   [flat] v   11.4 mm/s  SSMmin  109.1 mm  slip   0.8 mm  CoT   1.05  pitch   0.0 deg  
+wave_h135_s20_03: OK   [flat] v   25.9 mm/s  SSMmin  109.3 mm  slip   0.8 mm  CoT   0.81  pitch   0.0 deg  
+wave_h135_s35_03: OK   [flat] v   20.0 mm/s  SSMmin  108.8 mm  slip   0.9 mm  CoT   0.86  pitch   0.0 deg  
+wave_h135_s50_03: OK   [flat] v   14.2 mm/s  SSMmin  108.8 mm  slip   0.9 mm  CoT   0.90  pitch   0.0 deg  
+wave_h70_s20_04: OK   [flat] v   24.9 mm/s  SSMmin  109.1 mm  slip   0.5 mm  CoT   1.43  pitch   0.0 deg  
+wave_h100_s20_04: OK   [flat] v   25.8 mm/s  SSMmin  109.2 mm  slip   0.8 mm  CoT   1.04  pitch   0.0 deg  
+wave_h100_s35_04: OK   [flat] v   17.2 mm/s  SSMmin  109.0 mm  slip   0.8 mm  CoT   1.05  pitch   0.0 deg  
+wave_h100_s50_04: OK   [flat] v   11.4 mm/s  SSMmin  109.1 mm  slip   0.8 mm  CoT   1.06  pitch   0.0 deg  
+wave_h135_s20_04: OK   [flat] v   25.9 mm/s  SSMmin  109.3 mm  slip   0.8 mm  CoT   0.81  pitch   0.0 deg  
+wave_h135_s35_04: OK   [flat] v   20.0 mm/s  SSMmin  108.8 mm  slip   0.9 mm  CoT   0.86  pitch   0.0 deg  
+wave_h135_s50_04: OK   [flat] v   14.2 mm/s  SSMmin  108.8 mm  slip   0.9 mm  CoT   0.91  pitch   0.0 deg  
+wave_h70_s20_05: OK   [flat] v   24.9 mm/s  SSMmin  109.1 mm  slip   0.5 mm  CoT   1.43  pitch   0.0 deg  
+wave_h100_s20_05: OK   [flat] v   25.8 mm/s  SSMmin  109.2 mm  slip   0.8 mm  CoT   1.03  pitch   0.0 deg  
+wave_h100_s35_05: OK   [flat] v   17.2 mm/s  SSMmin  109.0 mm  slip   0.8 mm  CoT   1.05  pitch   0.0 deg  
+wave_h100_s50_05: OK   [flat] v   11.4 mm/s  SSMmin  109.1 mm  slip   0.9 mm  CoT   1.07  pitch   0.0 deg  
+wave_h135_s20_05: OK   [flat] v   25.9 mm/s  SSMmin  109.2 mm  slip   0.7 mm  CoT   0.82  pitch   0.0 deg  
+wave_h135_s35_05: OK   [flat] v   20.0 mm/s  SSMmin  108.8 mm  slip   0.9 mm  CoT   0.86  pitch   0.0 deg  
+wave_h135_s50_05: OK   [flat] v   14.1 mm/s  SSMmin  108.8 mm  slip   0.9 mm  CoT   0.90  pitch   0.0 deg  
+# E2b - body height x step height on flat ground (chapter 4.1.2, posture cost)
+
+- Generated 2026-09-29 00:05:07; seed 2; course 1.0 m, success = goal within 2.0 x nominal time without a fall (|roll|/|pitch| > 30.0°, z < 60 mm)
+- Mass 4.147 kg; cycle times {'tripod': 0.95, 'ripple': 1.3, 'wave': 2.4}; metrics exclude the warm-up (1 gait cycle); Mean ± SD (sample SD) over all trials of a condition
+- Ground truth only (OdometryPublisher, joint states, contact and joint F/T sensors); slip = sliding of the foot contact point per stance, centre slip = ball-centre displacement
+
+| Condition | Cmd (mm/s) | Success | Falls | Speed (mm/s) | Speed / cmd (%) | SSM min (mm) | SSM p5 (mm) | SSM mean (mm) | SSM min, contact only (mm) | Support feet | Feet in contact | Slip/stance (mm) | Centre slip (mm) | CoT | Roll RMS (°) | Pitch RMS (°) | Lateral drift (mm) | Cadence k |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| tripod_h70_s20 | 25 | 5/5 (100%) | 0 | 22.3 ± 0.0 | 89 ± 0 | 99.2 ± 0.1 | 100.0 ± 0.0 | 128.4 ± 0.1 | 98.3 ± 0.0 | 3.82 ± 0.00 | 3.15 ± 0.00 | 0.45 ± 0.01 | 0.24 ± 0.00 | 1.32 ± 0.00 | 0.00 ± 0.00 | 0.00 ± 0.00 | 1.2 ± 0.5 | 1.03 ± 0.00 |
+| tripod_h100_s20 | 25 | 5/5 (100%) | 0 | 22.4 ± 0.0 | 90 ± 0 | 99.5 ± 0.1 | 100.2 ± 0.0 | 129.7 ± 0.2 | 98.5 ± 0.0 | 3.85 ± 0.01 | 3.16 ± 0.00 | 0.58 ± 0.01 | 0.36 ± 0.00 | 1.24 ± 0.01 | 0.00 ± 0.00 | 0.00 ± 0.00 | 1.7 ± 0.9 | 1.00 ± 0.00 |
+| tripod_h100_s35 | 25 | 5/5 (100%) | 0 | 23.9 ± 0.0 | 96 ± 0 | 97.1 ± 0.0 | 98.0 ± 0.0 | 117.7 ± 0.2 | 96.4 ± 0.0 | 3.50 ± 0.01 | 3.11 ± 0.00 | 0.82 ± 0.01 | 0.51 ± 0.01 | 1.32 ± 0.01 | 0.00 ± 0.00 | 0.00 ± 0.00 | 1.8 ± 0.8 | 1.36 ± 0.00 |
+| tripod_h100_s50 | 25 | 5/5 (100%) | 0 | 25.1 ± 0.0 | 100 ± 0 | 93.5 ± 0.1 | 94.6 ± 0.0 | 113.5 ± 0.2 | 92.5 ± 0.0 | 3.42 ± 0.01 | 3.07 ± 0.00 | 1.30 ± 0.01 | 0.86 ± 0.02 | 1.23 ± 0.01 | 0.00 ± 0.00 | 0.00 ± 0.00 | 1.3 ± 1.2 | 2.05 ± 0.00 |
+| tripod_h135_s20 | 25 | 5/5 (100%) | 0 | 22.6 ± 0.0 | 90 ± 0 | 99.4 ± 0.0 | 100.1 ± 0.0 | 128.7 ± 0.4 | 98.5 ± 0.0 | 3.82 ± 0.01 | 3.15 ± 0.01 | 0.63 ± 0.01 | 0.43 ± 0.01 | 1.28 ± 0.01 | 0.00 ± 0.00 | 0.00 ± 0.00 | 2.3 ± 0.7 | 1.00 ± 0.00 |
+| tripod_h135_s35 | 25 | 5/5 (100%) | 0 | 23.5 ± 0.0 | 94 ± 0 | 97.9 ± 0.0 | 98.7 ± 0.0 | 118.3 ± 0.3 | 97.4 ± 0.0 | 3.51 ± 0.01 | 3.13 ± 0.00 | 0.76 ± 0.01 | 0.50 ± 0.02 | 1.51 ± 0.00 | 0.00 ± 0.00 | 0.00 ± 0.00 | 2.2 ± 0.9 | 1.19 ± 0.00 |
+| tripod_h135_s50 | 25 | 5/5 (100%) | 0 | 24.5 ± 0.0 | 98 ± 0 | 95.7 ± 0.1 | 96.6 ± 0.0 | 113.6 ± 0.3 | 95.1 ± 0.0 | 3.39 ± 0.01 | 3.10 ± 0.00 | 1.05 ± 0.00 | 0.71 ± 0.01 | 1.44 ± 0.01 | 0.00 ± 0.00 | 0.00 ± 0.00 | 1.9 ± 0.8 | 1.58 ± 0.00 |
+| ripple_h70_s20 | 25 | 5/5 (100%) | 0 | 25.2 ± 0.0 | 101 ± 0 | 102.2 ± 0.1 | 103.0 ± 0.1 | 112.1 ± 0.3 | -3.5 ± 0.4 | 4.35 ± 0.02 | 2.80 ± 0.05 | 0.29 ± 0.01 | 0.50 ± 0.01 | 1.04 ± 0.02 | 0.06 ± 0.00 | 0.05 ± 0.00 | 0.4 ± 1.0 | 1.00 ± 0.00 |
+| ripple_h100_s20 | 25 | 5/5 (100%) | 0 | 25.4 ± 0.0 | 102 ± 0 | 102.5 ± 0.1 | 103.4 ± 0.1 | 112.6 ± 0.3 | -4.2 ± 0.4 | 4.38 ± 0.01 | 2.71 ± 0.03 | 0.34 ± 0.01 | 0.59 ± 0.02 | 1.03 ± 0.01 | 0.07 ± 0.00 | 0.06 ± 0.00 | 1.9 ± 0.7 | 1.00 ± 0.00 |
+| ripple_h100_s35 | 25 | 5/5 (100%) | 0 | 26.1 ± 0.0 | 104 ± 0 | 100.8 ± 0.0 | 102.1 ± 0.0 | 110.1 ± 0.1 | -5.3 ± 0.5 | 4.20 ± 0.00 | 2.71 ± 0.01 | 0.52 ± 0.01 | 0.99 ± 0.01 | 1.06 ± 0.00 | 0.06 ± 0.00 | 0.05 ± 0.00 | 1.3 ± 0.6 | 1.42 ± 0.00 |
+| ripple_h100_s50 | 25 | 5/5 (100%) | 0 | 26.2 ± 0.0 | 105 ± 0 | 99.6 ± 0.0 | 101.5 ± 0.0 | 112.2 ± 0.0 | -4.9 ± 0.7 | 4.19 ± 0.00 | 2.86 ± 0.01 | 0.90 ± 0.03 | 1.57 ± 0.04 | 1.08 ± 0.00 | 0.03 ± 0.00 | 0.02 ± 0.00 | 1.0 ± 1.6 | 2.16 ± 0.00 |
+| ripple_h135_s20 | 25 | 5/5 (100%) | 0 | 25.4 ± 0.0 | 102 ± 0 | 102.6 ± 0.1 | 103.5 ± 0.1 | 112.8 ± 0.5 | -4.5 ± 0.1 | 4.42 ± 0.02 | 2.76 ± 0.05 | 0.37 ± 0.01 | 0.61 ± 0.02 | 0.97 ± 0.01 | 0.08 ± 0.00 | 0.07 ± 0.00 | 0.6 ± 1.3 | 1.00 ± 0.00 |
+| ripple_h135_s35 | 25 | 5/5 (100%) | 0 | 25.9 ± 0.0 | 104 ± 0 | 101.2 ± 0.0 | 102.3 ± 0.0 | 108.9 ± 0.2 | -5.2 ± 0.0 | 4.17 ± 0.01 | 2.71 ± 0.01 | 0.45 ± 0.01 | 0.81 ± 0.01 | 1.05 ± 0.00 | 0.08 ± 0.00 | 0.07 ± 0.00 | 1.3 ± 0.8 | 1.23 ± 0.00 |
+| ripple_h135_s50 | 25 | 5/5 (100%) | 0 | 26.2 ± 0.0 | 105 ± 0 | 100.2 ± 0.0 | 101.7 ± 0.0 | 109.6 ± 0.1 | -5.0 ± 1.4 | 4.11 ± 0.00 | 2.79 ± 0.01 | 0.71 ± 0.01 | 1.32 ± 0.02 | 1.08 ± 0.00 | 0.05 ± 0.00 | 0.04 ± 0.00 | 1.1 ± 0.6 | 1.69 ± 0.00 |
+| wave_h70_s20 | 24 | 5/5 (100%) | 0 | 24.9 ± 0.0 | 104 ± 0 | 109.1 ± 0.0 | 110.4 ± 0.1 | 139.4 ± 0.3 | -0.3 ± 0.0 | 5.17 ± 0.00 | 3.28 ± 0.00 | 0.49 ± 0.01 | 1.03 ± 0.01 | 1.43 ± 0.00 | 0.00 ± 0.00 | 0.00 ± 0.00 | 0.7 ± 0.7 | 1.02 ± 0.00 |
+| wave_h100_s20 | 24 | 5/5 (100%) | 0 | 25.8 ± 0.0 | 105 ± 0 | 109.2 ± 0.1 | 110.4 ± 0.1 | 139.7 ± 1.2 | -4.6 ± 1.3 | 5.17 ± 0.02 | 3.37 ± 0.02 | 0.81 ± 0.04 | 1.61 ± 0.06 | 1.04 ± 0.01 | 0.01 ± 0.00 | 0.01 ± 0.00 | 1.3 ± 0.8 | 1.00 ± 0.00 |
+| wave_h100_s35 | 16 | 5/5 (100%) | 0 | 17.2 ± 0.0 | 106 ± 0 | 109.0 ± 0.0 | 110.2 ± 0.1 | 139.9 ± 0.3 | 0.3 ± 0.0 | 5.18 ± 0.00 | 3.24 ± 0.02 | 0.84 ± 0.01 | 1.64 ± 0.01 | 1.05 ± 0.01 | 0.00 ± 0.00 | 0.00 ± 0.00 | 1.1 ± 0.7 | 1.50 ± 0.00 |
+| wave_h100_s50 | 11 | 5/5 (100%) | 0 | 11.4 ± 0.0 | 105 ± 0 | 109.1 ± 0.0 | 110.4 ± 0.0 | 143.7 ± 0.2 | 0.7 ± 0.2 | 5.24 ± 0.00 | 3.30 ± 0.04 | 0.82 ± 0.04 | 1.49 ± 0.07 | 1.06 ± 0.01 | 0.00 ± 0.00 | 0.00 ± 0.00 | 3.1 ± 0.4 | 2.28 ± 0.00 |
+| wave_h135_s20 | 24 | 5/5 (100%) | 0 | 25.9 ± 0.0 | 106 ± 0 | 109.3 ± 0.0 | 110.4 ± 0.0 | 139.9 ± 0.5 | -4.9 ± 1.5 | 5.17 ± 0.01 | 3.33 ± 0.01 | 0.79 ± 0.04 | 1.59 ± 0.08 | 0.81 ± 0.00 | 0.00 ± 0.00 | 0.01 ± 0.00 | 1.0 ± 0.4 | 1.00 ± 0.00 |
+| wave_h135_s35 | 19 | 5/5 (100%) | 0 | 20.0 ± 0.0 | 106 ± 0 | 108.8 ± 0.0 | 109.9 ± 0.0 | 135.6 ± 0.2 | -4.1 ± 0.0 | 5.12 ± 0.00 | 3.23 ± 0.00 | 0.86 ± 0.01 | 1.70 ± 0.01 | 0.86 ± 0.00 | 0.00 ± 0.00 | 0.00 ± 0.00 | 0.8 ± 0.4 | 1.30 ± 0.00 |
+| wave_h135_s50 | 13 | 5/5 (100%) | 0 | 14.2 ± 0.0 | 106 ± 0 | 108.8 ± 0.0 | 110.0 ± 0.0 | 139.0 ± 0.1 | 0.8 ± 0.0 | 5.17 ± 0.00 | 3.26 ± 0.00 | 0.91 ± 0.01 | 1.68 ± 0.01 | 0.90 ± 0.00 | 0.00 ± 0.00 | 0.00 ± 0.00 | 1.1 ± 0.8 | 1.82 ± 0.00 |
+
+Peak joint speed / torque in % of the servo limit (3.65 rad/s, 3.29 N·m at 6.0 V; max over the trials of the condition):
+
+| Condition | ω coxa | ω femur | ω tibia | τ coxa | τ femur | τ tibia |
+|---|---:|---:|---:|---:|---:|---:|
+| tripod_h70_s20 | 10% | 22% | 15% | 85% | 100% | 100% |
+| tripod_h100_s20 | 10% | 18% | 16% | 65% | 100% | 87% |
+| tripod_h100_s35 | 12% | 27% | 21% | 100% | 101% | 100% |
+| tripod_h100_s50 | 13% | 29% | 22% | 100% | 100% | 100% |
+| tripod_h135_s20 | 10% | 16% | 18% | 47% | 100% | 100% |
+| tripod_h135_s35 | 11% | 25% | 26% | 100% | 101% | 100% |
+| tripod_h135_s50 | 12% | 31% | 29% | 64% | 100% | 100% |
+| ripple_h70_s20 | 17% | 26% | 21% | 100% | 93% | 100% |
+| ripple_h100_s20 | 17% | 20% | 21% | 82% | 100% | 100% |
+| ripple_h100_s35 | 20% | 29% | 27% | 97% | 100% | 100% |
+| ripple_h100_s50 | 21% | 31% | 30% | 69% | 100% | 100% |
+| ripple_h135_s20 | 17% | 17% | 23% | 88% | 100% | 100% |
+| ripple_h135_s35 | 19% | 27% | 31% | 100% | 100% | 100% |
+| ripple_h135_s50 | 20% | 32% | 35% | 77% | 100% | 100% |
+| wave_h70_s20 | 37% | 34% | 42% | 25% | 91% | 100% |
+| wave_h100_s20 | 38% | 24% | 38% | 42% | 100% | 100% |
+| wave_h100_s35 | 29% | 22% | 31% | 26% | 100% | 100% |
+| wave_h100_s50 | 21% | 16% | 23% | 25% | 100% | 100% |
+| wave_h135_s20 | 38% | 19% | 38% | 44% | 100% | 100% |
+| wave_h135_s35 | 32% | 22% | 36% | 27% | 100% | 100% |
+| wave_h135_s50 | 25% | 18% | 29% | 26% | 100% | 100% |
+
+Joint torque p95 in % of the limit (mean over trials) and fraction of samples at the limit (>= 98 %) - the peak above is often a single touch-down sample:
+
+| Condition | τ p95 coxa | τ p95 femur | τ p95 tibia | femur at limit | tibia at limit |
+|---|---:|---:|---:|---:|---:|
+| tripod_h70_s20 | 42% | 58% | 74% | 0.1% | 0.0% |
+| tripod_h100_s20 | 42% | 68% | 65% | 0.0% | 0.0% |
+| tripod_h100_s35 | 42% | 68% | 65% | 0.1% | 0.0% |
+| tripod_h100_s50 | 42% | 67% | 64% | 0.0% | 0.0% |
+| tripod_h135_s20 | 42% | 81% | 61% | 0.1% | 0.0% |
+| tripod_h135_s35 | 42% | 82% | 61% | 0.1% | 0.1% |
+| tripod_h135_s50 | 42% | 81% | 60% | 0.1% | 0.0% |
+| ripple_h70_s20 | 33% | 56% | 72% | 0.0% | 0.8% |
+| ripple_h100_s20 | 40% | 67% | 84% | 1.2% | 0.2% |
+| ripple_h100_s35 | 39% | 50% | 83% | 0.4% | 0.1% |
+| ripple_h100_s50 | 39% | 99% | 83% | 5.8% | 0.0% |
+| ripple_h135_s20 | 40% | 81% | 91% | 1.0% | 0.3% |
+| ripple_h135_s35 | 40% | 81% | 90% | 0.5% | 0.2% |
+| ripple_h135_s50 | 39% | 56% | 89% | 0.1% | 0.1% |
+| wave_h70_s20 | 14% | 85% | 100% | 0.0% | 13.5% |
+| wave_h100_s20 | 14% | 100% | 97% | 17.7% | 4.0% |
+| wave_h100_s35 | 17% | 100% | 89% | 13.3% | 1.4% |
+| wave_h100_s50 | 17% | 100% | 94% | 10.1% | 3.2% |
+| wave_h135_s20 | 15% | 100% | 95% | 13.6% | 0.5% |
+| wave_h135_s35 | 16% | 100% | 94% | 11.6% | 0.8% |
+| wave_h135_s50 | 17% | 100% | 94% | 11.0% | 0.0% |
+
+
+--- launch log: errors / warnings (last 40 lines) ---
+
+results: /home/t/49x_Hexapod/ros2_ws/results/e2b (exit 0)

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-25 18:00:19",
+  "generated": "2026-09-28 23:50:28",
   "seed": 2,
   "n": 10,
   "distance_m": 2.0,
@@ -36,7 +36,8 @@
       "tilt_deg": 30.0,
       "min_z_m": 0.06
     },
-    "settle_s": 2.0
+    "settle_s": 2.0,
+    "name": "e2"
   },
   "cycle_times_s": {
     "tripod": 0.95,
@@ -79,5 +80,6 @@
   "foot_radius_m": 0.0163182,
   "effort_limit_nm": 3.29,
   "velocity_limit_rad_s": 3.65,
-  "gz_partition": "hexapod_27459_e2"
+  "gz_partition": "hexapod_3899_e2",
+  "mode": "full"
 }

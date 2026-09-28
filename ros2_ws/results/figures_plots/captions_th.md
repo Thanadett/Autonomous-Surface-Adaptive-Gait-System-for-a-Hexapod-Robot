@@ -7,7 +7,7 @@
 ## บทที่ 3
 | ไฟล์ | คำบรรยาย (ร่าง) |
 |---|---|
-| fig_gait_diagram | แผนภาพลำดับการก้าว (gait diagram) ของ Tripod, Ripple และ Wave Gait ที่วัดจากการจำลอง 2 รอบการเดิน (แถบทึบ = ช่วง stance, ช่องว่าง = ช่วง swing; L1–L3 ขาซ้ายหน้า–หลัง, R1–R3 ขาขวา) |
+| fig_gait_diagram | แผนภาพลำดับการก้าว (gait diagram) ของ Tripod, Ripple และ Wave Gait ที่วัดจากการจำลอง 2 รอบการเดิน เรียงแถว R3, R2, R1, L3, L2, L1 (แถบทึบ = ช่วง stance, ช่องว่าง = ช่วง swing); Wave ยกขาทีละขาตามลำดับ R3→R2→R1→L3→L2→L1 ห่างกัน 1/6 รอบ |
 | g01/g02_robot_nominal / raised_posture | หุ่นยนต์ในการจำลองท่ามาตรฐาน (ลำตัว 100 mm, ยกเท้า 20 mm) และท่ายกตัว (135 / 50 mm) |
 | g03_e3_friction_mats | แผ่นพื้นทดสอบ E3 ค่า μ 1.0, 0.6, 0.3 และ 0.15 (สีต่างกันเพื่อให้กล้อง RGB แยกพื้นผิวได้) |
 
@@ -30,7 +30,7 @@
 |---|---|
 | fig_e4_ssm_vs_slope | SSM ต่ำสุดขณะเดินขึ้นทางลาด 0–25° ของ (ก) Tripod (ข) Ripple (ค) Wave เมื่อปิด (เส้นประ) และเปิด (เส้นทึบ) Posture Control; n = 5 ต่อจุด, สำเร็จ 180/180 |
 | fig_e4_body_pitch | มุม pitch ของลำตัวเทียบมุมทางลาด (เฉลี่ย 3 Gait): Posture Control ปรับลำตัวให้ขนานพื้นโลกได้เต็มที่ถึง 5° และชดเชยได้สูงสุด ≈ 7.5° ตามระยะยืดหดของขา |
-| fig_e4_attitude_trace | มุม pitch ของลำตัวจากค่าจริงของตัวจำลองเทียบค่าประมาณจาก IMU ด้วย complementary filter (τ = 0.5 s) ขณะ Wave Gait เดินขึ้นทางลาด 15° โดยเปิด Posture Control (RMS error 0.28°) |
+| fig_e4_attitude_trace | มุม pitch ของลำตัวจากค่าจริงของตัวจำลองเทียบค่าประมาณจาก IMU ด้วย complementary filter (τ = 0.5 s) ขณะ Wave Gait เดินขึ้นทางลาด 15° โดยเปิด Posture Control (RMS error 0.20°) |
 | g04_e4_ramp15_wave_pc_off/on_side, g05 | Wave Gait บนทางลาด 15° เมื่อปิด / เปิด Posture Control (มุมมองด้านข้าง) |
 
 ## 4.1.5 E5

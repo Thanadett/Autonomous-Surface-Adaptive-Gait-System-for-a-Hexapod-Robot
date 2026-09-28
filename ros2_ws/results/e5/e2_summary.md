@@ -1,6 +1,6 @@
 # E5 - obstacle height ladder (chapter 4.1.5)
 
-- Generated 2026-09-26 12:52:36; seed 2; course 0.8 m, success = goal within 2.0 x nominal time without a fall (|roll|/|pitch| > 30.0°, z < 60 mm)
+- Generated 2026-09-29 01:37:19; seed 2; course 0.8 m, success = goal within 2.0 x nominal time without a fall (|roll|/|pitch| > 30.0°, z < 60 mm)
 - Mass 4.147 kg; cycle times {'tripod': 0.95, 'ripple': 1.3, 'wave': 2.4}; metrics exclude the warm-up (1 gait cycle); Mean ± SD (sample SD) over all trials of a condition
 - Ground truth only (OdometryPublisher, joint states, contact and joint F/T sensors); slip = sliding of the foot contact point per stance, centre slip = ball-centre displacement
 
@@ -14,8 +14,8 @@
 | ripple_high_h010 | 25 | 5/5 (100%) | 0 | 24.3 ± 0.2 | 97 ± 1 | -9.2 ± 0.3 | -3.7 ± 0.1 | 48.3 ± 1.9 | -105.9 ± 0.3 | 3.28 ± 0.03 | 2.55 ± 0.01 | 1.02 ± 0.02 | 1.67 ± 0.02 | 1.31 ± 0.01 | 0.79 ± 0.01 | 1.33 ± 0.01 | 1.6 ± 5.2 | 1.69 ± 0.00 |
 | ripple_high_h020 | 25 | 5/5 (100%) | 0 | 13.9 ± 0.3 | 56 ± 1 | -14.2 ± 0.8 | -6.0 ± 0.6 | 36.2 ± 2.6 | -106.2 ± 0.8 | 3.17 ± 0.02 | 2.59 ± 0.02 | 3.41 ± 0.19 | 3.89 ± 0.16 | 3.36 ± 0.14 | 1.43 ± 0.03 | 3.23 ± 0.04 | 32.2 ± 178.6 | 1.69 ± 0.00 |
 | ripple_high_h030 | 25 | 0/2 (0%) | 0 | 5.1 ± 0.1 | 21 ± 0 | -114.4 ± 141.1 | -8.6 ± 0.2 | 18.0 ± 0.5 | -255.1 ± 13.8 | 3.02 ± 0.02 | 2.70 ± 0.01 | 10.29 ± 0.35 | 10.78 ± 0.38 | 10.33 ± 0.25 | 1.51 ± 0.00 | 6.30 ± 0.00 | -3.4 ± 2.2 | 1.69 ± 0.00 |
-| wave_nominal_h010 | 24 | 0/2 (0%) | 0 | 5.7 ± 0.2 | 23 ± 1 | -13.2 ± 0.2 | -8.3 ± 0.1 | 24.8 ± 0.1 | -112.0 ± 0.1 | 3.15 ± 0.03 | 2.42 ± 0.00 | 5.20 ± 0.08 | 5.10 ± 0.07 | 4.07 ± 0.22 | 0.39 ± 0.01 | 1.83 ± 0.00 | 29.9 ± 1.2 | 1.00 ± 0.00 |
-| wave_high_h010 | 13 | 0/2 (0%) | 0 | 2.8 ± 0.2 | 21 ± 2 | -15.3 ± 0.0 | -6.9 ± 0.0 | 24.9 ± 3.0 | -112.4 ± 0.1 | 3.44 ± 0.03 | 2.60 ± 0.01 | 2.35 ± 0.02 | 2.28 ± 0.03 | 6.37 ± 0.50 | 0.56 ± 0.00 | 2.15 ± 0.04 | -3.5 ± 0.6 | 1.82 ± 0.00 |
+| wave_nominal_h010 | 24 | 0/2 (0%) | 0 | 5.9 ± 0.0 | 24 ± 0 | -12.8 ± 0.0 | -8.9 ± 0.0 | 19.1 ± 0.6 | -99.2 ± 0.1 | 3.27 ± 0.01 | 2.53 ± 0.00 | 1.75 ± 0.01 | 1.72 ± 0.02 | 4.15 ± 0.00 | 0.38 ± 0.00 | 1.99 ± 0.00 | -9.2 ± 4.3 | 1.00 ± 0.00 |
+| wave_high_h010 | 13 | 0/2 (0%) | 0 | 2.9 ± 0.2 | 22 ± 1 | -15.4 ± 0.2 | -7.2 ± 0.1 | 23.4 ± 0.7 | -99.6 ± 0.0 | 3.45 ± 0.02 | 2.67 ± 0.01 | 4.34 ± 0.10 | 4.30 ± 0.06 | 6.20 ± 0.35 | 0.54 ± 0.00 | 2.11 ± 0.00 | 0.6 ± 3.6 | 1.82 ± 0.00 |
 
 Peak joint speed / torque in % of the servo limit (3.65 rad/s, 3.29 N·m at 6.0 V; max over the trials of the condition):
 
@@ -29,8 +29,8 @@ Peak joint speed / torque in % of the servo limit (3.65 rad/s, 3.29 N·m at 6.0 
 | ripple_high_h010 | 21% | 35% | 36% | 101% | 102% | 102% |
 | ripple_high_h020 | 25% | 82% | 85% | 101% | 103% | 103% |
 | ripple_high_h030 | 21% | 49% | 50% | 101% | 102% | 101% |
-| wave_nominal_h010 | 38% | 50% | 43% | 101% | 103% | 102% |
-| wave_high_h010 | 25% | 39% | 41% | 101% | 102% | 102% |
+| wave_nominal_h010 | 38% | 47% | 39% | 101% | 102% | 102% |
+| wave_high_h010 | 25% | 33% | 36% | 100% | 102% | 102% |
 
 Joint torque p95 in % of the limit (mean over trials) and fraction of samples at the limit (>= 98 %) - the peak above is often a single touch-down sample:
 
@@ -44,8 +44,8 @@ Joint torque p95 in % of the limit (mean over trials) and fraction of samples at
 | ripple_high_h010 | 26% | 100% | 87% | 8.7% | 0.3% |
 | ripple_high_h020 | 29% | 100% | 74% | 13.9% | 0.5% |
 | ripple_high_h030 | 24% | 100% | 67% | 13.0% | 0.8% |
-| wave_nominal_h010 | 13% | 96% | 80% | 2.2% | 0.9% |
-| wave_high_h010 | 10% | 100% | 64% | 25.2% | 0.2% |
+| wave_nominal_h010 | 15% | 96% | 81% | 3.3% | 0.9% |
+| wave_high_h010 | 9% | 100% | 64% | 25.8% | 0.4% |
 
 ## Obstacle ladder: successes / trials per height (pass = at least 4/5; a failing height stops early)
 

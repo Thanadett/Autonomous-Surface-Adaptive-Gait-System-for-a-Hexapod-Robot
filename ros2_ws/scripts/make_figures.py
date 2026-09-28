@@ -128,12 +128,12 @@ def fig_gait_diagram():
         t = s.t - s.t[0]
         cycle = {"tripod": 0.95, "ripple": 1.30, "wave": 2.40}[gait]
         # two cycles after the warm-up, starting at a swing onset of leg 0
-        sw0 = s.swing_plan[:, 0].astype(int)
+        sw0 = s.swing_plan[:, LEGS.index("rear_right")].astype(int)
         on = np.where(np.diff(sw0) == 1)[0]
         on = on[t[on] > 3.0]
         t0 = t[on[0]]
         win = (t >= t0) & (t <= t0 + 2 * cycle)
-        order = ["front_left", "middle_left", "rear_left", "front_right", "middle_right", "rear_right"]
+        order = ["rear_right", "middle_right", "front_right", "rear_left", "middle_left", "front_left"]
         for row, leg in enumerate(order):
             i = LEGS.index(leg)
             swing = s.swing_plan[win, i].astype(bool)
@@ -181,7 +181,7 @@ def fig_e2():
             ax.text(i, m * 1.02 + (0.5 if key != "cot" else 0.01), f"{m:.1f}" if key != "cot" else f"{m:.2f}",
                     ha="center", va="bottom", fontsize=7.5)
         ax.set_xticks(x, [l for _, l in conds], fontsize=8)
-        ax.set_xlabel("Commanded speed (mm/s)")
+        ax.set_xlabel("Command (mm/s)")
         ax.set_ylabel(ylabel)
         ax.set_title(title)
     axes[0].set_ylim(0, 105)

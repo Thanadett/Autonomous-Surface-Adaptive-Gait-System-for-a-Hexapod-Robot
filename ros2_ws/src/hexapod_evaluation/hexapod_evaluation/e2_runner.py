@@ -430,21 +430,30 @@ class Runner:
             self.clear_terrain(trial_id)   # a late create must not survive into the next attempt
         return False
 
+    SKIP_RETRIES = 2   # a skipped trial (lost gz reply, start check, slow step) is tried again
+
     def trial(self, cond: dict, trial_id: str, rep: int, extra: dict | None = None) -> dict | None:
-        row = self._trial(cond, trial_id, rep, extra)
+        # offsets are drawn once per trial id, so a retry and a resumed run reuse them
+        offsets = self.rng.uniform(-1.0, 1.0, size=3)
+        row = None
+        for attempt in range(1 + self.SKIP_RETRIES):
+            if attempt:
+                self.log(f"{trial_id}: retry {attempt}/{self.SKIP_RETRIES} after a skip")
+            row = self._trial(cond, trial_id, rep, extra, offsets)
+            if row is not None:
+                break
         if row is None:
             self.skipped += 1
         return row
 
-    def _trial(self, cond: dict, trial_id: str, rep: int, extra: dict | None = None) -> dict | None:
+    def _trial(self, cond: dict, trial_id: str, rep: int, extra: dict | None, offsets) -> dict | None:
         node, plan, log = self.node, self.plan, self.log
         gait, speed = cond["gait"], cond["speed"]
         stance, step = cond.get("stance", self.nominal[0]), cond.get("step", self.nominal[1])
         posture_control = bool(cond.get("posture_control", False))
         scenario = cond.get("scenario")
         distance = self.args.distance or (0.3 if self.args.check else 0.5 if self.args.quick else float(plan["distance_m"]))
-        # offsets are drawn for every trial (also skipped ones) so a resumed run reuses them
-        dx, dy, dyaw_u = self.rng.uniform(-1.0, 1.0, size=3)
+        dx, dy, dyaw_u = offsets
         # 1. stop, posture, gait (at rest the switch completes at once)
         node.spin_sim(3.0, every=lambda: node.send(0.0))
         if not node.set_posture(stance, step, posture_control):
